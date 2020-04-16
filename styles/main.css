@@ -1,0 +1,104 @@
+.row{
+
+}
+
+.my-row-1{
+  
+   
+    
+}
+.my-row-2{
+   
+}
+
+
+/* 
+.my-row-1-col-1{
+    border: 1px solid red;
+}
+.my-row-1-col-2{
+    border: 1px solid rgb(17, 43, 192);
+    background-color: rgb(167, 10, 127);
+}
+.my-row-1-col-3{
+    border: 1px solid rgb(99, 87, 87);
+}
+.my-row-1-col-4{
+    border: 1px solid rgb(167, 10, 127);
+}
+
+
+.my-row-2-col-1{
+    border: 1px solid rgb(19, 243, 30);
+}
+.my-row-2-col-2{
+    border: 1px solid rgb(212, 12, 162);
+}
+
+.my-row-2-col-3{
+    border: 1px solid rgb(38, 53, 105);
+}
+
+.my-row-2-col-4{
+    border: 1px solid rgb(34, 206, 19);
+} */
+
+
+#confirmed-td{
+   
+    background-color: rgb(30, 9, 221);
+    color: rgb(149, 235, 11);
+    border-radius:50%;
+}
+#deaths-td{
+  
+    color: red;
+    background-color: rgb(8, 5, 3);
+    border-radius:50%;
+}
+#recovered-td{
+   
+    background-color: rgb(25, 197, 9);
+    border-radius:50%;
+}
+
+
+
+
+#confirmed-tt{
+   
+    background-color: rgb(176, 185, 212);
+    border-radius:20px;
+ 
+}
+
+
+#deaths-tt{
+    border: 1px solid black;
+    background-color: skyblue;
+    border-radius:20px;
+}
+#recovered-tt{
+  
+    background-color: rgb(33, 207, 10);
+    border-radius:30px;
+}
+#active-tt{
+    border: 1px solid black;
+    background-color: tomato;
+    border-radius:20px;
+}
+
+
+
+
+p{
+    font-size: 40px;
+    font-family: 'Ultra', serif;
+    font-weight: bolder;
+}
+
+small{
+    font-family: 'Teko', sans-serif;    
+    font-weight: bolder;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Updates</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <style>
+        .my-container {
+            border-radius: 10px;
+            text-align: center;
+            height: auto;
+            padding: 10px;
+            background-color: rgb(230, 230, 211);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand">#StayAtHome</a>
+            <small style="color:greenyellow;">Last Updated : {{last_updated}}</small>
+        </nav>
+
+
+
+        <div class="container">
+            <div class="header">
+
+            </div>
+        </div>
+        <br>
+       
+        <marquee behavior="" direction=""><b>Total Sample Tested: {{total_tested}} | Total Individual Tested: {{total_ind_tested}}</b> Source: <a href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_16April_9PM_IST.pdf">ICMR WEBSITE</a></marquee>
+        <div class="container my-container justify-content-center">
+
+            <br>
+
+            <div class="row row-0">
+                <div class="col-md-12">
+                    <div id="confirmed-tt">
+                        <small>TOTAL CONFIRMED</small>
+                        <p style="color: rgb(3, 3, 19);">{{confirmed_tt}}</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <center>
+                <h5>TODAY</h5>
+
+            </center>
+            <br>
+
+            <div class="row my-row-1 ">
+                <div class="col-sm-4  my-row-1-col-1">
+
+                    <div id="confirmed-td">
+                        <small>CONFIRMED TODAY</small>
+                        <img src="images/plus.png" alt=""
+                        srcset="">   <p>+{{confirmed_td}}  </p>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-sm-4 my-row-1-col-3">
+
+                    <div id="deaths-td">
+                         <small>DEATHS TODAY</small>
+                         <img src="images/death.png" alt=""
+                         srcset="">    <p>+{{deaths_td}} </p>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4 my-row-1-col-4">
+
+                    <div id="recovered-td">
+                        <small>RECOVERD TODAY</small>
+                        <img src="images/sprinter.png" alt=""
+                        srcset="">
+                        <p>+{{recovered_td}}</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- row2 -->
+
+            <br>
+            <center>
+                <h5>ALL TIME</h5>
+            </center>
+            <br>
+
+
+            <div class="row my-row-2">
+               
+
+                <div class="col-sm-4 my-row-2-col-1">
+
+                    <div id="active-tt" class="active-tt">
+                        <small>TOTAL ACTIVE</small>
+                        <p>{{active_tt}}</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-4 my-row-2-col-2">
+
+                    <div id="deaths-tt">
+                        <small>TOTAL DEATHS</small>
+
+                        <p>{{deaths_tt}}</p>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4 my-row-2-col-3">
+                    <div id="recovered-tt">
+                        <small>TOTAL RECOVERED</small>
+                        <p>{{recovered_tt}}</p>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <br>
+            <center>
+                <h5>OTHER INFO</h5>
+            Source: <a href="http://www.covid19india.org/">Covid19.org</a>
+            </center>
+            <br>
+
+            <div class="row justify-content-center">
+                
+                <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
+                    srcset=""></button>
+            <button type="button" @click="facebook" class="btn btn-secondary"><img src="images/facebook.png" alt=""
+                    srcset=""></button>
+            <button type="button" @click="quora" class="btn btn-success"><img src="images/quora.png" alt=""
+                    srcset=""></button>
+            <button type="button" @click="github" class="btn btn-warning"><img src="images/github.png" alt=""
+                    srcset=""></button>
+            <button type="button" @click="instagram" class="btn btn-info"><img src="images/instagram.png" alt=""
+                    srcset=""></button>
+            </div>
+
+
+           
+
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="scripts/thirdparty.js"></script>
+   
+
+</body >
+
+</html >
