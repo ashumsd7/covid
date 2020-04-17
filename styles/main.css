@@ -52,8 +52,8 @@
 }
 #deaths-td{
   
-    color: red;
-    background-color: rgb(68, 64, 62);
+    color: rgb(226, 40, 15);
+    background-color: rgb(100, 236, 46);
     border-radius:20%;
 }
 #recovered-td{
@@ -95,11 +95,15 @@
 
 p{
     font-size: 40px;
-    font-family: 'Fredoka One', cursive;
+    /* font-family: 'Fredoka One', cursive; */
+    font-family: 'Righteous', cursive;
     font-weight: bolder;
 }
 
 small{
     font-family: 'Teko', sans-serif;    
+    font-weight: bolder;
+}
+h5{
     font-weight: bolder;
 }
