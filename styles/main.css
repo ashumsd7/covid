@@ -46,20 +46,20 @@
 
 #confirmed-td{
    
-    background-color: rgb(30, 9, 221);
+    background-color: rgb(96, 92, 138);
     color: rgb(149, 235, 11);
-    border-radius:50%;
+    border-radius:20%;
 }
 #deaths-td{
   
     color: red;
-    background-color: rgb(8, 5, 3);
-    border-radius:50%;
+    background-color: rgb(68, 64, 62);
+    border-radius:20%;
 }
 #recovered-td{
    
-    background-color: rgb(25, 197, 9);
-    border-radius:50%;
+    background-color: rgb(108, 187, 101);
+    border-radius:20%;
 }
 
 
@@ -81,7 +81,8 @@
 #recovered-tt{
   
     background-color: rgb(33, 207, 10);
-    border-radius:30px;
+    border-radius:20px;
+    border: 1px solid black;
 }
 #active-tt{
     border: 1px solid black;
@@ -94,7 +95,7 @@
 
 p{
     font-size: 40px;
-    font-family: 'Ultra', serif;
+    font-family: 'Fredoka One', cursive;
     font-weight: bolder;
 }
 

@@ -24,12 +24,13 @@
     <link rel="stylesheet" href="styles/main.css">
 
     <style>
+     
         .my-container {
             border-radius: 10px;
             text-align: center;
             height: auto;
             padding: 10px;
-            background-color: rgb(230, 230, 211);
+            /* background-color: rgb(230, 230, 211); */
 
         }
     </style>
@@ -52,8 +53,11 @@
             </div>
         </div>
         <br>
-       
-        <marquee behavior="" direction=""><b>Total Sample Tested: {{total_tested}} | Total Individual Tested: {{total_ind_tested}}</b> Source: <a href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_16April_9PM_IST.pdf">ICMR WEBSITE</a></marquee>
+
+        <marquee behavior="" direction=""><b>Total Sample Tested: {{total_tested}} | Total Individual Tested:
+                {{total_ind_tested}}</b> Source: <a
+                href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_16April_9PM_IST.pdf">ICMR
+                WEBSITE</a></marquee>
         <div class="container my-container justify-content-center">
 
             <br>
@@ -81,8 +85,8 @@
 
                     <div id="confirmed-td">
                         <small>CONFIRMED TODAY</small>
-                        <img src="images/plus.png" alt=""
-                        srcset="">   <p>+{{confirmed_td}}  </p>
+                        <img src="images/plus.png" alt="" srcset="">
+                        <p>+{{confirmed_td}} </p>
 
 
 
@@ -95,9 +99,9 @@
                 <div class="col-sm-4 my-row-1-col-3">
 
                     <div id="deaths-td">
-                         <small>DEATHS TODAY</small>
-                         <img src="images/death.png" alt=""
-                         srcset="">    <p>+{{deaths_td}} </p>
+                        <small>DEATHS TODAY</small>
+                        <img src="images/death.png" alt="" srcset="">
+                        <p>+{{deaths_td}} </p>
 
 
                     </div>
@@ -108,8 +112,7 @@
 
                     <div id="recovered-td">
                         <small>RECOVERD TODAY</small>
-                        <img src="images/sprinter.png" alt=""
-                        srcset="">
+                        <img src="images/sprinter.png" alt="" srcset="">
                         <p>+{{recovered_td}}</p>
 
                     </div>
@@ -130,7 +133,7 @@
 
 
             <div class="row my-row-2">
-               
+
 
                 <div class="col-sm-4 my-row-2-col-1">
 
@@ -171,36 +174,41 @@
             <br>
             <center>
                 <h5>OTHER INFO</h5>
-            Source: <a href="http://www.covid19india.org/">Covid19.org</a>
+                Source: <a href="http://www.covid19india.org/">Covid19.org</a>
             </center>
             <br>
 
             <div class="row justify-content-center">
-                
+
                 <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
-                    srcset=""></button>
-            <button type="button" @click="facebook" class="btn btn-secondary"><img src="images/facebook.png" alt=""
-                    srcset=""></button>
-            <button type="button" @click="quora" class="btn btn-success"><img src="images/quora.png" alt=""
-                    srcset=""></button>
-            <button type="button" @click="github" class="btn btn-warning"><img src="images/github.png" alt=""
-                    srcset=""></button>
-            <button type="button" @click="instagram" class="btn btn-info"><img src="images/instagram.png" alt=""
-                    srcset=""></button>
+                        srcset=""></button>
+                <button type="button" @click="facebook" class="btn btn-secondary"><img src="images/facebook.png" alt=""
+                        srcset=""></button>
+                <button type="button" @click="quora" class="btn btn-success"><img src="images/quora.png" alt=""
+                        srcset=""></button>
+                <button type="button" @click="github" class="btn btn-warning"><img src="images/github.png" alt=""
+                        srcset=""></button>
+                <button type="button" @click="instagram" class="btn btn-info"><img src="images/instagram.png"></button>
+
             </div>
-
-
-           
-
+          
+            Page Visits:    <img src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count"   border="0" >
+                                                 
+                       
 
         </div>
 
+        <!-- hitwebcounter Code START -->
+                             
+                           
     </div>
+
+
 
     <script src="app.js"></script>
     <script src="scripts/thirdparty.js"></script>
-   
 
-</body >
 
-</html >
+</body>
+
+</html>
