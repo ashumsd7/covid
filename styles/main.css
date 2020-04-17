@@ -11,6 +11,9 @@
    
 }
 
+*{
+    /* font-family: 'Girassol', cursive; */
+}
 
 /* 
 .my-row-1-col-1{
@@ -96,7 +99,7 @@
 p{
     font-size: 40px;
     /* font-family: 'Fredoka One', cursive; */
-    font-family: 'Righteous', cursive;
+    /* font-family: 'Girassol', cursive; */
     font-weight: bolder;
 }
 
