@@ -21,7 +21,10 @@ var corona= new Vue({
 
             mobile_number:'',
             subscribe_flag:false,
-            notify:false
+            notify:false,
+
+
+            input_warning: false,
 
         }
     },
@@ -99,24 +102,40 @@ var corona= new Vue({
             this.subscribe_flag=true;
         },
 
+        isNumber: function(evt) {
+            evt = evt ? evt : window.event;
+            var charCode = evt.which ? evt.which : evt.keyCode;
+            if (
+              charCode > 31 &&
+              (charCode < 48 || charCode > 57) &&
+              charCode !== 46
+            ) {
+              evt.preventDefault();
+              this.input_warning = true;
+            } else {
+              this.input_warning = false;
+              return true;
+            }
+          },
+
 
         my: function(){
             alert("Aads");
         },
         github(){
-            document.location.href = "https://github.com/ashumsd7";
+            document.location.href = "";
         },
         facebook(){
-            document.location.href = "https://www.facebook.com/ashu027";
+            document.location.href = "";
         },
         quora(){
-            document.location.href = "https://www.quora.com/profile/%E0%A4%86%E0%A4%B6%E0%A5%81%E0%A4%A4%E0%A5%8B%E0%A4%B7-%E0%A4%86%E0%A4%A8%E0%A4%A8%E0%A5%8D%E0%A4%A6-%E0%A4%A4%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80-Ashutosh-Anand-Tiwari";
+            document.location.href = "";
         },
         twitter(){
             document.location.href = "https://twitter.com/WeWillStopCovid";
         },
         instagram(){
-            document.location.href = "https://www.instagram.com/ashumsd7/";
+            document.location.href = "";
         }
 
     },
