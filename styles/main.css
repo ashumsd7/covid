@@ -131,3 +131,6 @@ h5{
 .Subscribe-btn{
 cursor: pointer;
 }
+#notify{
+    background-color: rgb(166, 201, 10);
+}
