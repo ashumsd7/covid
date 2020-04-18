@@ -14,8 +14,8 @@ var corona= new Vue({
             recovered_tt: '',
             recovered_td: '',
             last_updated:'',
-            total_tested:' 3,35,123 ',
-            total_ind_tested:'3,18,449',
+            total_tested:' 3,72,123 ',
+            total_ind_tested:'3,54,969',
             result: '',
             result1:'',
 
