@@ -61,7 +61,7 @@ var corona= new Vue({
 
         subscribeMobileNumber(e){
             e.preventDefault();
-            var check_MobileNumber=  confirm(" Check Your Mobile Number "+this.mobile_number +" Is it ok? ");
+            var check_MobileNumber=  confirm(" क्या ये  "+this.mobile_number +"  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
             if(check_MobileNumber){
             const firebaseConfig = {
                 apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
