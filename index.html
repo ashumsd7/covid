@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="styles/main.css">
 
     <style>
-     
         .my-container {
             border-radius: 10px;
             text-align: center;
@@ -41,8 +40,8 @@
 
 
         <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand">#घर में रहे सुरक्षित रहे </a>
-            <small style="color:greenyellow;">आखिर बार अपडेट किया गया  : {{last_updated}}</small>
+            <a class="navbar-brand">#घर में रहें सुरक्षित रहें </a>
+            <small style="color:greenyellow;">आखिर बार अपडेट किया गया : {{last_updated}}</small>
         </nav>
 
 
@@ -53,14 +52,16 @@
             </div>
         </div>
         <br>
-        <sup >ICMR के रिपोर्ट के अनुसार 9PM बजे तक </sup>
-        <marquee behavior="" direction="">अब तक <b>{{total_tested}}</b> सैंपल टेस्ट किये गए   | अब तक   <b>{{total_ind_tested}}</b>  लोगों को टेस्ट किया गया :
-              स्रोत: <a
+        <sup>ICMR के रिपोर्ट के अनुसार 17.04.2020 9PM बजे तक </sup>
+        <marquee behavior="" direction="">अब तक <b>{{total_tested}}</b> सैंपल टेस्ट किये गए | अब तक
+            <b>{{total_ind_tested}}</b> लोगों को टेस्ट किया गया :
+            स्रोत: <a
                 href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_17April_9PM_IST.pdf">ICMR
-                वेबसाइट  </a></marquee>
+                वेबसाइट </a></marquee>
 
-	<br>
-<marquee behavior="" direction="">आज 17 अप्रैल  के दिन 9 बजे रात तक, कुल टेस्ट किये गए :   <b>31,083</b>  | पॉजिटिव केस मिले : <b>1443</b>  </marquee>
+
+        <marquee behavior="" direction=""> 17 अप्रैल के दिन 9 बजे रात तक, कुल <b>31,083</b>टेस्ट किये गए | इनमें
+            <b>1443</b> पॉजिटिव केस मिले : </marquee>
 
         <div class="container my-container justify-content-center">
 
@@ -69,29 +70,30 @@
             <div class="row row-0">
                 <div class="col-md-12">
                     <div id="confirmed-tt">
-                        <small>अब तक इतने मामले पॉजिटिव आये </small>
-                        <p style="color: rgb(3, 3, 19);">{{confirmed_tt}}  <img src="images/virus.png" alt="" srcset=""></p>
+                        <small>भारत में अब तक इतने मामले पॉजिटिव आये </small>
+                        <p style="color: rgb(3, 3, 19);">{{confirmed_tt}} <img src="images/virus.png" alt="" srcset="">
+                        </p>
 
                     </div>
                 </div>
             </div>
 
-            <br>
+            <hr>
 
             <center>
-                <h5>आज दिनभर </h5>
+                <h5>आज भारत में <sup style="color: rgb(88, 76, 76);">[12:00am से 11:59pm तक ]</sup> </h5>
 
             </center>
-            <br>
+            <hr>
 
             <div class="row my-row-1 ">
                 <div class="col-sm-4  my-row-1-col-1">
 
                     <div id="confirmed-td">
-                        <small>आज के पॉजिटिव मामले <sub style="color: rgb(40, 238, 22);">12:00am से 11:59pm</sub> </small>
-                        
-                      
-                        <p>+{{confirmed_td}}   <img src="images/plus.png" alt="" srcset=""></p>
+                        <small>आज के पॉजिटिव मामले </small>
+
+
+                        <p>+{{confirmed_td}} <img src="images/plus.png" alt="" srcset=""></p>
 
 
 
@@ -105,8 +107,8 @@
 
                     <div id="deaths-td">
                         <small>आज के मृतकों की संख्या </small>
-                       
-                        <p>+{{deaths_td}}  <img src="images/death.png" alt="" srcset=""> </p>
+
+                        <p>+{{deaths_td}} <img src="images/death.png" alt="" srcset=""> </p>
 
 
                     </div>
@@ -117,7 +119,7 @@
 
                     <div id="recovered-td">
                         <small>आज ठीक हुए </small>
-                       
+
                         <p>+{{recovered_td}} <img src="images/sprinter.png" alt="" srcset=""></p>
 
                     </div>
@@ -130,11 +132,11 @@
 
             <!-- row2 -->
 
-            <br>
+            <hr>
             <center>
                 <h5>अब तक भारत में </h5>
             </center>
-            <br>
+            <hr>
 
 
             <div class="row my-row-2">
@@ -144,7 +146,7 @@
 
                     <div id="active-tt" class="active-tt">
                         <small>भारत में सक्रिय मामले </small>
-                        <p>{{active_tt}}  <img src="images/patient.png" alt="" srcset=""></p>
+                        <p>{{active_tt}} <img src="images/patient.png" alt="" srcset=""></p>
 
                     </div>
 
@@ -156,15 +158,15 @@
                     <div id="deaths-tt">
                         <small>कुल मौतें </small>
 
-                        <p>{{deaths_tt}}  <img src="images/death.png" alt="" srcset=""></p>
+                        <p>{{deaths_tt}} <img src="images/death.png" alt="" srcset=""></p>
                     </div>
 
                 </div>
 
                 <div class="col-sm-4 my-row-2-col-3">
                     <div id="recovered-tt">
-                        <small>भारत में कुल ठीक हो गए   </small>
-                        <p>{{recovered_tt}}  <img src="images/sprinter.png" alt="" srcset=""></p>
+                        <small>भारत में कुल ठीक हो गए </small>
+                        <p>{{recovered_tt}} <img src="images/sprinter.png" alt="" srcset=""></p>
 
                     </div>
                 </div>
@@ -177,7 +179,7 @@
 
 
             <br>
-           
+
 
             <div class="row justify-content-center">
 
@@ -192,21 +194,24 @@
                 <button type="button" @click="instagram" class="btn btn-info"><img src="images/instagram.png"></button> -->
 
             </div>
-          
-           <br>
+
+            <br>
             <center>
                 <h5>अधिक जानकारी के लिए </h5>
                 स्रोत : <a href="http://www.covid19india.org/">Covid19.org</a>
             </center>
-            <br>      
-            ये वेबसाइट <img src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count"   border="0" > बार देखी गयी                          
-                       
+            <br>
+            ये वेबसाइट <img
+                src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
+                title="User Stats" Alt="PHP Hits Count" border="0"> बार देखी गयी
+
 
         </div>
 
-  <marquee behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा रहे है ऐसा संभव है की गलतियां  हो जाएँ हमें अवगत कराईये हम गलतियों को सुधारने  का पूरा प्रयास करेंगे  धन्यवाद </marquee>
-                             
-                           
+        <marquee behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा रहे है ऐसा संभव है की गलतियां हो जाएँ हमें
+            अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद </marquee>
+
+
     </div>
 
 
