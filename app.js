@@ -85,7 +85,7 @@ var corona= new Vue({
                 this.notify= false;
                
                 window.location.reload();
-              }, 2000);
+              }, 5000);
                 
 
                 

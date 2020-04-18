@@ -132,5 +132,9 @@ h5{
 cursor: pointer;
 }
 #notify{
-    background-color: rgb(166, 201, 10);
+ background-color: aqua;
+ border-radius: 10px;
+ color: black;
+ font-size: 25px;
+ font-weight: bolder;
 }
