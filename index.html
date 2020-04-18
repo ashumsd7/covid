@@ -23,6 +23,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 
+      <!-- firebae cdn -->
+      <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase.js"></script>
+
+      <!-- fafa icon -->
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <style>
         .my-container {
             border-radius: 10px;
@@ -42,6 +48,22 @@
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand">#घर में रहें सुरक्षित रहें </a>
             
+
+            <div v-if="subscribe_flag" class="mobile-form">
+                <form class="form-inline">
+                    <input v-model="mobile_number" class="form-control mr-sm-2" type="search"
+                        placeholder="Mobile Number" aria-label="Search">
+                    <button @click="subscribeMobileNumber($event)" class="btn btn-outline-success my-2 my-sm-0"
+                        type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div v-else class="Subscribe-btn">
+                <i class="fa fa-mobile" aria-hidden="true"></i> <span @click="showMobileDialogue" class=" badge badge-danger">Get Updates On Phone</span>
+            </div>
+
+
+
+
         </nav>
 
 
@@ -52,6 +74,10 @@
             </div>
         </div>
         <div id="imporatant-info">
+            <div v-if="notify" id="notify">
+                <span class=" badge badge-success">{{this.mobile_number}} subscribed for updates</span>
+            </div>
+
             <sup>ICMR के रिपोर्ट के अनुसार 17.04.2020 9PM बजे तक </sup>
             <marquee behavior="" direction="">अब तक <b>{{total_tested}}</b> सैंपल टेस्ट किये गए | अब तक
                 <b>{{total_ind_tested}}</b> लोगों को टेस्ट किया गया :
