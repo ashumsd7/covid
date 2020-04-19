@@ -121,16 +121,19 @@
                 </center>
             </div>
 
-            <sup>ICMR के रिपोर्ट के अनुसार 18.04.2020 9PM बजे तक </sup>
-            <marquee scrollamount="4"  behavior="" direction="">अब तक <b>{{total_tested}}</b> सैंपल टेस्ट किये गए | अब तक
-                <b>{{total_ind_tested}}</b> लोगों को टेस्ट किया गया :
-                स्रोत: <a
-                    href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_18April_9PM_IST.pdf">ICMR
-                    वेबसाइट </a></marquee>
 
-<!-- 
-            <marquee behavior="" direction=""> 17 अप्रैल 9 बजे रात तक, कुल <b>31,083</b>टेस्ट किये गए | इनमें
-                <b>1443</b> पॉजिटिव केस मिले : </marquee> -->
+
+            <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक :  स्रोत: <a
+                href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_18April_9PM_IST.pdf">ICMR
+                वेबसाइट </a> </sup> <br>
+                <marquee scrollamount="4" behavior="" direction="">पिछले 24 घण्टे में {{date_icmr}} बजे की रिपोर्ट के अनुसार <b>{{ today_tested_icmr}}</b>  सैंपल टेस्ट में <b>{{today_positive_icmr}} </b> पॉजिटिव पाए गए |</marquee>
+
+
+            <small> अब तक सैंपल टेस्ट किये गए</small>: <b style="color: blue;">{{total_tested}}</b> <br> 
+            <small>अब तक लोगों को टेस्ट किया गया: </small> <b style="color: blue;">{{total_ind_tested}}</b>
+           
+            
+            
         </div>
 
         <div class="container my-container justify-content-center">
@@ -156,7 +159,7 @@
             <hr>
 
             <center>
-                <h5>आज भारत में <sup style="color: rgb(88, 76, 76);"><small>[12:00am से 11:59pm तक ]</small></sup> </h5>
+                <h5>आज भारत में <sup style="color: rgb(88, 76, 76);"><small>[रात 12 बजे से अभी तक ]</small></sup> </h5>
 
             </center>
             <hr>

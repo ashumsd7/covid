@@ -14,8 +14,15 @@ var corona= new Vue({
             recovered_tt: '',
             recovered_td: '',
             last_updated:'',
+
+
             total_tested:' 3,72,123 ',
             total_ind_tested:'3,54,969',
+            today_tested_icmr:'35,494 ',
+            today_positive_icmr:'2154',
+            date_icmr:'18 अप्रैल 2020  9PM',
+          
+
             result: '',
             result1:'',
 
@@ -25,6 +32,11 @@ var corona= new Vue({
 
 
             input_warning: false,
+
+
+
+
+
 
         }
     },
