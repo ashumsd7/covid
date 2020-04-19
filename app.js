@@ -118,7 +118,7 @@ var corona= new Vue({
         },
         
         downloadApp(){
-            document.location.href = "https://drive.google.com/uc?id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT&export=download";
+            document.location.href = "https://docs.google.com/uc?export=download&id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT";
         },
 
         isNumber: function(evt) {
