@@ -2,6 +2,7 @@ var corona= new Vue({
     el: "#app",
     mounted: function () {
         this.method1() //method1 will execute at pageload
+        this.loadStateData();
     },
     data() {
         return {
@@ -33,6 +34,63 @@ var corona= new Vue({
 
             input_warning: false,
 
+            DisttConfirmArray: '',
+            DisttNewCaseArray: '',
+
+            
+            disttConfirmCases: [],
+            disttConformNewCases: [],
+            listOfDistt:[],
+            listOfDisttHindi:["आगरा",
+                'गाज़ियाबाद',
+                'लखनऊ',
+                'गौतमबुद्धनगर',
+                'खेरी',
+                'मुरादाबाद',
+                'वाराणसी',
+                'कानपुरनगर',
+                'पीलीभीत',
+                'जौनपुर',
+                'बागपत',
+                'शामली',
+                'मेरठ',
+                'बरेली',
+                'बुलंदशहर',
+                'बस्ती',
+                'हरदोई',
+                'शाहजहांपुर',
+                'फिरोजाबाद',
+                'आजमगढ़',
+                'सहारनपुर',
+                'प्रतापगढ़',
+                'हापुड़',
+                'गाजीपुर',
+                'बांदा',
+                'महाराजगंज',
+                'हाथरस',
+                'मिर्जापुर',
+                'रायबरेली',
+                'बाराबंकी',
+                'औरैया',
+                'मथुरा',
+                'शाहजहांपुर',
+                'कौशाम्बी',
+                'बिजनौर',
+                'प्रयागराज',
+                'सीतापुर',
+                'मुजफ्फरनगर',
+                'अमरोहा',
+                'रामपुर',
+                'भदोही',
+                'कासगंज',
+                'इटावा',
+                'संभल',
+                'उन्नाव',
+                'कन्नौज',
+                'संतकबीरनगर',
+                'मैनपुरी',
+                'गोंडा',
+                'मऊ']
 
 
 
@@ -69,6 +127,42 @@ var corona= new Vue({
 
 
 
+        },
+        
+        loadStateData() {
+            axios
+                .get('https://api.covid19india.org/state_district_wise.json')
+                .then(response => {
+                    var result = JSON.stringify(response);
+                    var data = JSON.parse(result).data;
+                    var state = "Uttar Pradesh";
+                    var disttCollection;
+                    for (const [getState, distt] of Object.entries(data)) {
+
+                        if (getState == state) {
+                            disttCollection = distt;
+                        }
+                    }
+                    var disttObj = disttCollection.districtData;
+                  
+                    // console.log(this.nameOfDistt);   //success list of distt
+                   
+                    var arr = [];
+                  
+                    for (const [distt, disttValues] of Object.entries(disttObj)) {
+                        arr.push(disttValues);
+                        this.listOfDistt.push(distt);
+                    }
+
+                   
+
+                    for (let i in arr) {
+                        this.disttConfirmCases.push(arr[i].confirmed);
+                        this.disttConformNewCases.push(arr[i].delta.confirmed)
+                    }
+                    console.log(this.disttConfirmCases); //list of cases success all distt
+                    console.log(this.disttConformNewCases); //list of new cases of all distt               
+                })
         },
 
         subscribeMobileNumber(e){

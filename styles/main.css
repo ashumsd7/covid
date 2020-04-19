@@ -142,3 +142,27 @@ cursor: pointer;
 .movable-info{
     display: flex;
 }
+.my-row-3{
+    /* border: 1px solid red; */
+}
+li{
+    list-style:none;
+}
+.NameList{
+    list-style: decimal;
+}
+
+.list-view{
+    font-weight: bold;
+}
+.DisttTitle{
+    color: rgb(1, 1, 5);
+    background-color: chartreuse;
+    border-radius: 5px;
+}
+.StateTitle{
+    background-color: rgb(19, 231, 72);
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px gray;
+}
