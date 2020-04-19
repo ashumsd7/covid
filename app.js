@@ -104,6 +104,11 @@ var corona= new Vue({
             
             this.subscribe_flag=true;
         },
+        
+        downloadApp(){
+            document.location.href = "https://drive.google.com/uc?id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT&export=download";
+        },
+
 
 
           sendMessageNow(){

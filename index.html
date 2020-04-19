@@ -134,12 +134,15 @@
         </div>
 
         <div class="container my-container justify-content-center">
-
-
+            
+            <div style="cursor: pointer;" @click="downloadApp" id="android-app">
+                <b><img src="images/android.png" alt="" srcset=""> ऐप डाउनलोड <img src="images/download.png" alt="" srcset="">करें </b> 
+           </div>   
+           <hr>
 
             <div class="row row-0">
                 <div class="col-md-12">
-                    <small style="color:rgb(20, 6, 146);">आखिर बार अपडेट किया गया : {{last_updated}}</small>
+                    <small style="color:rgb(20, 6, 146);">डेटा आखिर बार अपडेट किया गया : {{last_updated}}</small>
                     <hr>
                     <div id="confirmed-tt">
                         <small>भारत में अब तक इतने मामले पॉजिटिव आये </small>
