@@ -82,7 +82,7 @@ var corona= new Vue({
                 this.subscribe_flag=false;
                 this.notify= true;
 
-              this.sendMessageNow();
+           
 
               setTimeout(() => {
                 this.notify= false;
@@ -107,79 +107,6 @@ var corona= new Vue({
         
         downloadApp(){
             document.location.href = "https://drive.google.com/uc?id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT&export=download";
-        },
-
-
-
-          sendMessageNow(){
-            // var settings = {
-            //     "async": true,
-            //     "crossDomain": true,
-            //     "url": "https://www.fast2sms.com/dev/bulk",
-            //     "method": "POST",
-            //     "headers": {
-            //       "authorization": "wLr7nZRfemK0lptNoIEaM5gGc2VQY9JvDyb1H4A3jqF86SUsXxS9xKen4PtTskwH0dgQAfEa68MXrZhb",
-            //     },
-            //     "data": {
-            //       "sender_id": "FSTSMS",
-            //       "message": "This is a test message",
-            //       "language": "english",
-            //       "route": "p",
-            //       "numbers": this.mobile_number,
-            //     }
-            //   }
-              
-            //   $.ajax(settings).done(function (response) {
-            //    alert(response)
-            //   });
-
-
-
-
-
-
-            //   var postData = {
-            //     "sender_id": "FSTSMS",
-            //            "message": "This is a test message",
-            //          "language": "english",
-            //           "route": "p",
-            //            "numbers": this.mobile_number,
-            //   };
-              
-            //   let axiosConfig = {
-            //     headers: {
-            //         "async": true,
-            //         "crossDomain": true,
-            //         "method": "POST",
-            //         // 'Content-Type': 'application/json;charset=UTF-8',
-            //         "Access-Control-Allow-Origin": "*",
-            //     }
-            //   };
-              
-            //   axios.post('https://www.fast2sms.com/dev/bulk', postData, axiosConfig)
-            //   .then((res) => {
-            //     console.log("RESPONSE RECEIVED: ", res);
-            //   })
-            //   .catch((err) => {
-            //     console.log("AXIOS ERROR: ", err);
-            //   })
-
-
-
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://www.fast2sms.com/dev/bulk?authorization=wLr7nZRfemK0lptNoIEaM5gGc2VQY9JvDyb1H4A3jqF86SUsXxS9xKen4PtTskwH0dgQAfEa68MXrZhbY&sender_id=FSTSMS&language=english&route=qt&numbers=7800818001&message=YOUR_QT_TEMPLATE_ID&variables={AA}|{CC}&variables_values=12345|asdaswdx",
-                "method": "GET",
-                "headers": {
-                  "cache-control": "no-cache"
-                }
-              }
-              
-              $.ajax(settings).done(function (response) {
-                console.log(response);
-              });
-
         },
 
         isNumber: function(evt) {
