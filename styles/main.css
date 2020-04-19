@@ -138,3 +138,7 @@ cursor: pointer;
  font-size: 25px;
  font-weight: bolder;
 } */
+
+.movable-info{
+    display: flex;
+}

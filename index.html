@@ -109,7 +109,9 @@
 
         <div class="container">
             <div class="header">
-
+             <marquee behavior="" direction=""><sup> अगर आप एंड्राइड ऐप्प का  प्रयोग कर रहे है तो डेटा देखने के अलावा कुछ फंक्शन्स हो सकता है काम न कर रहे हो एंड्राइड अप्प अभी डेवलपमेंट मोड में है आप डेटा देखने के लिए ही उसका प्रयोग करिये, धन्यवाद |    
+             || अगर आपने SMS अपडेट के लिए सब्सक्राइब किया है,  SMS सुविधा जल्द शुरू होगी, घर पर रहिये ख्याल रखिये धन्यवाद 
+             </sup> </marquee> 
             </div>
         </div>
         <div id="imporatant-info">
@@ -121,12 +123,18 @@
                 </center>
             </div>
 
-
+          
 
             <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक :  स्रोत: <a
                 href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_18April_9PM_IST.pdf">ICMR
                 वेबसाइट </a> </sup> <br>
-                <marquee scrollamount="4" behavior="" direction="">पिछले 24 घण्टे में {{date_icmr}} बजे की रिपोर्ट के अनुसार <b>{{ today_tested_icmr}}</b>  सैंपल टेस्ट में <b>{{today_positive_icmr}} </b> पॉजिटिव पाए गए |</marquee>
+
+                <div class="movable-info">
+                    <img src="images/speaker.png" alt="" srcset="">    <marquee scrollamount="4" behavior="" direction="">पिछले 24 घण्टे में {{date_icmr}} बजे की रिपोर्ट के अनुसार <b>{{ today_tested_icmr}}</b>  सैंपल टेस्ट में <b>{{today_positive_icmr}} </b> पॉजिटिव पाए गए |</marquee>
+
+                </div>
+            
+
 
 
             <small> अब तक सैंपल टेस्ट किये गए</small>: <b style="color: blue;">{{total_tested}}</b> <br> 
