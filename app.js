@@ -111,6 +111,7 @@ var corona = new Vue({
                 'मैनपुरी',
                 'गोंडा',
                 'मऊ',
+                '--',
                 'एटा ',
                 'सुलतानपुर' ]
 
@@ -185,9 +186,9 @@ var corona = new Vue({
                             this.listOfDistt[i] = "SantKabirNagar";
                         }
 
-                        if (this.listOfDistt[i] == "Unknown") {
-                            this.listOfDisttHindi.push("अज्ञात");
-                        }
+                        // if (this.listOfDistt[i] == "Unknown") {
+                        //     this.listOfDisttHindi.push("अज्ञात");
+                        // }
                     }
 
 
