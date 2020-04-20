@@ -391,7 +391,7 @@
                         <small>सुझाव, शिकायत, विचार या सवाल नीचे  टाइप करें  </small> <br> <textarea v-model="feedbackLines" name="" id="" cols="30"
                             rows="5"></textarea>
                             <br>
-                            <button  @click="captureFeedBack($event)" class="btn btn-success">फीडबैक भेजें</button>
+                            <button  @click="captureFeedBack()" class="btn btn-success">फीडबैक भेजें</button>
                     </div>
 
                     <div v-if="feedbackSentNotify" class="feedback-notify">

@@ -287,13 +287,13 @@ var corona= new Vue({
         enableFeedBack(){
             this.enableFeedbackContainer= true;
         },
-        captureFeedBack(e){
-            e.preventDefault();
+        captureFeedBack(){
+           
 
-            firebase.initializeApp(this.firebaseConfig);
+          
          
-            let db= firebase.database().ref("Feedbacks");
-            var newdb= db.push();
+           
+         
             var sendFeedbackObj={
                 number: this.feedbackMobileNumber,
                 lines: this.feedbackLines
@@ -314,8 +314,10 @@ var corona= new Vue({
             if(this.feedbackMobileNumber=="" && this.feedbackLines!="")
             {
                 alert("आपने मोबाइल नंबर या ईमेल नहीं टाइप किया है अगर आप सवाल पूछ रहे है तो हम आपका जवाब नहीं दे पाएंगे आपके सुझाव और शिकायत का स्वागत है | धन्यवाद ");
-          
-            newdb.set(sendFeedbackObj);
+                firebase.initializeApp(this.firebaseConfig);
+                let db= firebase.database().ref("FeedbacksWithoutContact");
+                var newdb= db.push();
+                newdb.set(this.feedbackLines);
           
             this.enableFeedbackContainer= false;
             this.feedbackSentNotify= true;
@@ -328,7 +330,12 @@ var corona= new Vue({
             if(this.feedbackMobileNumber!="" && this.feedbackLines!="")
             {
                 
-            newdb.set(sendFeedbackObj);
+                  firebase.initializeApp(this.firebaseConfig);
+                let db= firebase.database().ref("FeedbacksTwoEntries");
+                var newdb= db.push();
+                newdb.set(sendFeedbackObj);    
+
+            // newdb.set(sendFeedbackObj);
           
             this.enableFeedbackContainer= false;
             this.feedbackSentNotify= true;
