@@ -188,7 +188,7 @@ var corona = new Vue({
 
                         // if (this.listOfDistt[i] == "Unknown") {
                         //     this.listOfDisttHindi.push("अज्ञात");
-                        // }
+                        // }..
                     }
 
 
