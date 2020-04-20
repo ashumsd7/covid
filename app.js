@@ -1,4 +1,4 @@
-var corona= new Vue({
+var corona = new Vue({
     el: "#app",
     mounted: function () {
         this.method1() //method1 will execute at pageload
@@ -14,37 +14,37 @@ var corona= new Vue({
             deaths_td: '',
             recovered_tt: '',
             recovered_td: '',
-            last_updated:'',
+            last_updated: '',
 
 
-            total_tested:'  4,01,586 ',
-            total_ind_tested:'3,83,985',
-            today_tested_icmr:'27,824 ',
-            today_positive_icmr:'1135',
-            date_icmr:'19 अप्रैल 2020  9PM',
-          
+            total_tested: '  4,01,586 ',
+            total_ind_tested: '3,83,985',
+            today_tested_icmr: '27,824 ',
+            today_positive_icmr: '1135',
+            date_icmr: '19 अप्रैल 2020  9PM',
+
 
             result: '',
-            result1:'',
+            result1: '',
 
-            mobile_number:'',
-            subscribe_flag:false,
-            notify:false,
+            mobile_number: '',
+            subscribe_flag: false,
+            notify: false,
 
 
             input_warning: false,
-            download_App_Loading:false,
+            download_App_Loading: false,
 
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
 
-            
+
             enableFeedbackContainer: false,
-            feedbackMobileNumber:'',
-            feedbackLines:'',
-            feedbackSentNotify:false,
-             firebaseConfig :{
+            feedbackMobileNumber: '',
+            feedbackLines: '',
+            feedbackSentNotify: false,
+            firebaseConfig: {
                 apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
                 authDomain: "covid-19-updates-459b6.firebaseapp.com",
                 databaseURL: "https://covid-19-updates-459b6.firebaseio.com",
@@ -53,15 +53,15 @@ var corona= new Vue({
                 messagingSenderId: "194285663598",
                 appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
                 measurementId: "G-8PC5ZS12T1"
-              },
+            },
 
 
 
 
             disttConfirmCases: [],
             disttConformNewCases: [],
-            listOfDistt:[],
-            listOfDisttHindi:["आगरा",
+            listOfDistt: [],
+            listOfDisttHindi: ["आगरा",
                 'गाज़ियाबाद',
                 'लखनऊ',
                 'नॉएडा',
@@ -123,22 +123,22 @@ var corona= new Vue({
             axios
                 .get('https://api.covid19india.org/data.json')
                 .then(response => {
-                   this.result= JSON.stringify(response);
+                    this.result = JSON.stringify(response);
 
-                   this.active_tt= JSON.parse(this.result).data.statewise[0].active;
-                   this.confirmed_tt= JSON.parse(this.result).data.statewise[0].confirmed;
-                   this.deaths_tt= JSON.parse(this.result).data.statewise[0].deaths;
-                   this.recovered_tt= JSON.parse(this.result).data.statewise[0].recovered;
+                    this.active_tt = JSON.parse(this.result).data.statewise[0].active;
+                    this.confirmed_tt = JSON.parse(this.result).data.statewise[0].confirmed;
+                    this.deaths_tt = JSON.parse(this.result).data.statewise[0].deaths;
+                    this.recovered_tt = JSON.parse(this.result).data.statewise[0].recovered;
 
-                   this.active_td= JSON.parse(this.result).data.statewise[0].active;
-                   this.confirmed_td= JSON.parse(this.result).data.statewise[0].deltaconfirmed;
-                   this.deaths_td= JSON.parse(this.result).data.statewise[0].deltadeaths;
-                   this.recovered_td= JSON.parse(this.result).data.statewise[0].deltarecovered;
+                    this.active_td = JSON.parse(this.result).data.statewise[0].active;
+                    this.confirmed_td = JSON.parse(this.result).data.statewise[0].deltaconfirmed;
+                    this.deaths_td = JSON.parse(this.result).data.statewise[0].deltadeaths;
+                    this.recovered_td = JSON.parse(this.result).data.statewise[0].deltarecovered;
 
-                   this.last_updated= JSON.parse(this.result).data.statewise[0].lastupdatedtime;
-                
+                    this.last_updated = JSON.parse(this.result).data.statewise[0].lastupdatedtime;
 
-                  
+
+
                 })
 
             // fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -148,7 +148,7 @@ var corona= new Vue({
 
 
         },
-        
+
         loadStateData() {
             axios
                 .get('https://api.covid19india.org/state_district_wise.json')
@@ -164,34 +164,30 @@ var corona= new Vue({
                         }
                     }
                     var disttObj = disttCollection.districtData;
-                  
+
                     // console.log(this.nameOfDistt);   //success list of distt
-                   
+
                     var arr = [];
-                  
+
                     for (const [distt, disttValues] of Object.entries(disttObj)) {
                         arr.push(disttValues);
                         this.listOfDistt.push(distt);
                     }
                     // changing Name of Distt
-                    for(let i in  this.listOfDistt)
-                    {
-                        if( this.listOfDistt[i]=="Gautam Buddha Nagar")
-                        {
-                           this.listOfDistt[i]= "Noida";
+                    for (let i in this.listOfDistt) {
+                        if (this.listOfDistt[i] == "Gautam Buddha Nagar") {
+                            this.listOfDistt[i] = "Noida";
                         }
 
-                        if( this.listOfDistt[i]=="Sant Kabir Nagar")
-                        {
-                           this.listOfDistt[i]= "SantKabirNagar";
+                        if (this.listOfDistt[i] == "Sant Kabir Nagar") {
+                            this.listOfDistt[i] = "SantKabirNagar";
                         }
-                        
-                        if( this.listOfDistt[i]=="Unknown")
-                        {
-                             this.listOfDisttHindi.push("अज्ञात");
+
+                        if (this.listOfDistt[i] == "Unknown") {
+                            this.listOfDisttHindi.push("अज्ञात");
                         }
                     }
-                   
+
 
                     for (let i in arr) {
                         this.disttConfirmCases.push(arr[i].confirmed);
@@ -202,147 +198,141 @@ var corona= new Vue({
                 })
         },
 
-        subscribeMobileNumber(e){
+        subscribeMobileNumber(e) {
             e.preventDefault();
-            var check_MobileNumber=  confirm(" क्या ये  "+this.mobile_number +"  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
-            if(check_MobileNumber){
-          
-              firebase.initializeApp(this.firebaseConfig);
-         
-                let db= firebase.database().ref("Subscribtions");
-                var newdb= db.push();
+            var check_MobileNumber = confirm(" क्या ये  " + this.mobile_number + "  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
+            if (check_MobileNumber) {
+
+                firebase.initializeApp(this.firebaseConfig);
+
+                let db = firebase.database().ref("Subscribtions");
+                var newdb = db.push();
                 newdb.set(this.mobile_number);
-                
-                this.subscribe_flag=false;
-                this.notify= true;
 
-           
+                this.subscribe_flag = false;
+                this.notify = true;
 
-              setTimeout(() => {
-                this.notify= false;
-                alert(" अपडेट्स हेतु अपने आप को सब्सक्राइब करने के लिए आपका आभार | हम आपको प्रतिदिन एक मैसेज आपके इनबॉक्स में भेजंगे, जिसमे तब तक की टेस्टिंग, पॉज़ीटिव और ठीक होने वाले मामलो की संख्या रहेगी । नोट :  मैसेज केवल नॉन डीएनडी (Do not Disturb) Numbers पर ही जायेगा | ये सुविधा निःशुल्क है |  अपने घर पर रहिये सुरक्षित रहिये धन्यवाद");
-                window.location.reload();
-              }, 3000);
-                
 
-                
-        
+
+                setTimeout(() => {
+                    this.notify = false;
+                    alert(" अपडेट्स हेतु अपने आप को सब्सक्राइब करने के लिए आपका आभार | हम आपको प्रतिदिन एक मैसेज आपके इनबॉक्स में भेजंगे, जिसमे तब तक की टेस्टिंग, पॉज़ीटिव और ठीक होने वाले मामलो की संख्या रहेगी । नोट :  मैसेज केवल नॉन डीएनडी (Do not Disturb) Numbers पर ही जायेगा | ये सुविधा निःशुल्क है |  अपने घर पर रहिये सुरक्षित रहिये धन्यवाद");
+                    window.location.reload();
+                }, 3000);
+
+
+
+
             }
-            else{
+            else {
                 window.location.reload();
             }
         },
 
 
-        showMobileDialogue(){
-            
-            this.subscribe_flag=true;
+        showMobileDialogue() {
+
+            this.subscribe_flag = true;
         },
-        
-        downloadApp(){
-            this.download_App_Loading=true;
+
+        downloadApp() {
+            this.download_App_Loading = true;
             document.location.href = "https://docs.google.com/uc?export=download&id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT";
-             setTimeout(() => {
-                this.download_App_Loading=false;   
-             }, 2000);   
+            setTimeout(() => {
+                this.download_App_Loading = false;
+            }, 2000);
         },
 
-        isNumber: function(evt) {
+        isNumber: function (evt) {
             evt = evt ? evt : window.event;
             var charCode = evt.which ? evt.which : evt.keyCode;
             if (
-              charCode > 31 &&
-              (charCode < 48 || charCode > 57) &&
-              charCode !== 46
+                charCode > 31 &&
+                (charCode < 48 || charCode > 57) &&
+                charCode !== 46
             ) {
-              evt.preventDefault();
-              this.input_warning = true;
+                evt.preventDefault();
+                this.input_warning = true;
             } else {
-              this.input_warning = false;
-              return true;
+                this.input_warning = false;
+                return true;
             }
-          },
+        },
 
 
-        my: function(){
+        my: function () {
             alert("Aads");
         },
-        github(){
+        github() {
             document.location.href = "";
         },
-        facebook(){
+        facebook() {
             document.location.href = "";
         },
-        quora(){
+        quora() {
             document.location.href = "";
         },
-        twitter(){
+        twitter() {
             document.location.href = "https://twitter.com/WeWillStopCovid";
         },
-        instagram(){
+        instagram() {
             document.location.href = "";
         },
 
 
-        enableFeedBack(){
-            this.enableFeedbackContainer= true;
+        enableFeedBack() {
+            this.enableFeedbackContainer = true;
         },
-        captureFeedBack(){
-           
+        captureFeedBack() {
 
-          
-         
-           
-         
-            var sendFeedbackObj={
+
+
+            var sendFeedbackObj = {
                 number: this.feedbackMobileNumber,
                 lines: this.feedbackLines
             }
 
-            if(this.feedbackMobileNumber=="" && this.feedbackLines=="")
-            {
+            if (this.feedbackMobileNumber == "" && this.feedbackLines == "") {
                 alert("फीडबैक में बिना कुछ टाइप किये कुछ भेजा नहीं जा सकता पुनः प्रयास करें ,धन्यवाद |");
                 window.location.reload();
             }
-            
-            if(this.feedbackMobileNumber!="" && this.feedbackLines=="")
-            {
+
+            if (this.feedbackMobileNumber != "" && this.feedbackLines == "") {
                 alert("शायद आप फीडबैक लिखना भूल गए पुनः प्रयास करें ");
                 window.location.reload();
             }
 
-            if(this.feedbackMobileNumber=="" && this.feedbackLines!="")
-            {
-                alert("आपने मोबाइल नंबर या ईमेल नहीं टाइप किया है अगर आप सवाल पूछ रहे है तो हम आपका जवाब नहीं दे पाएंगे आपके सुझाव और शिकायत का स्वागत है | धन्यवाद ");
+            // if(this.feedbackMobileNumber=="" && this.feedbackLines!="")
+            // {
+            //     alert("आपने मोबाइल नंबर या ईमेल नहीं टाइप किया है अगर आप सवाल पूछ रहे है तो हम आपका जवाब नहीं दे पाएंगे आपके सुझाव और शिकायत का स्वागत है | धन्यवाद ");
+            //     firebase.initializeApp(this.firebaseConfig);
+            //     let db= firebase.database().ref("FeedbacksWithoutContact");
+            //     var newdb= db.push();
+            //     newdb.set(this.feedbackLines);
+
+            // this.enableFeedbackContainer= false;
+            // this.feedbackSentNotify= true;
+            // setTimeout(() => {
+            //     this.feedbackSentNotify= false;
+            //     window.location.reload();
+            // }, 3000);
+            // }
+
+            if (this.feedbackMobileNumber != "" && this.feedbackLines != "") {
+
                 firebase.initializeApp(this.firebaseConfig);
-                let db= firebase.database().ref("FeedbacksWithoutContact");
-                var newdb= db.push();
-                newdb.set(this.feedbackLines);
-          
-            this.enableFeedbackContainer= false;
-            this.feedbackSentNotify= true;
-            setTimeout(() => {
-                this.feedbackSentNotify= false;
-                window.location.reload();
-            }, 3000);
-            }
+                let db = firebase.database().ref("FeedbacksTwoEntries");
+                var newdb = db.push();
+                newdb.set(sendFeedbackObj);
 
-            if(this.feedbackMobileNumber!="" && this.feedbackLines!="")
-            {
-                
-                  firebase.initializeApp(this.firebaseConfig);
-                let db= firebase.database().ref("FeedbacksTwoEntries");
-                var newdb= db.push();
-                newdb.set(sendFeedbackObj);    
+                // newdb.set(sendFeedbackObj);
 
-            // newdb.set(sendFeedbackObj);
-          
-            this.enableFeedbackContainer= false;
-            this.feedbackSentNotify= true;
-            setTimeout(() => {
-                this.feedbackSentNotify= false;
-                window.location.reload();
-            }, 3000);
+                this.enableFeedbackContainer = false;
+                this.feedbackSentNotify = true;
+                setTimeout(() => {
+                    this.feedbackSentNotify = false;
+                    window.location.reload();
+                }, 3000);
             }
 
 
