@@ -175,3 +175,6 @@ li{
 .list-view-cases{
     font-weight: 700;
 }
+.list-view-disttEng{
+    list-style: decimal;
+}
