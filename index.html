@@ -373,34 +373,13 @@
 
                 <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
                         srcset=""></button>
-               
+
             </div>
 
-            <br>
-            <br>
+
+
             <!-- #<sup>Don't give now, we are fixing errors </sup> -->
-            <div   class="feedback-section">
-                <button  @click="enableFeedBack" style="color: black; font-weight: bolder; width: 200px;" class=" btn btn-warning">फीडबैक <img
-                        src="images/feedback.png" alt="" srcset=""
-                       ></button>
-                <center>
-                    <div v-if="enableFeedbackContainer" class="feedback-container">
-                        <small>मोबाइल नंबर या ईमेल </small>
-                        <input v-model="feedbackMobileNumber" style="color: black; font-weight: bolder; width: 200px;" class="form-control mr-sm-2"
-                            type="search" placeholder="मोबाइल नंबर या ईमेल " aria-label="Search">
-                        <small>सुझाव, शिकायत, विचार या सवाल नीचे  टाइप करें  </small> <br> <textarea v-model="feedbackLines" name="" id="" cols="30"
-                            rows="5"></textarea>
-                            <br>
-                            <button  @click="captureFeedBack()" class="btn btn-success">फीडबैक भेजें</button>
-                    </div>
 
-                    <div v-if="feedbackSentNotify" class="feedback-notify">
-                        <img src="images/tick.png" alt=""> <br>
-                        <span class="badge badge-success">आपका फीडबैक भेजा गया </span>
-                    </div>
-                   
-                </center>
-            </div>
 
 
 
@@ -415,6 +394,32 @@
         <marquee behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा रहे है ऐसा संभव है की गलतियां हो जाएँ हमें
             अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद </marquee>
 
+
+        <nav class="navbar fixed-bottom navbar-light bg-dark">
+            <!-- <a class="navbar-brand" href="#">Fixed bottom</a> -->
+            <div class="feedback-section">
+                <button @click="enableFeedBack" style="color: black; font-weight: bolder; width: 200px;"
+                    class=" btn btn-warning">फीडबैक <img src="images/feedback.png" alt="" srcset=""></button>
+                <center>
+                    <div v-if="enableFeedbackContainer" class="feedback-container">
+                        <small>मोबाइल नंबर या ईमेल </small>
+                        <input v-model="feedbackMobileNumber" style="color: black; font-weight: bolder; width: 200px;"
+                            class="form-control mr-sm-2" type="search" placeholder="मोबाइल नंबर या ईमेल "
+                            aria-label="Search">
+                        <small>सुझाव, शिकायत, विचार या सवाल नीचे टाइप करें </small> <br> <textarea
+                            v-model="feedbackLines" name="" id="" cols="30" rows="5"></textarea>
+                        <br>
+                        <button @click="captureFeedBack()" class="btn btn-success">फीडबैक भेजें</button>
+                    </div>
+
+                    <div v-if="feedbackSentNotify" class="feedback-notify">
+                        <img src="images/tick.png" alt=""> <br>
+                        <span class="badge badge-success">आपका फीडबैक भेजा गया </span>
+                    </div>
+
+                </center>
+            </div>
+        </nav>
 
     </div>
 
