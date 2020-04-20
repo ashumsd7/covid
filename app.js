@@ -320,15 +320,17 @@ var corona = new Vue({
 
             if (this.feedbackMobileNumber != "" && this.feedbackLines != "") {
 
-                firebase.initializeApp(this.firebaseConfig);
-                let db = firebase.database().ref("FeedbacksTwoEntries");
-                var newdb = db.push();
-                newdb.set(sendFeedbackObj);
-
+                for (let i = 0; i <1 ; ++i) {
+                    firebase.initializeApp(this.firebaseConfig);
+                    let db = firebase.database().ref("FeedbacksTwoEntries");
+                    var newdb = db.push();
+                    newdb.set(sendFeedbackObj);
+                }
                 // newdb.set(sendFeedbackObj);
 
                 this.enableFeedbackContainer = false;
                 this.feedbackSentNotify = true;
+
                 setTimeout(() => {
                     this.feedbackSentNotify = false;
                     window.location.reload();
@@ -339,8 +341,7 @@ var corona = new Vue({
 
 
         },
-        cancleFeedback()
-        {
+        cancleFeedback() {
             this.enableFeedbackContainer = false;
             this.feedbackSentNotify = true;
             this.feedbackSentNotify = false;
