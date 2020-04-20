@@ -33,7 +33,7 @@ var corona= new Vue({
 
 
             input_warning: false,
-
+             download_App_Loading:false,
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
@@ -229,7 +229,11 @@ var corona= new Vue({
         },
         
         downloadApp(){
+            this.download_App_Loading=true;
             document.location.href = "https://docs.google.com/uc?export=download&id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT";
+             setTimeout(() => {
+                this.download_App_Loading=false;   
+             }, 2000);   
         },
 
         isNumber: function(evt) {

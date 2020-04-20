@@ -164,7 +164,16 @@
 
         <div class="container my-container justify-content-center">
 
-            <div style="cursor: pointer;" @click="downloadApp" id="android-app">
+
+            <div v-if="download_App_Loading">
+                <div class="spinner-border text-warning" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <br>
+                <span class=" badge badge-success"> Please Wait</span>
+            </div>
+
+            <div v-else style="cursor: pointer;" @click="downloadApp" id="android-app">
                 <b><img src="images/android.png" alt="" srcset=""> ऐप डाउनलोड <img src="images/download.png" alt=""
                         srcset="">करें </b>
             </div>
@@ -297,11 +306,12 @@
 
                 <div class="col-sm-12 my-row-3-col-1 ">
                     <center>
-                        <h5 class="StateTitle">एक नज़र उत्तर प्रदेश <img src="images/indiaup.png" alt="" srcset="">  पर 
+                        <h5 class="StateTitle">एक नज़र उत्तर प्रदेश <img src="images/indiaup.png" alt="" srcset=""> पर
                         </h5><sup>डेटा आखिर बार अपडेट किया गया {{last_updated}}</sup>
                     </center>
                     <!-- के इंडेक्स (A,B,C...) -->
-                    <MARquee> <small>अगर डेटा दिखने के आर्डर में  कुछ गड़बड़ी होती है, तो कृपया अंग्रेजी नाम  से ही कुल मामलों का मिलान
+                    <MARquee> <small>अगर डेटा दिखने के आर्डर में कुछ गड़बड़ी होती है, तो कृपया अंग्रेजी नाम से ही कुल
+                            मामलों का मिलान
                             करें, धन्यवाद |</small></MARquee>
                     <div style="display: flex;">
 
@@ -311,7 +321,8 @@
                                 <ul>
                                     <h4 class="DisttTitle">DISTRICT NAME</h4>
                                     <hr>
-                                    <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt"> {{ disttName }}
+                                    <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
+                                        {{ disttName }}
                                     </li>
 
                                 </ul>
@@ -325,7 +336,8 @@
                                 <ul>
                                     <h4 class="DisttTitle">जिलों के नाम </h4>
                                     <hr>
-                                    <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi"> {{ disttName }} </li>
+                                    <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi">
+                                        {{ disttName }} </li>
                                 </ul>
 
                             </div>
@@ -336,7 +348,8 @@
                                 <ul>
                                     <h4 class="DisttTitle">कुल मामले </h4>
                                     <hr>
-                                    <li class="list-view-cases" v-for="confcases in disttConfirmCases"> {{confcases}} </li>
+                                    <li class="list-view-cases" v-for="confcases in disttConfirmCases"> {{confcases}}
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -355,7 +368,7 @@
 
             </div>
 
-<hr>
+            <hr>
 
             <div class="row justify-content-center">
 
