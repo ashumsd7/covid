@@ -387,23 +387,23 @@
             <br>
             <br>
             <div class="feedback-section">
-                <button style="color: black; font-weight: bolder; width: 200px;" class=" btn btn-warning">FEEDBACK <img
+                <button style="color: black; font-weight: bolder; width: 200px;" class=" btn btn-warning">फीडबैक  <img
                         src="images/feedback.png" alt="" srcset=""
                         @click="enableFeedBack"></button>
                 <center>
                     <div v-if="enableFeedbackContainer" class="feedback-container">
-                        <small>Mobile Number:</small>
+                        <small>मोबाइल नंबर या ईमेल </small>
                         <input v-model="feedbackMobileNumber" style="color: black; font-weight: bolder; width: 200px;" class="form-control mr-sm-2"
-                            type="number" placeholder="मोबाइल नंबर डालें " aria-label="Search">
-                        <small>Write your Query (Suggestions/anyhting) </small> <br> <textarea v-model="feedbackLines" name="" id="" cols="30"
-                            rows="5"></textarea>
+                            type="text" placeholder="मोबाइल / इ-मेल डालें  " aria-label="Search">
+                        <sup>कोई सवाल/शिकायत/सलाह या कोई विचार जो आप साझा करना चाहते हैं ?</sup> <br> <textarea placeholder=":---यहाँ लिखे फीडबैक---:नोट: अगर आप अपना ईमेल या नंबर साझा नहीं करना चाहते तो हम आपको जवाब नहीं दे पाएंगे हाँ अगर कोई सुझाव या शिकायत होगी उसपे हम विचार अवश्य करेंगे धन्यवाद " v-model="feedbackLines" name="" id="" cols="45"
+                            rows="6"></textarea>
                             <br>
-                            <button  @click="captureFeedBack($event)" class="btn btn-success">SUBMIT</button>
+                            <button  @click="captureFeedBack($event)" class="btn btn-success">भेजें </button>
                     </div>
 
                     <div v-if="feedbackSentNotify" class="feedback-notify">
                         <img src="images/tick.png" alt="">
-                        Saved
+                        आपका सन्देश हम तक पहुंच गया है धन्यवाद 
                     </div>
                    
                 </center>
