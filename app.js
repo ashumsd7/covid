@@ -282,7 +282,6 @@ var corona= new Vue({
         },
         captureFeedBack(e){
             e.preventDefault();
-
             firebase.initializeApp(this.firebaseConfig);
          
             let db= firebase.database().ref("Feedbacks");
@@ -292,7 +291,11 @@ var corona= new Vue({
                 lines: this.feedbackLines
             }
             newdb.set(sendFeedbackObj);
-            alert(this.feedbackLines);
+            // alert(this.feedbackLines);
+            if(this.feedbackMobileNumber=="")
+            {
+                alert("आपने शायद अपने मोबाइल नंबर या ईमेल नहीं टाइप किया है, अगर आप अपना ईमेल या नंबर साझा नहीं करना चाहते , तो हम आपके सवाल का  जवाब नहीं दे पाएंगे हाँ अगर कोई सुझाव या शिकायत होगी उसपे हम विचार अवश्य करेंगे, धन्यवाद");
+            }
             this.enableFeedbackContainer= false;
             this.feedbackSentNotify= true;
             setTimeout(() => {
