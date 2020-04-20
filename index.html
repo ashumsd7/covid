@@ -140,7 +140,7 @@
 
 
             <sup>No testing updates on ICMR website for 20th April till(23:48IST)</sup>
-            <br>
+                <br>
             <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक : स्रोत: <a
                     href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_19April_9PM_IST.pdf">ICMR
                     वेबसाइट </a> </sup> <br>
@@ -312,82 +312,71 @@
                     </p>
 
 
-                    <div id="collapseExample" class="collapse  row row-3-col-1-row-1">
-                        <!-- 1 -->
-                        <div class="col-sm-4">
-                            <div class="ZERO">
-                                <div class="statesENG">
+              
 
-                                    <ul>
-                                        <h4 class="DisttTitle">DISTRICT NAME</h4>
-                                        <hr>
-                                        <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
-                                            {{ disttName }}
-                                        </li>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <div style="display: flex;">
+                                <div class="ZERO">
+                                    <div class="statesENG">
 
-                                    </ul>
+                                        <ul>
+                                            <h4 class="DisttTitle">DISTRICT NAME</h4>
+                                            <hr>
+                                            <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
+                                                {{ disttName }}
+                                            </li>
 
+                                        </ul>
+
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- 2 -->
-                        <div class="col-sm-4">
-                            <div class="one">
-                                <div class="statesHIN">
+                                <div class="one">
+                                    <div class="statesHIN">
 
-                                    <ul>
-                                        <h4 class="DisttTitle">जिलों के नाम* </h4>
-                                        <hr>
-                                        <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi">
-                                            {{ disttName }} </li>
-                                    </ul>
+                                        <ul>
+                                            <h4 class="DisttTitle">जिलों के नाम* </h4>
+                                            <hr>
+                                            <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi">
+                                                {{ disttName }} </li>
+                                        </ul>
 
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- 3 -->
-                        <div class="col-sm-2">
-                            <div class="two">
-                                <div class="cases">
-                                    <ul>
-                                        <h4 class="DisttTitle">कुल  </h4>
-                                        <hr>
-                                        <li class="list-view-cases" v-for="confcases in disttConfirmCases">
-                                            {{confcases}}
-                                        </li>
-                                    </ul>
+                                <div class="two">
+                                    <div class="cases">
+                                        <ul>
+                                            <h4 class="DisttTitle">कुल मामले </h4>
+                                            <hr>
+                                            <li class="list-view-cases" v-for="confcases in disttConfirmCases">
+                                                {{confcases}}
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
+
+                               
+                    <div class="three">
+                        <div class="cases">
+                            <ul>
+                                <h4 class="DisttTitle">नए मामले  </h4>
+                                <hr>
+                                <li style="color: red;" class="list-view-cases" v-for="confcases in disttConformNewCases"> <small> {{confcases}}</small>
+                                </li>
+                            </ul>
                         </div>
-
-                        <!-- 4                        -->
-                        <div class="col-sm-2">
-                            <div class="three">
-                                <div class="cases">
-                                    <ul>
-                                        <h4 class="DisttTitle">नए  </h4>
-                                        <hr>
-                                        <li style="color: red;" class="list-view-cases"
-                                            v-for="confcases in disttConformNewCases"> <small> {{confcases}}</small>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
                     </div>
 
-                    
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-sm-4 my-row-3-col-2">
-
+rgrfgr
 
                 </div>
 
