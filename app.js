@@ -33,10 +33,27 @@ var corona= new Vue({
 
 
             input_warning: false,
-             download_App_Loading:false,
+
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
+
+            
+            
+            enableFeedbackContainer: false,
+            feedbackMobileNumber:'',
+            feedbackLines:'',
+            feedbackSentNotify:false,
+             firebaseConfig :{
+                apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
+                authDomain: "covid-19-updates-459b6.firebaseapp.com",
+                databaseURL: "https://covid-19-updates-459b6.firebaseio.com",
+                projectId: "covid-19-updates-459b6",
+                storageBucket: "covid-19-updates-459b6.appspot.com",
+                messagingSenderId: "194285663598",
+                appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
+                measurementId: "G-8PC5ZS12T1"
+              },
             
             disttConfirmCases: [],
             disttConformNewCases: [],
@@ -186,17 +203,8 @@ var corona= new Vue({
             e.preventDefault();
             var check_MobileNumber=  confirm(" क्या ये  "+this.mobile_number +"  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
             if(check_MobileNumber){
-            const firebaseConfig = {
-                apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
-                authDomain: "covid-19-updates-459b6.firebaseapp.com",
-                databaseURL: "https://covid-19-updates-459b6.firebaseio.com",
-                projectId: "covid-19-updates-459b6",
-                storageBucket: "covid-19-updates-459b6.appspot.com",
-                messagingSenderId: "194285663598",
-                appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
-                measurementId: "G-8PC5ZS12T1"
-              };
-              firebase.initializeApp(firebaseConfig);
+        
+              firebase.initializeApp(this.firebaseConfig);
          
                 let db= firebase.database().ref("Subscribtions");
                 var newdb= db.push();
@@ -229,11 +237,7 @@ var corona= new Vue({
         },
         
         downloadApp(){
-            this.download_App_Loading=true;
             document.location.href = "https://docs.google.com/uc?export=download&id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT";
-             setTimeout(() => {
-                this.download_App_Loading=false;   
-             }, 2000);   
         },
 
         isNumber: function(evt) {
@@ -270,6 +274,30 @@ var corona= new Vue({
         },
         instagram(){
             document.location.href = "";
+        },
+
+        
+        enableFeedBack(){
+            this.enableFeedbackContainer= true;
+        },
+        captureFeedBack(e){
+            e.preventDefault();
+
+            firebase.initializeApp(this.firebaseConfig);
+         
+            let db= firebase.database().ref("Feedbacks");
+            var newdb= db.push();
+            var sendFeedbackObj={
+                number: this.feedbackMobileNumber,
+                lines: this.feedbackLines
+            }
+            newdb.set(sendFeedbackObj);
+            alert(this.feedbackLines);
+            this.enableFeedbackContainer= false;
+            this.feedbackSentNotify= true;
+            setTimeout(() => {
+                this.feedbackSentNotify= false;
+            }, 3000);
         }
 
     },
