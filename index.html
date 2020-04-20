@@ -101,7 +101,7 @@
                 <form class="form-inline">
                     <sup v-if="input_warning" class="badge badge-warning">माफ़ करिये ! केवल नंबर डाल सकते हैं </sup>
                     <img src="images/number.png" alt=""> <input @keypress="isNumber($event)" v-model="mobile_number"
-                        class="form-control mr-sm-2" type="number" placeholder="मोबाइल नंबर डालें " aria-label="Search">
+                        class="form-control mr-sm-2" type="search" placeholder="मोबाइल नंबर डालें " aria-label="Search">
                     <button @click="subscribeMobileNumber($event)" class="btn btn-outline-success my-2 my-sm-0"
                         type="submit">सब्सक्राइब </button>
                 </form>
@@ -163,7 +163,6 @@
         </div>
 
         <div class="container my-container justify-content-center">
-
 
             <div v-if="download_App_Loading">
                 <div class="spinner-border text-warning" role="status">
@@ -372,7 +371,7 @@
 
             <div class="row justify-content-center">
 
-                <button  type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
+                <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
                         srcset=""></button>
                 <!-- <button type="button" @click="facebook" class="btn btn-secondary"><img src="images/facebook.png" alt=""
                         srcset=""></button> -->
@@ -387,38 +386,30 @@
             <br>
             <br>
             <div class="feedback-section">
-                <button  @click="enableFeedBack" style="color: black; font-weight: bolder; width: 200px;" class=" btn btn-warning">फीडबैक  <img
+                <button style="color: black; font-weight: bolder; width: 200px;" class=" btn btn-warning">FEEDBACK <img
                         src="images/feedback.png" alt="" srcset=""
-                       ></button>
+                        @click="enableFeedBack"></button>
                 <center>
                     <div v-if="enableFeedbackContainer" class="feedback-container">
-                        <small>मोबाइल नंबर या ईमेल </small>
+                        <small>Mobile Number:</small>
                         <input v-model="feedbackMobileNumber" style="color: black; font-weight: bolder; width: 200px;" class="form-control mr-sm-2"
-                            type="text" placeholder="मोबाइल / इ-मेल डालें  " aria-label="Search">
-                        <sup>कोई सवाल/शिकायत/सलाह या कोई विचार जो आप साझा करना चाहते हैं ?</sup> <br> <textarea placeholder=":---यहाँ लिखे फीडबैक---:" v-model="feedbackLines" name="" id="" cols="35"
-                            rows="6"></textarea>
+                            type="search" placeholder="मोबाइल नंबर डालें " aria-label="Search">
+                        <small>Write your Query (Suggestions/anyhting) </small> <br> <textarea v-model="feedbackLines" name="" id="" cols="30"
+                            rows="5"></textarea>
                             <br>
-                            <button  @click="captureFeedBack($event)" class="btn btn-success">भेजें </button>
+                            <button  @click="captureFeedBack($event)" class="btn btn-success">SUBMIT</button>
                     </div>
 
                     <div v-if="feedbackSentNotify" class="feedback-notify">
-                        <img src="images/tick.png" alt=""> <br>
-                        आपका सन्देश हम तक पहुंच गया है, धन्यवाद 
+                        <img src="images/tick.png" alt="">
+                        Saved
                     </div>
                    
                 </center>
             </div>
 
-            
 
 
-
-
-            <!-- <br>
-            <center>
-                <h5>अधिक जानकारी के लिए </h5>
-                स्रोत : <a href="http://www.covid19india.org/">Covid19.org</a>
-            </center> -->
             <br>
             ये वेबसाइट <img
                 src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"

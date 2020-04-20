@@ -16,7 +16,6 @@ var corona= new Vue({
             recovered_td: '',
             last_updated:'',
 
-            download_App_Loading:false,
 
             total_tested:'  4,01,586 ',
             total_ind_tested:'3,83,985',
@@ -34,12 +33,12 @@ var corona= new Vue({
 
 
             input_warning: false,
+            download_App_Loading:false,
 
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
 
-            
             
             enableFeedbackContainer: false,
             feedbackMobileNumber:'',
@@ -55,7 +54,10 @@ var corona= new Vue({
                 appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
                 measurementId: "G-8PC5ZS12T1"
               },
-            
+
+
+
+
             disttConfirmCases: [],
             disttConformNewCases: [],
             listOfDistt:[],
@@ -204,7 +206,7 @@ var corona= new Vue({
             e.preventDefault();
             var check_MobileNumber=  confirm(" क्या ये  "+this.mobile_number +"  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
             if(check_MobileNumber){
-        
+          
               firebase.initializeApp(this.firebaseConfig);
          
                 let db= firebase.database().ref("Subscribtions");
@@ -240,9 +242,9 @@ var corona= new Vue({
         downloadApp(){
             this.download_App_Loading=true;
             document.location.href = "https://docs.google.com/uc?export=download&id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT";
-            setTimeout(() => {
-                this.download_App_Loading=false;
-            }, 5000);
+             setTimeout(() => {
+                this.download_App_Loading=false;   
+             }, 2000);   
         },
 
         isNumber: function(evt) {
@@ -281,12 +283,13 @@ var corona= new Vue({
             document.location.href = "";
         },
 
-        
+
         enableFeedBack(){
             this.enableFeedbackContainer= true;
         },
         captureFeedBack(e){
             e.preventDefault();
+
             firebase.initializeApp(this.firebaseConfig);
          
             let db= firebase.database().ref("Feedbacks");
@@ -295,37 +298,13 @@ var corona= new Vue({
                 number: this.feedbackMobileNumber,
                 lines: this.feedbackLines
             }
-           
-
-            if(this.feedbackMobileNumber=="" && this.feedbackLines!="" )
-            {
-                alert("आपने शायद मोबाइल नंबर या ईमेल नहीं टाइप किया है, अगर आप अपना ईमेल या नंबर साझा नहीं करना चाहते , तो हम आपके सवाल का जवाब नहीं दे पाएंगे हाँ अगर कोई सुझाव या शिकायत होगी उसपे हम विचार अवश्य करेंगे, धन्यवाद");
-                
-                if(this.feedbackLines!="")
-                {
-                    newdb.set(sendFeedbackObj);
-                    this.enableFeedbackContainer= false;
-                    this.feedbackSentNotify= true;
-                    setTimeout(() => {
-                        this.feedbackSentNotify= false;
-                        window.location.reload();
-                    }, 3000);
-                }
-            }
-            
-            if(this.feedbackMobileNumber!="" && this.feedbackLines=="" )
-            {
-                alert("माफ़ करिये बिना फीडबैक टाइप किये कुछ भी शेयर नहीं किया जा सकता पुनः प्रयास करें धन्यवाद ")
-                window.location.reload();
-            }   
-
-            if(this.feedbackMobileNumber=="" && this.feedbackLines=="")
-            {
-                alert("माफ़ करिये न तो आपने फीडबैक में कुछ लिखा है न कोई संपर्क शेयर किया है , फिर से प्रयास करें | धन्यवाद  ")
-                window.location.reload();
-            }
-           
-           
+            newdb.set(sendFeedbackObj);
+            alert(this.feedbackLines);
+            this.enableFeedbackContainer= false;
+            this.feedbackSentNotify= true;
+            setTimeout(() => {
+                this.feedbackSentNotify= false;
+            }, 3000);
         }
 
     },
