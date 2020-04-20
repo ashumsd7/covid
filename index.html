@@ -391,23 +391,29 @@
             अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद </marquee>
 
 
-        <nav class="navbar fixed-bottom navbar-light bg-dark">
+        <nav class="navbar fixed-bottom navbar-light bg-light">
             <!-- <a class="navbar-brand" href="#">Fixed bottom</a> -->
             <div class="feedback-section">
                 <button @click="enableFeedBack" style="color: black; font-weight: bolder; width: 200px;"
                     class=" btn btn-warning">फीडबैक दें <img src="images/feedback.png" alt="" srcset=""></button>
-              <small style="color: blanchedalmond;">Visitor Counter</small>   <img
+
+                
+                    
+                    
+              <small style="color: rgb(236, 22, 22);">Visitor Counter</small>   <img
                     src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
                     title="User Stats" Alt="VISITOR COUNTER" border="0">
                 <center>
                     <div v-if="enableFeedbackContainer" class="feedback-container">
-                        <small style="color: blanchedalmond;">मोबाइल नंबर या ईमेल </small>
+                        <small style="color: rgb(17, 11, 1);">मोबाइल नंबर या ईमेल </small>
                         <input v-model="feedbackMobileNumber" style="color: black; font-weight: bolder; width: 200px;"
                             class="form-control mr-sm-2" type="search" placeholder="मोबाइल नंबर या ईमेल "
                             aria-label="Search">
-                        <small style="color: blanchedalmond;">सुझाव, शिकायत, विचार या सवाल नीचे टाइप करें </small> <br>
+                        <small style="color: rgb(10, 6, 1);">सुझाव, शिकायत, विचार या सवाल नीचे टाइप करें </small> <br>
                         <textarea v-model="feedbackLines" name="" id="" cols="30" rows="5"></textarea>
                         <br>
+                        
+                        <button @click="cancleFeedback()" class="btn btn-danger">कैंसिल करें </button>
                         <button @click="captureFeedBack()" class="btn btn-success">फीडबैक भेजें</button>
                     </div>
 

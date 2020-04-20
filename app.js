@@ -338,7 +338,12 @@ var corona = new Vue({
 
 
 
+        },
+        cancleFeedback()
+        {
+            this.enableFeedbackContainer = false;
+            this.feedbackSentNotify = true;
+            this.feedbackSentNotify = false;
         }
-
     },
 })
