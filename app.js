@@ -298,13 +298,49 @@ var corona= new Vue({
                 number: this.feedbackMobileNumber,
                 lines: this.feedbackLines
             }
+
+            if(this.feedbackMobileNumber=="" && this.feedbackLines=="")
+            {
+                alert("फीडबैक में बिना कुछ टाइप किये कुछ भेजा नहीं जा सकता पुनः प्रयास करें ,धन्यवाद |");
+                window.location.reload();
+            }
+            
+            if(this.feedbackMobileNumber!="" && this.feedbackLines=="")
+            {
+                alert("शायद आप फीडबैक लिखना भूल गए पुनः प्रयास करें ");
+                window.location.reload();
+            }
+
+            if(this.feedbackMobileNumber=="" && this.feedbackLines!="")
+            {
+                alert("आपने मोबाइल नंबर या ईमेल नहीं टाइप किया है अगर आप सवाल पूछ रहे है तो हम आपका जवाब नहीं दे पाएंगे आपके सुझाव और शिकायत का स्वागत है | धन्यवाद ");
+          
             newdb.set(sendFeedbackObj);
-            alert(this.feedbackLines);
+          
             this.enableFeedbackContainer= false;
             this.feedbackSentNotify= true;
             setTimeout(() => {
                 this.feedbackSentNotify= false;
+                window.location.reload();
             }, 3000);
+            }
+
+            if(this.feedbackMobileNumber!="" && this.feedbackLines!="")
+            {
+                
+            newdb.set(sendFeedbackObj);
+          
+            this.enableFeedbackContainer= false;
+            this.feedbackSentNotify= true;
+            setTimeout(() => {
+                this.feedbackSentNotify= false;
+                window.location.reload();
+            }, 3000);
+            }
+
+
+
+
         }
 
     },
