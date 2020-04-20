@@ -276,26 +276,15 @@
                         <p>{{recovered_tt}} <img src="images/sprinter.png" alt="" srcset=""></p>
 
                     </div>
-
-
                 </div>
 
                 <div class="col-sm-4 my-row-2-col-3">
-
-
-
                     <div id="deaths-tt">
                         <small>कुल मौतें </small>
 
                         <p>{{deaths_tt}} <img src="images/death.png" alt="" srcset=""></p>
                     </div>
-
-
                 </div>
-
-
-
-
             </div>
 
 
@@ -308,55 +297,75 @@
                         <h5 class="StateTitle">एक नज़र उत्तर प्रदेश <img src="images/indiaup.png" alt="" srcset=""> पर
                         </h5><sup>डेटा आखिर बार अपडेट किया गया {{last_updated}}</sup>
                     </center>
-                    <!-- के इंडेक्स (A,B,C...) -->
-                    <MARquee> <small>अगर डेटा दिखने के आर्डर में कुछ गड़बड़ी होती है, तो कृपया अंग्रेजी नाम से ही कुल
-                            मामलों का मिलान
-                            करें, धन्यवाद |</small></MARquee>
-                    <div style="display: flex;">
 
-                        <div class="ZERO">
-                            <div class="statesENG">
 
-                                <ul>
-                                    <h4 class="DisttTitle">DISTRICT NAME</h4>
-                                    <hr>
-                                    <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
-                                        {{ disttName }}
-                                    </li>
 
-                                </ul>
+                    <p>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            देखने के लिए क्लिक करें
+                        </a>
+                        <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Button with data-target
+                        </button> -->
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+
+                            <!-- के इंडेक्स (A,B,C...) -->
+                            <MARquee> <small>अगर डेटा दिखने के आर्डर में कुछ गड़बड़ी होती है, तो कृपया अंग्रेजी नाम से ही
+                                    कुल
+                                    मामलों का मिलान
+                                    करें, धन्यवाद |</small></MARquee>
+                            <div style="display: flex;">
+
+                                <div class="ZERO">
+                                    <div class="statesENG">
+
+                                        <ul>
+                                            <h4 class="DisttTitle">DISTRICT NAME</h4>
+                                            <hr>
+                                            <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
+                                                {{ disttName }}
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <div class="statesHIN">
+
+                                        <ul>
+                                            <h4 class="DisttTitle">जिलों के नाम </h4>
+                                            <hr>
+                                            <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi">
+                                                {{ disttName }} </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <div class="two">
+                                    <div class="cases">
+                                        <ul>
+                                            <h4 class="DisttTitle">कुल मामले </h4>
+                                            <hr>
+                                            <li class="list-view-cases" v-for="confcases in disttConfirmCases">
+                                                {{confcases}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="three">
+                        <h6 tag="li" v-for="confNewcases in disttConformNewCases">{{confNewcases}}</h6> 
+                    </div> -->
 
                             </div>
+
                         </div>
-
-                        <div class="one">
-                            <div class="statesHIN">
-
-                                <ul>
-                                    <h4 class="DisttTitle">जिलों के नाम </h4>
-                                    <hr>
-                                    <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi">
-                                        {{ disttName }} </li>
-                                </ul>
-
-                            </div>
-                        </div>
-
-                        <div class="two">
-                            <div class="cases">
-                                <ul>
-                                    <h4 class="DisttTitle">कुल मामले </h4>
-                                    <hr>
-                                    <li class="list-view-cases" v-for="confcases in disttConfirmCases"> {{confcases}}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- <div class="three">
-                            <h6 tag="li" v-for="confNewcases in disttConformNewCases">{{confNewcases}}</h6> 
-                        </div> -->
-
                     </div>
                 </div>
 
@@ -369,20 +378,14 @@
 
             <hr>
 
+
             <div class="row justify-content-center">
 
                 <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
                         srcset=""></button>
 
             </div>
-
-
-
             <!-- #<sup>Don't give now, we are fixing errors </sup> -->
-
-
-
-
             <br>
             ये वेबसाइट <img
                 src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
@@ -399,16 +402,18 @@
             <!-- <a class="navbar-brand" href="#">Fixed bottom</a> -->
             <div class="feedback-section">
                 <button @click="enableFeedBack" style="color: black; font-weight: bolder; width: 200px;"
-                    class=" btn btn-warning">फीडबैक दें  <img src="images/feedback.png" alt="" srcset=""></button>
-                    <!-- <button style="color: rgb(6, 17, 2); font-weight: bolder;"  class="btn btn-light"> कुल मामले {{confirmed_tt}}</button> -->
+                    class=" btn btn-warning">फीडबैक दें <img src="images/feedback.png" alt="" srcset=""></button>
+              <small style="color: blanchedalmond;">Visitor Counter</small>   <img
+                    src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
+                    title="User Stats" Alt="VISITOR COUNTER" border="0">
                 <center>
                     <div v-if="enableFeedbackContainer" class="feedback-container">
                         <small style="color: blanchedalmond;">मोबाइल नंबर या ईमेल </small>
                         <input v-model="feedbackMobileNumber" style="color: black; font-weight: bolder; width: 200px;"
                             class="form-control mr-sm-2" type="search" placeholder="मोबाइल नंबर या ईमेल "
                             aria-label="Search">
-                        <small style="color: blanchedalmond;">सुझाव, शिकायत, विचार या सवाल नीचे टाइप करें </small> <br> <textarea
-                            v-model="feedbackLines" name="" id="" cols="30" rows="5"></textarea>
+                        <small style="color: blanchedalmond;">सुझाव, शिकायत, विचार या सवाल नीचे टाइप करें </small> <br>
+                        <textarea v-model="feedbackLines" name="" id="" cols="30" rows="5"></textarea>
                         <br>
                         <button @click="captureFeedBack()" class="btn btn-success">फीडबैक भेजें</button>
                     </div>
