@@ -193,8 +193,18 @@ var corona = new Vue({
                         this.disttConfirmCases.push(arr[i].confirmed);
                         this.disttConformNewCases.push(arr[i].delta.confirmed)
                     }
-                    console.log(this.disttConfirmCases); //list of cases success all distt
-                    console.log(this.disttConformNewCases); //list of new cases of all distt               
+                    for(let i in this.disttConformNewCases){
+                        if(this.disttConformNewCases[i]==0)
+                        {
+                            this.disttConformNewCases[i]="-";
+                        }
+                    }
+
+
+
+
+                    //console.log(this.disttConfirmCases); //list of cases success all distt
+                    //console.log(this.disttConformNewCases); //list of new cases of all distt               
                 })
         },
 

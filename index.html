@@ -352,9 +352,17 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="three">
-                        <h6 tag="li" v-for="confNewcases in disttConformNewCases">{{confNewcases}}</h6> 
-                    </div> -->
+                               
+                    <div class="three">
+                        <div class="cases">
+                            <ul>
+                                <h4 class="DisttTitle">नए मामले  </h4>
+                                <hr>
+                                <li style="color: red;" class="list-view-cases" v-for="confcases in disttConformNewCases"> <small> {{confcases}}</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                             </div>
 
