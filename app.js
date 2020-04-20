@@ -160,6 +160,11 @@ var corona= new Vue({
                         {
                            this.listOfDistt[i]= "Noida";
                         }
+
+                        if( this.listOfDistt[i]=="Sant Kabir Nagar")
+                        {
+                           this.listOfDistt[i]= "SantKabirNagar";
+                        }
                         
                         if( this.listOfDistt[i]=="Unknown")
                         {
