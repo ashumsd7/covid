@@ -146,15 +146,13 @@ cursor: pointer;
     /* border: 1px solid red; */
 }
 li{
-    list-style:none;
+    list-style: upper-alpha;
 }
 .NameList{
-    list-style: decimal;
+    list-style: upper-alpha;
 }
 
-.list-view{
-    font-weight: bold;
-}
+
 .DisttTitle{
     color: rgb(1, 1, 5);
     background-color: chartreuse;
@@ -165,4 +163,15 @@ li{
     color: black;
     border-radius: 5px;
     box-shadow: 2px 3px 4px gray;
+}
+.list-view-disttEng
+{
+    font-weight: 500;
+}
+.list-view-disttHin{
+    font-weight: 600;
+
+}
+.list-view-cases{
+    font-weight: 700;
 }

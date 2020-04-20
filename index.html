@@ -301,7 +301,7 @@
                         </h5><sup>डेटा आखिर बार अपडेट किया गया {{last_updated}}</sup>
                     </center>
                    
-                    <MARquee> <small>अगर डेटा में कुछ गड़बड़ी होती है, तो कृपया अंग्रेजी नाम से ही कुल मामलों का मिलान
+                    <MARquee> <small>अगर डेटा दिखने के आर्डर में  कुछ गड़बड़ी होती है, तो कृपया अंग्रेजी नाम के इंडेक्स (A,B,C...) से ही कुल मामलों का मिलान
                             करें, धन्यवाद |</small></MARquee>
                     <div style="display: flex;">
 
@@ -311,7 +311,7 @@
                                 <ul>
                                     <h4 class="DisttTitle">DISTRICT NAME</h4>
                                     <hr>
-                                    <li class="NameList list-view" v-for="disttName in listOfDistt"> {{ disttName }}
+                                    <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt"> {{ disttName }}
                                     </li>
 
                                 </ul>
@@ -325,7 +325,7 @@
                                 <ul>
                                     <h4 class="DisttTitle">जिलों के नाम </h4>
                                     <hr>
-                                    <li class="list-view" v-for="disttName in listOfDisttHindi"> {{ disttName }} </li>
+                                    <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi"> {{ disttName }} </li>
                                 </ul>
 
                             </div>
@@ -336,7 +336,7 @@
                                 <ul>
                                     <h4 class="DisttTitle">कुल मामले </h4>
                                     <hr>
-                                    <li class="list-view" v-for="confcases in disttConfirmCases"> {{confcases}} </li>
+                                    <li class="list-view-cases" v-for="confcases in disttConfirmCases"> {{confcases}} </li>
                                 </ul>
                             </div>
                         </div>
