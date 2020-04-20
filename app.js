@@ -16,6 +16,7 @@ var corona= new Vue({
             recovered_td: '',
             last_updated:'',
 
+            download_App_Loading:false,
 
             total_tested:'  4,01,586 ',
             total_ind_tested:'3,83,985',
@@ -237,7 +238,11 @@ var corona= new Vue({
         },
         
         downloadApp(){
+            this.download_App_Loading=true;
             document.location.href = "https://docs.google.com/uc?export=download&id=1OTxCrJHCChbOW0NpZZVLBrVEV55_jKOT";
+            setTimeout(() => {
+                this.download_App_Loading=false;
+            }, 5000);
         },
 
         isNumber: function(evt) {
@@ -290,17 +295,37 @@ var corona= new Vue({
                 number: this.feedbackMobileNumber,
                 lines: this.feedbackLines
             }
-            newdb.set(sendFeedbackObj);
-            // alert(this.feedbackLines);
-            if(this.feedbackMobileNumber=="")
+           
+
+            if(this.feedbackMobileNumber=="" && this.feedbackLines!="" )
             {
                 alert("आपने शायद मोबाइल नंबर या ईमेल नहीं टाइप किया है, अगर आप अपना ईमेल या नंबर साझा नहीं करना चाहते , तो हम आपके सवाल का जवाब नहीं दे पाएंगे हाँ अगर कोई सुझाव या शिकायत होगी उसपे हम विचार अवश्य करेंगे, धन्यवाद");
+                
+                if(this.feedbackLines!="")
+                {
+                    newdb.set(sendFeedbackObj);
+                    this.enableFeedbackContainer= false;
+                    this.feedbackSentNotify= true;
+                    setTimeout(() => {
+                        this.feedbackSentNotify= false;
+                        window.location.reload();
+                    }, 3000);
+                }
             }
-            this.enableFeedbackContainer= false;
-            this.feedbackSentNotify= true;
-            setTimeout(() => {
-                this.feedbackSentNotify= false;
-            }, 3000);
+            
+            if(this.feedbackMobileNumber!="" && this.feedbackLines=="" )
+            {
+                alert("माफ़ करिये बिना फीडबैक टाइप किये कुछ भी शेयर नहीं किया जा सकता पुनः प्रयास करें धन्यवाद ")
+                window.location.reload();
+            }   
+
+            if(this.feedbackMobileNumber=="" && this.feedbackLines=="")
+            {
+                alert("माफ़ करिये न तो आपने फीडबैक में कुछ लिखा है न कोई संपर्क शेयर किया है , फिर से प्रयास करें | धन्यवाद  ")
+                window.location.reload();
+            }
+           
+           
         }
 
     },
