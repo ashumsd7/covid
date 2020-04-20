@@ -146,10 +146,10 @@ cursor: pointer;
     /* border: 1px solid red; */
 }
 li{
-    list-style: upper-alpha;
+    list-style: none;
 }
 .NameList{
-    list-style: upper-alpha;
+    /* list-style: upper-alpha; */
 }
 
 

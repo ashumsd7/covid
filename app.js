@@ -44,7 +44,7 @@ var corona= new Vue({
             listOfDisttHindi:["आगरा",
                 'गाज़ियाबाद',
                 'लखनऊ',
-                'गौतमबुद्धनगर',
+                'नॉएडा',
                 'खेरी',
                 'मुरादाबाद',
                 'वाराणसी',
@@ -153,7 +153,19 @@ var corona= new Vue({
                         arr.push(disttValues);
                         this.listOfDistt.push(distt);
                     }
-
+                    // changing Name of Distt
+                    for(let i in  this.listOfDistt)
+                    {
+                        if( this.listOfDistt[i]=="Gautam Buddha Nagar")
+                        {
+                           this.listOfDistt[i]= "Noida";
+                        }
+                        
+                        if( this.listOfDistt[i]=="Unknown")
+                        {
+                             this.listOfDisttHindi.push("अज्ञात");
+                        }
+                    }
                    
 
                     for (let i in arr) {
