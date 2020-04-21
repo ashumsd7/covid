@@ -39,17 +39,7 @@ var corona = new Vue({
             subscribe_contaoner_flag: true,
 
 
-            firebaseConfig: {
-                apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
-                authDomain: "covid-19-updates-459b6.firebaseapp.com",
-                databaseURL: "https://covid-19-updates-459b6.firebaseio.com",
-                projectId: "covid-19-updates-459b6",
-                storageBucket: "covid-19-updates-459b6.appspot.com",
-                messagingSenderId: "194285663598",
-                appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
-                measurementId: "G-8PC5ZS12T1"
-            },
-
+           
 
             disttConfirmCases: [],
             disttConformNewCases: [],
@@ -109,8 +99,9 @@ var corona = new Vue({
                 'नहीं पता '],
 
             showFeedbackForm: false,
-            showSubscribeForm: false
+            showSubscribeForm: false,
 
+            wistleCount: '',
 
 
 
@@ -205,36 +196,55 @@ var corona = new Vue({
                 })
         },
 
-        // subscribeMobileNumber(e) {
-        //     e.preventDefault();
-        //     var check_MobileNumber = confirm(" क्या ये  " + this.mobile_number + "  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
-        //     if (check_MobileNumber) {
+        playWistle() {
+ 
+            firebaseConfig= {
+                apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
+                authDomain: "covid-19-updates-459b6.firebaseapp.com",
+                databaseURL: "https://covid-19-updates-459b6.firebaseio.com",
+                projectId: "covid-19-updates-459b6",
+                storageBucket: "covid-19-updates-459b6.appspot.com",
+                messagingSenderId: "194285663598",
+                appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
+                measurementId: "G-8PC5ZS12T1"
+            },
+            firebase.initializeApp(firebaseConfig);
+            var db = firebase.database().ref("NEwDB");
+          
+           
+            // setTimeout(() => {
+            //     this.reloadPage();
+            // }, 2000);
 
-        //         firebase.initializeApp(this.firebaseConfig);
+            db.on("value",function(snapshot){ 
+                var data= snapshot.val();
+                console.log(data);
+             var objlen= Object.keys(data).length;
 
-        //         let db = firebase.database().ref("Subscribtions");
-        //         var newdb = db.push();
-        //         newdb.set(this.mobile_number);
-
-        //         this.subscribe_flag = false;
-        //         this.notify = true;
-
-
-
-        //         setTimeout(() => {
-        //             this.notify = false;
-        //             alert(" अपडेट्स हेतु अपने आप को सब्सक्राइब करने के लिए आपका आभार | हम आपको प्रतिदिन एक मैसेज आपके इनबॉक्स में भेजंगे, जिसमे तब तक की टेस्टिंग, पॉज़ीटिव और ठीक होने वाले मामलो की संख्या रहेगी । नोट :  मैसेज केवल नॉन डीएनडी (Do not Disturb) Numbers पर ही जायेगा | ये सुविधा निःशुल्क है |  अपने घर पर रहिये सुरक्षित रहिये धन्यवाद");
-        //             window.location.reload();
-        //         }, 3000);
+             var wistleArray=[];
+             for(const[key,val] of Object.entries(data)){
+                wistleArray.push(val);
+             }
+             console.log(wistleArray[objlen-1]);
 
 
+            var latestWistleCount= wistleArray[objlen-1];
+
+            this.wistleCount= latestWistleCount+1;
+            console.log(this.wistleCount);
+
+            })
+
+            var newdb = db.push();
+            newdb.set(5);
 
 
-        //     }
-        //     else {
-        //         window.location.reload();
-        //     }
-        // },
+        },
+
+
+        reloadPage(){
+            location.reload(true);
+        },
 
 
 

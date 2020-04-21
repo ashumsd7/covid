@@ -56,14 +56,25 @@
         <!-- first nav bar start -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="ashumsd7.github.io/covid/"> <img src="images/stopcovid.png" alt=""></a>
+
+            <!-- notify btn -->
+            <!-- <button @click="playWistle" type="button" class="btn btn-primary">
+                <img src="./images/wistle.png" alt="" srcset=""> <span class="badge badge-light">{{wistleCount}}</span>
+                <span class="sr-only"></span>
+              </button> -->
+
+
             <iframe src="https://giphy.com/embed/3o6wrAGrygEMdv5zdC" width="50" height="50" frameBorder="0"
                 class="giphy-embed" allowFullScreen></iframe>
+
+                
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
+                    
                     <li class="nav-item active">
                         <a class="nav-link" href="https://ashumsd7.github.io/covid/">होम <span
                                 class="sr-only">(current)</span></a>
@@ -124,7 +135,7 @@
             </div>
 
             <div v-if="feedback_conatiner_flag" class="feedbackBtnDiv">
-                <span @click="showFeedbackFormMethod" class=" badge badge-danger" style="cursor: pointer;">
+                <span @click="showFeedbackFormMethod" class=" badge badge-success" style="cursor: pointer;">
                     <img src="images/feedback.png" alt="" srcset=""> फीडबैक दें</span>
             </div>
             <div v-else class="hideFeedbackBtnDIv">
@@ -156,13 +167,6 @@
                 
                 </div>
 
-
-                <marquee behavior="" direction=""><sup> अगर आप एंड्राइड ऐप्प का प्रयोग कर रहे है तो डेटा देखने के अलावा
-                        कुछ फंक्शन्स हो सकता है काम न कर रहे हो एंड्राइड ऐप्प अभी डेवलपमेंट मोड में है आप डेटा देखने के
-                        लिए ही उसका प्रयोग करिये, धन्यवाद |
-                        || अगर आपने SMS अपडेट के लिए सब्सक्राइब किया है, SMS सुविधा जल्द शुरू होगी, घर पर रहिये ख्याल
-                        रखिये धन्यवाद
-                    </sup> </marquee>
             </div>
         </div>
         <!-- small first  container end -->
@@ -171,18 +175,15 @@
         <!-- important info section start -->
         <div id="imporatant-info">
 
-         
-
-            <!-- <sup>No testing updates on ICMR website for 20th April till(20:04IST)</sup> -->
-            <br>
             <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक : स्रोत: <a
                     href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_21April_9PM_IST.pdf">ICMR
                     वेबसाइट </a> </sup> <br>
 
             <div class="movable-info">
                 <img src="images/speaker.png" alt="" srcset="">
-                <marquee scrollamount="4" behavior="" direction="">पिछले 24 घण्टे में {{date_icmr}} बजे की रिपोर्ट के
-                    अनुसार <b>{{ today_tested_icmr}}</b> सैंपल टेस्ट में <b>{{today_positive_icmr}} </b> पॉजिटिव पाए गए
+                <marquee scrollamount="5" behavior="" direction="">पिछले 24 घण्टे में {{date_icmr}} बजे की रिपोर्ट के
+                    अनुसार <b>{{ today_tested_icmr}}</b> सैंपल टेस्ट किये गए 
+                    <!-- में <b>{{today_positive_icmr}} </b> पॉजिटिव पाए गए -->
                     |</marquee>
 
             </div>
@@ -201,19 +202,7 @@
 
 
             <!-- noraml information start         -->
-            <div v-if="download_App_Loading">
-                <div class="spinner-border text-warning" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-                <br>
-                <span class=" badge badge-success"> Please Wait</span>
-            </div>
-
-            <div v-else style="cursor: pointer;" @click="downloadApp" id="android-app">
-                <b><img src="images/android.png" alt="" srcset=""> ऐप डाउनलोड <img src="images/download.png" alt=""
-                        srcset="">करें </b>
-            </div>
-            <hr>
+           
 
             <!-- noraml information end         -->
 
@@ -493,7 +482,29 @@
 
         <!-- main big container end -->
 
-        <marquee behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा रहे है ऐसा संभव है की गलतियां हो जाएँ हमें
+
+
+        <!-- app download-start -->
+        <center>
+
+        <div v-if="download_App_Loading">
+            <div class="spinner-border text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <br>
+            <span class=" badge badge-success"> Please Wait</span>
+        </div>
+
+        <div v-else style="cursor: pointer;" @click="downloadApp" id="android-app">
+            <b><img src="images/android.png" alt="" srcset=""> ऐप डाउनलोड <img src="images/download.png" alt=""
+                    srcset="">करें </b>
+        </div>
+        <hr>
+     </center>
+
+            <!-- app download-end -->     
+
+        <marquee style="background-color: antiquewhite;" behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा रहे है ऐसा संभव है की गलतियां हो जाएँ हमें
             अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद </marquee>
 
 
@@ -506,6 +517,7 @@
     <script src="app.js"></script>
     <script src="scripts/thirdparty.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase.js"></script>
 
 
 </body>
