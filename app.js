@@ -270,7 +270,7 @@ var corona = new Vue({
         },
 
         showSubscribeFormMethod(){
-          alert("dd");
+         ;
           this.subscribe_contaoner_flag=false;
           this.showSubscribeForm= true;
         
@@ -278,14 +278,14 @@ var corona = new Vue({
         },
 
         showFeedbackFormMethod(){
-            alert("d");
+           
             this.feedback_conatiner_flag=false;
             this.showFeedbackForm= true;
   
         },
 
         hideFeedBackForm(){
-            alert("hide")
+           
             this.feedback_conatiner_flag=true;
             this.showFeedbackForm= false;
         },
