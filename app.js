@@ -27,16 +27,16 @@ var corona = new Vue({
             result: '',
             result1: '',
 
-          
 
-        
+
+
             download_App_Loading: false,
 
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
-            feedback_conatiner_flag:false,
-            subscribe_contaoner_flag:false,
+            feedback_conatiner_flag: true,
+            subscribe_contaoner_flag: true,
 
 
             firebaseConfig: {
@@ -72,7 +72,7 @@ var corona = new Vue({
                 'फिरोजाबाद',
                 'नोएडा',
                 'गाज़ियाबाद',
-               'गाजीपुर',
+                'गाजीपुर',
                 'गोंडा',
                 'हापुड़',
                 'हरदोई',
@@ -106,7 +106,10 @@ var corona = new Vue({
                 'सुल्तानपुर',
                 'उन्नाव',
                 'वाराणसी',
-                'नहीं पता ' ]
+                'नहीं पता '],
+
+            showFeedbackForm: false,
+            showSubscribeForm: false
 
 
 
@@ -130,14 +133,13 @@ var corona = new Vue({
                     this.confirmed_td = JSON.parse(this.result).data.statewise[0].deltaconfirmed;
                     this.deaths_td = JSON.parse(this.result).data.statewise[0].deltadeaths;
                     this.recovered_td = JSON.parse(this.result).data.statewise[0].deltarecovered;
-
                     this.last_updated = JSON.parse(this.result).data.statewise[0].lastupdatedtime;
 
 
 
                 })
 
-           
+
 
 
 
@@ -187,10 +189,9 @@ var corona = new Vue({
                         this.disttConfirmCases.push(arr[i].confirmed);
                         this.disttConformNewCases.push(arr[i].delta.confirmed)
                     }
-                    for(let i in this.disttConformNewCases){
-                        if(this.disttConformNewCases[i]==0)
-                        {
-                            this.disttConformNewCases[i]="--";
+                    for (let i in this.disttConformNewCases) {
+                        if (this.disttConformNewCases[i] == 0) {
+                            this.disttConformNewCases[i] = "--";
                         }
                     }
 
@@ -234,13 +235,6 @@ var corona = new Vue({
         // },
 
 
-        showMobileDialogue() {
-            
-            
-            this.subscribe_contaoner_flag= true;
-            // document.location.href = "https://forms.gle/r1LauU4dcTp6wrKs8";
-            
-        },
 
         downloadApp() {
             this.download_App_Loading = true;
@@ -270,21 +264,36 @@ var corona = new Vue({
         // my: function () {
         //     alert("Aads");
         // },
-       
+
         twitter() {
             document.location.href = "https://twitter.com/WeWillStopCovid";
         },
-       
 
-        enableFeedBack() {
-            // document.location.href = "https://forms.gle/GuNWfh2nvFpP58Qu6";
-            this.feedback_conatiner_flag= true;
-        },
+        showSubscribeFormMethod(){
+          alert("dd");
+          this.subscribe_contaoner_flag=false;
+          this.showSubscribeForm= true;
         
-        cancleFeedback() {
-            this.enableFeedbackContainer = false;
-            this.feedbackSentNotify = true;
-            this.feedbackSentNotify = false;
+
+        },
+
+        showFeedbackFormMethod(){
+            alert("d");
+            this.feedback_conatiner_flag=false;
+            this.showFeedbackForm= true;
+  
+        },
+
+        hideFeedBackForm(){
+            alert("hide")
+            this.feedback_conatiner_flag=true;
+            this.showFeedbackForm= false;
+        },
+        hideSubscribeForm(){
+            this.subscribe_contaoner_flag=true;
+          this.showSubscribeForm= false;
         }
+
+
     },
 })

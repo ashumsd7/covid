@@ -114,12 +114,24 @@
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true" width="300" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div> -->
             <div class="Subscribe-btn">
-                <span @click="showMobileDialogue" class=" badge badge-success">
-                    <img src="images/sms.png" alt="">   पाएं SMS अपडेट </span>
+                <div v-if="subscribe_contaoner_flag " class="smsUpdateBtnDiv">
+                    <span @click="showSubscribeFormMethod" class=" badge badge-success">
+                        <img src="images/sms.png" alt="">   पाएं SMS अपडेट </span>
+                </div>  
+                <div v-else class="hideSubscribeBtnDiv">
+                    <button  @click="hideSubscribeForm" class=" btn btn-danger">फॉर्म छिपाएं </button>
+                </div>
             </div>
-          
-            <span @click="enableFeedBack" class=" badge badge-danger">
-                <img src="images/feedback.png" alt="" srcset=""> फीडबैक दें</span>
+
+            <div v-if="feedback_conatiner_flag" class="feedbackBtnDiv">
+                <span @click="showFeedbackFormMethod" class=" badge badge-danger" style="cursor: pointer;">
+                    <img src="images/feedback.png" alt="" srcset=""> फीडबैक दें</span>
+            </div>
+            <div v-else class="hideFeedbackBtnDIv">
+                <Button @click="hideFeedBackForm" class="btn btn-danger">फॉर्म छिपाएं </Button>
+            </div>
+
+           
         </nav>
 
         <!-- second nav bar end -->
@@ -131,13 +143,15 @@
             <div class="header">
                 <div style="display: flex;" class="feedback-subcribe-container">
                   
-                    <div v-if="feedback_conatiner_flag" class="feedback-conatiner">
+                    <div v-if="showFeedbackForm" class="feedback-conatiner">
                       
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrwo1ZQ3lls0G1bk1Oxz16f6ZZaPAIkOgISRmhrVFMoiKN6g/viewform?embedded=true" width="330" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                       
                     </div>
 
-                    <div v-if="subscribe_contaoner_flag" class="subscribe-container">
+                    <div v-if="showSubscribeForm" class="subscribe-container">
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        
                     </div>
                 
                 </div>
@@ -157,14 +171,7 @@
         <!-- important info section start -->
         <div id="imporatant-info">
 
-            <div v-if="notify" id="notify">
-                <center>
-                    <img src="images/tick.png" alt=""> <span class=" badge badge-success"> <b>{{this.mobile_number}}
-                        </b>
-                        सब्सक्राइब किया गया ,SMS की सुविधा जल्द शुरू होगी |
-                    </span>
-                </center>
-            </div>
+         
 
             <sup>No testing updates on ICMR website for 20th April till(23:48IST)</sup>
             <br>
