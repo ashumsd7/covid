@@ -199,7 +199,7 @@ var corona = new Vue({
                     for(let i in this.disttConformNewCases){
                         if(this.disttConformNewCases[i]==0)
                         {
-                            this.disttConformNewCases[i]="-";
+                            this.disttConformNewCases[i]="--";
                         }
                     }
 

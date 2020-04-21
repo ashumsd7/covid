@@ -297,14 +297,15 @@
                     <center>
                         <h5 class="StateTitle">एक नज़र उत्तर प्रदेश <img src="images/indiaup.png" alt="" srcset=""> पर
                         </h5><sup>डेटा आखिर बार अपडेट किया गया {{last_updated}}</sup>
+                        <marquee behavior="" direction=""><small>अगर डेटा का आर्डर गड़बड़ होता है तो अंग्रेजी नाम से ही कुल और नए मामलों का मिलान करें  </small></marquee>
                     </center>
 
 
 
                     <p>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            जिलों का देखने के लिए क्लिक करें
+                        <a class="btn btn-success" data-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample" style="color: black;">
+                            जिलों को  देखने के लिए क्लिक करें <img src="images/downarrow.png" alt="" srcset="">
                         </a>
                         <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                           Button with data-target
@@ -315,23 +316,9 @@
               
 
                     <div class="collapse" id="collapseExample">
+                     
                         <div class="card card-body">
                             <div style="display: flex;">
-                                <div class="ZERO">
-                                    <div class="statesENG">
-
-                                        <ul>
-                                            <h4 class="DisttTitle">DISTRICT NAME</h4>
-                                            <hr>
-                                            <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
-                                                {{ disttName }}
-                                            </li>
-
-                                        </ul>
-
-                                    </div>
-                                </div>
-
                                 <div class="one">
                                     <div class="statesHIN">
 
@@ -344,6 +331,8 @@
 
                                     </div>
                                 </div>
+
+                              
 
                                 <div class="two">
                                     <div class="cases">
@@ -368,6 +357,26 @@
                             </ul>
                         </div>
                     </div>
+
+
+
+
+                    
+                    <div class="ZERO">
+                        <div class="statesENG">
+
+                            <ul>
+                                <h4 class="DisttTitle">DISTRICT NAME</h4>
+                                <hr>
+                                <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
+                                    {{ disttName }}
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
 
                             </div>
 
