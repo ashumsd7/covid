@@ -203,7 +203,7 @@ var corona = new Vue({
                         }
                     }
 
-
+                    console.log(this.listOfDisttHindi);
 
 
                     //console.log(this.disttConfirmCases); //list of cases success all distt
