@@ -27,12 +27,9 @@ var corona = new Vue({
             result: '',
             result1: '',
 
-            mobile_number: '',
-            subscribe_flag: false,
-            notify: false,
+          
 
-
-            input_warning: false,
+        
             download_App_Loading: false,
 
             DisttConfirmArray: '',
@@ -45,10 +42,6 @@ var corona = new Vue({
 
 
 
-            enableFeedbackContainer: false,
-            feedbackMobileNumber: '',
-            feedbackLines: '',
-            feedbackSentNotify: false,
             firebaseConfig: {
                 apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
                 authDomain: "covid-19-updates-459b6.firebaseapp.com",
