@@ -144,9 +144,7 @@ var corona = new Vue({
 
                 })
 
-            // fetch('https://jsonplaceholder.typicode.com/todos/1')
-            //     .then(response => response.json())
-            //     .then(json => console.log(json))
+           
 
 
 
@@ -278,25 +276,16 @@ var corona = new Vue({
         // my: function () {
         //     alert("Aads");
         // },
-        github() {
-            document.location.href = "";
-        },
-        facebook() {
-            document.location.href = "";
-        },
-        quora() {
-            document.location.href = "";
-        },
+       
         twitter() {
             document.location.href = "https://twitter.com/WeWillStopCovid";
         },
-        instagram() {
-            document.location.href = "";
-        },
-
+       
 
         enableFeedBack() {
             this.enableFeedbackContainer = true;
+            document.location.href = "https://forms.gle/GuNWfh2nvFpP58Qu6";
+            //
         },
         captureFeedBack() {
 
