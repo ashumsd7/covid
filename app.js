@@ -211,41 +211,43 @@ var corona = new Vue({
                 })
         },
 
-        subscribeMobileNumber(e) {
-            e.preventDefault();
-            var check_MobileNumber = confirm(" क्या ये  " + this.mobile_number + "  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
-            if (check_MobileNumber) {
+        // subscribeMobileNumber(e) {
+        //     e.preventDefault();
+        //     var check_MobileNumber = confirm(" क्या ये  " + this.mobile_number + "  आप ही का नंबर है? जांच लें, सही है तो ओके करें ");
+        //     if (check_MobileNumber) {
 
-                firebase.initializeApp(this.firebaseConfig);
+        //         firebase.initializeApp(this.firebaseConfig);
 
-                let db = firebase.database().ref("Subscribtions");
-                var newdb = db.push();
-                newdb.set(this.mobile_number);
+        //         let db = firebase.database().ref("Subscribtions");
+        //         var newdb = db.push();
+        //         newdb.set(this.mobile_number);
 
-                this.subscribe_flag = false;
-                this.notify = true;
-
-
-
-                setTimeout(() => {
-                    this.notify = false;
-                    alert(" अपडेट्स हेतु अपने आप को सब्सक्राइब करने के लिए आपका आभार | हम आपको प्रतिदिन एक मैसेज आपके इनबॉक्स में भेजंगे, जिसमे तब तक की टेस्टिंग, पॉज़ीटिव और ठीक होने वाले मामलो की संख्या रहेगी । नोट :  मैसेज केवल नॉन डीएनडी (Do not Disturb) Numbers पर ही जायेगा | ये सुविधा निःशुल्क है |  अपने घर पर रहिये सुरक्षित रहिये धन्यवाद");
-                    window.location.reload();
-                }, 3000);
+        //         this.subscribe_flag = false;
+        //         this.notify = true;
 
 
 
+        //         setTimeout(() => {
+        //             this.notify = false;
+        //             alert(" अपडेट्स हेतु अपने आप को सब्सक्राइब करने के लिए आपका आभार | हम आपको प्रतिदिन एक मैसेज आपके इनबॉक्स में भेजंगे, जिसमे तब तक की टेस्टिंग, पॉज़ीटिव और ठीक होने वाले मामलो की संख्या रहेगी । नोट :  मैसेज केवल नॉन डीएनडी (Do not Disturb) Numbers पर ही जायेगा | ये सुविधा निःशुल्क है |  अपने घर पर रहिये सुरक्षित रहिये धन्यवाद");
+        //             window.location.reload();
+        //         }, 3000);
 
-            }
-            else {
-                window.location.reload();
-            }
-        },
+
+
+
+        //     }
+        //     else {
+        //         window.location.reload();
+        //     }
+        // },
 
 
         showMobileDialogue() {
-
-            this.subscribe_flag = true;
+            alert("fgdgfdfdf");
+            // this.subscribe_flag = true;
+            document.location.href = "https://forms.gle/r1LauU4dcTp6wrKs8";
+            // 
         },
 
         downloadApp() {
@@ -256,26 +258,26 @@ var corona = new Vue({
             }, 2000);
         },
 
-        isNumber: function (evt) {
-            evt = evt ? evt : window.event;
-            var charCode = evt.which ? evt.which : evt.keyCode;
-            if (
-                charCode > 31 &&
-                (charCode < 48 || charCode > 57) &&
-                charCode !== 46
-            ) {
-                evt.preventDefault();
-                this.input_warning = true;
-            } else {
-                this.input_warning = false;
-                return true;
-            }
-        },
+        // isNumber: function (evt) {
+        //     evt = evt ? evt : window.event;
+        //     var charCode = evt.which ? evt.which : evt.keyCode;
+        //     if (
+        //         charCode > 31 &&
+        //         (charCode < 48 || charCode > 57) &&
+        //         charCode !== 46
+        //     ) {
+        //         evt.preventDefault();
+        //         this.input_warning = true;
+        //     } else {
+        //         this.input_warning = false;
+        //         return true;
+        //     }
+        // },
 
 
-        my: function () {
-            alert("Aads");
-        },
+        // my: function () {
+        //     alert("Aads");
+        // },
         github() {
             document.location.href = "";
         },

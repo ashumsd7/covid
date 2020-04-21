@@ -96,15 +96,15 @@
         <nav class="navbar navbar-dark sticky-top bg-dark">
             <a class="navbar-brand"><img src="images/stayhome.png" alt="" srcset=""></a>
 
-
             <div v-if="subscribe_flag" class="mobile-form">
                 <form class="form-inline">
-                    <sup v-if="input_warning" class="badge badge-warning">माफ़ करिये ! केवल नंबर डाल सकते हैं </sup>
+                   <sup v-if="input_warning" class="badge badge-warning">माफ़ करिये ! केवल नंबर डाल सकते हैं </sup>
                     <img src="images/number.png" alt=""> <input @keypress="isNumber($event)" v-model="mobile_number"
                         class="form-control mr-sm-2" type="search" placeholder="मोबाइल नंबर डालें " aria-label="Search">
                     <button @click="subscribeMobileNumber($event)" class="btn btn-outline-success my-2 my-sm-0"
                         type="submit">सब्सक्राइब </button>
                 </form>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true" width="300" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
             <div v-else class="Subscribe-btn">
                 <img src="images/sms.png" alt=""> <span @click="showMobileDialogue" class=" badge badge-danger">
@@ -129,6 +129,7 @@
             </div>
         </div>
         <div id="imporatant-info">
+            
             <div v-if="notify" id="notify">
                 <center>
                     <img src="images/tick.png" alt=""> <span class=" badge badge-success"> <b>{{this.mobile_number}}
