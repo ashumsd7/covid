@@ -39,9 +39,6 @@ var corona = new Vue({
             subscribe_contaoner_flag:false,
 
 
-
-
-
             firebaseConfig: {
                 apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
                 authDomain: "covid-19-updates-459b6.firebaseapp.com",
@@ -52,8 +49,6 @@ var corona = new Vue({
                 appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
                 measurementId: "G-8PC5ZS12T1"
             },
-
-
 
 
             disttConfirmCases: [],
@@ -241,10 +236,10 @@ var corona = new Vue({
 
         showMobileDialogue() {
             
-            // this.subscribe_flag = true;
+            
             this.subscribe_contaoner_flag= true;
             // document.location.href = "https://forms.gle/r1LauU4dcTp6wrKs8";
-            // 
+            
         },
 
         downloadApp() {
@@ -282,68 +277,10 @@ var corona = new Vue({
        
 
         enableFeedBack() {
-            // this.enableFeedbackContainer = true;
             // document.location.href = "https://forms.gle/GuNWfh2nvFpP58Qu6";
             this.feedback_conatiner_flag= true;
         },
-        captureFeedBack() {
-
-
-
-            var sendFeedbackObj = {
-                number: this.feedbackMobileNumber,
-                lines: this.feedbackLines
-            }
-
-            if (this.feedbackMobileNumber == "" && this.feedbackLines == "") {
-                alert("फीडबैक में बिना कुछ टाइप किये कुछ भेजा नहीं जा सकता पुनः प्रयास करें ,धन्यवाद |");
-                window.location.reload();
-            }
-
-            if (this.feedbackMobileNumber != "" && this.feedbackLines == "") {
-                alert("शायद आप फीडबैक लिखना भूल गए पुनः प्रयास करें ");
-                window.location.reload();
-            }
-
-            // if(this.feedbackMobileNumber=="" && this.feedbackLines!="")
-            // {
-            //     alert("आपने मोबाइल नंबर या ईमेल नहीं टाइप किया है अगर आप सवाल पूछ रहे है तो हम आपका जवाब नहीं दे पाएंगे आपके सुझाव और शिकायत का स्वागत है | धन्यवाद ");
-            //     firebase.initializeApp(this.firebaseConfig);
-            //     let db= firebase.database().ref("FeedbacksWithoutContact");
-            //     var newdb= db.push();
-            //     newdb.set(this.feedbackLines);
-
-            // this.enableFeedbackContainer= false;
-            // this.feedbackSentNotify= true;
-            // setTimeout(() => {
-            //     this.feedbackSentNotify= false;
-            //     window.location.reload();
-            // }, 3000);
-            // }
-
-            if (this.feedbackMobileNumber != "" && this.feedbackLines != "") {
-
-                for (let i = 0; i <1 ; ++i) {
-                    firebase.initializeApp(this.firebaseConfig);
-                    let db = firebase.database().ref("FeedbacksTwoEntries");
-                    var newdb = db.push();
-                    newdb.set(sendFeedbackObj);
-                }
-                // newdb.set(sendFeedbackObj);
-
-                this.enableFeedbackContainer = false;
-                this.feedbackSentNotify = true;
-
-                setTimeout(() => {
-                    this.feedbackSentNotify = false;
-                    window.location.reload();
-                }, 3000);
-            }
-
-
-
-
-        },
+        
         cancleFeedback() {
             this.enableFeedbackContainer = false;
             this.feedbackSentNotify = true;
