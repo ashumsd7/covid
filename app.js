@@ -244,7 +244,7 @@ var corona = new Vue({
 
 
         showMobileDialogue() {
-            alert("fgdgfdfdf");
+            
             // this.subscribe_flag = true;
             document.location.href = "https://forms.gle/r1LauU4dcTp6wrKs8";
             // 
