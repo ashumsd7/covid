@@ -54,7 +54,7 @@ var corona = new Vue({
             disttConfirmCases: [],
             disttConformNewCases: [],
             listOfDistt: [],
-            listOfDisttHindi: ['आगरा',
+            listOfDisttHindi: ['आगरा','अलीगढ',
                 'अमरोहा',
                 'औरैया',
                 'आजमगढ़',
@@ -169,6 +169,8 @@ var corona = new Vue({
                         arr.push(disttValues);
                         this.listOfDistt.push(distt);
                     }
+
+                    console.log(this.listOfDistt);  //list of distt eng
                     // changing Name of Distt
                     for (let i in this.listOfDistt) {
                         if (this.listOfDistt[i] == "Gautam Buddha Nagar") {
