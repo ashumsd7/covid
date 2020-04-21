@@ -114,9 +114,12 @@
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true" width="300" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div> -->
             <div class="Subscribe-btn">
-                <img src="images/sms.png" alt=""> <span @click="showMobileDialogue" class=" badge badge-danger">
-                    पाएं SMS अपडेट </span>
+                <span @click="showMobileDialogue" class=" badge badge-success">
+                    <img src="images/sms.png" alt="">   पाएं SMS अपडेट </span>
             </div>
+          
+            <span @click="enableFeedBack" class=" badge badge-danger">
+                <img src="images/feedback.png" alt="" srcset=""> फीडबैक दें</span>
         </nav>
 
         <!-- second nav bar end -->
@@ -126,6 +129,20 @@
 
         <div class="container">
             <div class="header">
+                <div style="display: flex;" class="feedback-subcribe-container">
+                  
+                    <div v-if="feedback_conatiner_flag" class="feedback-conatiner">
+                      
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrwo1ZQ3lls0G1bk1Oxz16f6ZZaPAIkOgISRmhrVFMoiKN6g/viewform?embedded=true" width="330" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+
+                    <div v-if="subscribe_contaoner_flag" class="subscribe-container">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                
+                </div>
+
+
                 <marquee behavior="" direction=""><sup> अगर आप एंड्राइड ऐप्प का प्रयोग कर रहे है तो डेटा देखने के अलावा
                         कुछ फंक्शन्स हो सकता है काम न कर रहे हो एंड्राइड ऐप्प अभी डेवलपमेंट मोड में है आप डेटा देखने के
                         लिए ही उसका प्रयोग करिये, धन्यवाद |
@@ -476,7 +493,7 @@
         <nav class="navbar  navbar-light bg-light">
             <!-- <a class="navbar-brand" href="#">Fixed bottom</a> -->
             <div class="feedback-section">
-                <button @click="enableFeedBack" style="color: black; font-weight: bolder; width: 200px;"
+                <button @click="enableFeedBack" style="color: black; font-weight: bolder;"
                     class=" btn btn-warning">फीडबैक दें <img src="images/feedback.png" alt="" srcset=""></button>
 
 

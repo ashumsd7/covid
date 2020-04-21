@@ -38,6 +38,11 @@ var corona = new Vue({
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
+            feedback_conatiner_flag:false,
+            subscribe_contaoner_flag:false,
+
+
+
 
 
             enableFeedbackContainer: false,
@@ -244,7 +249,8 @@ var corona = new Vue({
         showMobileDialogue() {
             
             // this.subscribe_flag = true;
-            document.location.href = "https://forms.gle/r1LauU4dcTp6wrKs8";
+            this.subscribe_contaoner_flag= true;
+            // document.location.href = "https://forms.gle/r1LauU4dcTp6wrKs8";
             // 
         },
 
@@ -283,9 +289,9 @@ var corona = new Vue({
        
 
         enableFeedBack() {
-            this.enableFeedbackContainer = true;
-            document.location.href = "https://forms.gle/GuNWfh2nvFpP58Qu6";
-            //
+            // this.enableFeedbackContainer = true;
+            // document.location.href = "https://forms.gle/GuNWfh2nvFpP58Qu6";
+            this.feedback_conatiner_flag= true;
         },
         captureFeedBack() {
 
