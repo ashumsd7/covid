@@ -149,34 +149,6 @@
 
         <!-- second nav bar end -->
 
-        <!-- popup  -->
-        
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>पाएं रोज SMS अपडेट </strong> 
-            <div class="container">
-                <center>
-                    
-                    <div v-if="showSubscribeForm" class="subscribe-container">
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true"
-                            width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-                    </div>
-
-                    <div class="sms-imgae">
-                        <img v-if="subscribe_contaoner_flag" src="/images/popupmobile.png" alt="">
-                    </div>      
-                </center>
-             <br>
-             <br>
-            </div>
-            <center>
-                <button @click="showSubscribeFormMethod" class="btn btn-primary">अभी सब्सक्राइब करें </button>
-            </center>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
 
 
         <!-- small first  container start -->
@@ -314,6 +286,33 @@
 
             <!-- row 1 end  -->
 
+            
+        <!-- popup  -->
+
+        <div v-if="showPopPup" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>पाएं रोज SMS अपडेट </strong>
+            <div class="container">
+                <center>
+
+                    <div v-if="showSubscribeForm" class="subscribe-container">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true"
+                            width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+
+                </center>
+
+            </div>
+            <center>
+                <button @click="showSubscribeFormMethod" class="btn btn-primary">अभी सब्सक्राइब करें </button>
+            </center>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+
+
             <!-- row2   start-->
 
             <hr>
@@ -364,11 +363,14 @@
 
 
         <div class="container state-container">
-          <center> <h5 class=" stateDetailHeading"> <img src="./images/indiannew.png" alt="" srcset=""> सभी राज्य एवं केंद्रशाषित प्रदेश <img src="./images/indiannew.png" alt="" srcset=""></h5> </center> 
+            <center>
+                <h5 class=" stateDetailHeading"> <img src="./images/indiannew.png" alt="" srcset=""> सभी राज्य एवं
+                    केंद्रशाषित प्रदेश <img src="./images/indiannew.png" alt="" srcset=""></h5>
+            </center>
             <hr>
             <marquee behavior="" direction=""><small>अगर डेटा का आर्डर गड़बड़ होता है तो अंग्रेजी नाम से ही
-                कुल और नए मामलों का मिलान करें </small></marquee>
-                <br>
+                    कुल और नए मामलों का मिलान करें </small></marquee>
+            <br>
             <div class="row row-cols-6">
                 <div class="col ">
                     <ul>
@@ -392,7 +394,7 @@
 
                 <div class="col ">
                     <ul>
-                        <small> आज+ </small> 
+                        <small> आज+ </small>
                         <hr>
                         <li style="color: rgb(235, 17, 17);" class="stateNew" v-for="disttName in stateDeltaConfirmed">
                             +{{ disttName }}
@@ -412,7 +414,7 @@
 
                 </div>
 
-          
+
 
                 <div class="col ">
                     <ul>
@@ -425,7 +427,7 @@
                     </ul>
                 </div>
 
-               
+
 
                 <div class="col ">
                     <ul>
@@ -453,7 +455,7 @@
 
 
 
-<hr>
+        <hr>
 
 
         <!-- row 3 start -->
@@ -466,25 +468,25 @@
                     <center>
                         <h5 class="StateTitle">एक नज़र उत्तर प्रदेश <img src="images/indiaup.png" alt="" srcset=""> पर
                         </h5><sup>डेटा आखिर बार अपडेट किया गया {{last_updated}}</sup>
-                       
+
                     </center>
 
 
                     <center>
-                    <p>
-                        <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample" style="color: rgb(6, 8, 1);">
-                            जिलों को देखने के लिए क्लिक करें <img src="images/downarrow.png" alt="" srcset="">
-                        </a>
-                        <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <p>
+                            <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample" style="color: rgb(6, 8, 1);">
+                                जिलों को देखने के लिए क्लिक करें <img src="images/downarrow.png" alt="" srcset="">
+                            </a>
+                            <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                           Button with data-target
                         </button> -->
-                    </p>
-                </center>
+                        </p>
+                    </center>
 
 
 
-                    <div class="collapse " id="collapseExample" >
+                    <div class="collapse " id="collapseExample">
 
                         <div class="card card-body">
                             <div class="" style="display: flex;">
@@ -608,9 +610,9 @@
         <!-- #<sup>Don't give now, we are fixing errors </sup> -->
         <br>
         <center>
-        ये वेबसाइट <img
-            src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
-            title="User Stats" Alt="PHP Hits Count" border="0"> बार देखी गयी
+            ये वेबसाइट <img
+                src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
+                title="User Stats" Alt="PHP Hits Count" border="0"> बार देखी गयी
         </center>
 
         <br>

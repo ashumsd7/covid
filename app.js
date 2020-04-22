@@ -4,6 +4,11 @@ var corona = new Vue({
         this.method1() //method1 will execute at pageload
         this.loadStateData();
         this.collectAllStateData();
+
+        setTimeout(() => {
+            this.showAnyPopUp();
+
+        }, 4000);
     },
     data() {
         return {
@@ -149,7 +154,8 @@ var corona = new Vue({
                 'दादरा',
                 'दमनदीव',
                 'लक्षद्वीप',
-                'सिक्किम']
+                'सिक्किम'],
+            showPopPup: false
 
 
 
@@ -209,7 +215,7 @@ var corona = new Vue({
                         this.listOfDistt.push(distt);
                     }
 
-                    console.log(this.listOfDistt);  //list of distt eng
+                    // console.log(this.listOfDistt);  //list of distt eng
                     // changing Name of Distt
                     for (let i in this.listOfDistt) {
                         if (this.listOfDistt[i] == "Gautam Buddha Nagar") {
@@ -236,7 +242,7 @@ var corona = new Vue({
                         }
                     }
 
-                    console.log(this.listOfDisttHindi);
+                    // console.log(this.listOfDisttHindi);
 
 
                     //console.log(this.disttConfirmCases); //list of cases success all distt
@@ -338,7 +344,7 @@ var corona = new Vue({
                 this.stateNameFilteredEng.shift();
 
 
-                console.log(stateName);
+                // console.log(stateName);
 
             //   console.log(fullData);
 
@@ -347,6 +353,11 @@ var corona = new Vue({
             })
 
 
+        },
+
+        showAnyPopUp(){
+            this.showPopPup= true;
+            window.scrollBy(0, 500);
         },
 
         playWistle() {

@@ -206,10 +206,10 @@ marquee{
 .alert-danger {
     background-color: #f8d7da;
     border-color: #f5c6cb;
-    height: 500px;
+    height: auto;
     width: 80%;
     margin: auto;
-    background: rgb(186, 167, 216);
-    color: rgb(8, 1, 1);
+    background: rgb(143, 36, 4);
+    color: rgb(22, 221, 39);
     border-radius: 10px;
 }
