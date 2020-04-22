@@ -52,7 +52,6 @@
 
 <body>
     <div id="app">
-
         <!-- first nav bar start -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="ashumsd7.github.io/covid/"> <img src="images/stopcovid.png" alt=""></a>
@@ -67,14 +66,14 @@
             <iframe src="https://giphy.com/embed/3o6wrAGrygEMdv5zdC" width="50" height="50" frameBorder="0"
                 class="giphy-embed" allowFullScreen></iframe>
 
-                
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    
+
                     <li class="nav-item active">
                         <a class="nav-link" href="https://ashumsd7.github.io/covid/">होम <span
                                 class="sr-only">(current)</span></a>
@@ -127,10 +126,10 @@
             <div class="Subscribe-btn">
                 <div v-if="subscribe_contaoner_flag " class="smsUpdateBtnDiv">
                     <span @click="showSubscribeFormMethod" class=" badge badge-success">
-                        <img src="images/sms.png" alt="">   पाएं SMS अपडेट </span>
-                </div>  
+                        <img src="images/sms.png" alt=""> पाएं SMS अपडेट </span>
+                </div>
                 <div v-else class="hideSubscribeBtnDiv">
-                    <button  @click="hideSubscribeForm" class=" btn btn-danger">फॉर्म छिपाएं </button>
+                    <button @click="hideSubscribeForm" class=" btn btn-danger">फॉर्म छिपाएं </button>
                 </div>
             </div>
 
@@ -142,7 +141,7 @@
                 <Button @click="hideFeedBackForm" class="btn btn-danger">फॉर्म छिपाएं </Button>
             </div>
 
-           
+
         </nav>
 
         <!-- second nav bar end -->
@@ -153,18 +152,22 @@
         <div class="container">
             <div class="header">
                 <div style="display: flex;" class="feedback-subcribe-container">
-                  
+
                     <div v-if="showFeedbackForm" class="feedback-conatiner">
-                      
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScrwo1ZQ3lls0G1bk1Oxz16f6ZZaPAIkOgISRmhrVFMoiKN6g/viewform?embedded=true" width="330" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                       
+
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLScrwo1ZQ3lls0G1bk1Oxz16f6ZZaPAIkOgISRmhrVFMoiKN6g/viewform?embedded=true"
+                            width="330" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
                     </div>
 
                     <div v-if="showSubscribeForm" class="subscribe-container">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                        
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true"
+                            width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
                     </div>
-                
+
                 </div>
 
             </div>
@@ -182,7 +185,7 @@
             <div class="movable-info">
                 <img src="images/speaker.png" alt="" srcset="">
                 <marquee scrollamount="5" behavior="" direction="">पिछले 24 घण्टे में {{date_icmr}} बजे की रिपोर्ट के
-                    अनुसार <b>{{ today_tested_icmr}}</b> सैंपल टेस्ट किये गए 
+                    अनुसार <b>{{ today_tested_icmr}}</b> सैंपल टेस्ट किये गए
                     <!-- में <b>{{today_positive_icmr}} </b> पॉजिटिव पाए गए -->
                     |</marquee>
 
@@ -202,7 +205,7 @@
 
 
             <!-- noraml information start         -->
-           
+
 
             <!-- noraml information end         -->
 
@@ -318,80 +321,80 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <br>
+        <hr>
+        <!-- row2   end-->
 
-            <!-- row2   end-->
 
+        <!-- row 3 all state start -->
+
+
+
+        <div class="container">
+            <h5 class="">भारत के सभी राज्य एवं केंद्र शाषित प्रदेश </h5>
             <hr>
-            <br>
-         <!-- row 3 all state start -->
+            <div class="row row-cols-5">
+                <div class="col col-sm-3">
+                    <ul>
+                        <h4 class="">राज्य</h4>
+                        <hr>
+                        <li class="" v-for="disttName in stateNameHindi">
+                            {{ disttName }}
 
+                        </li>
+                    </ul>
+                </div>
 
+                <div class="col col-sm-2">
+                    <ul>
+                        <h4 class="">कुल</h4>
+                        <hr>
+                        <li class="" v-for="confcases in stateConfirmed">
+                            {{confcases}}
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="container">
-                <h5 class="">भारत के सभी राज्य एवं केंद्र शाषित प्रदेश </h5>
-                <marquee behavior="" direction="">अगर अंग्रेज़ी नाम व हिंदी नाम के आर्डर में कोई गड़बड़ी हो तो कृपया अंग्रेजी नाम से ही कुल मामलों  का मिलान करें धन्यवाद </marquee>
-                <hr>
-                <div class="row row-cols-5">
-                    <div class="col col-sm-3">
-                        <ul>
-                            <h4 class="">राज्य</h4>
-                            <hr>
-                            <li class="" v-for="disttName in stateNameHindi">
-                                {{ disttName }}
-
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col col-sm-2">
-                        <ul>
-                            <h4 class="">कुल</h4>
-                            <hr>
-                            <li class="" v-for="confcases in stateConfirmed">
-                                {{confcases}}
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col col-sm-2">
-                        <ul>
-                            <h4 class="">ठीक</h4>
-                            <hr>
-                            <li  class="" v-for="confcases in stateRecovered">
-                                <small> {{confcases}}</small>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="col col-sm-2">
-                        <ul>
-                            <h4  class="">मृत्यु </h4>
-                            <hr>
-                            <li style="color: rgb(235, 17, 17);" class="" v-for="disttName in stateDeaths">
-                                {{ disttName }}
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <div class="col col-sm-3">
-                        <ul>
-                            <h4 class="">STATE</h4>
-                            <hr>
-                            <li class="NameList list-view-disttEng" v-for="disttName in stateNameFilteredEng">
-                                {{ disttName }}
-                            </li>
-
-                        </ul>
-                    </div>
-
-
+                <div class="col col-sm-2">
+                    <ul>
+                        <h4 class="">ठीक</h4>
+                        <hr>
+                        <li class="" v-for="confcases in stateRecovered">
+                            <small> {{confcases}}</small>
+                        </li>
+                    </ul>
 
                 </div>
+
+                <div class="col col-sm-2">
+                    <ul>
+                        <h4 class="">मृत्यु </h4>
+                        <hr>
+                        <li style="color: rgb(235, 17, 17);" class="" v-for="disttName in stateDeaths">
+                            {{ disttName }}
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col col-sm-3">
+                    <ul>
+                        <h4 class="">STATE</h4>
+                        <hr>
+                        <li class="NameList list-view-disttEng" v-for="disttName in stateNameFilteredEng">
+                            {{ disttName }}
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
             </div>
-            
-            <!-- row 3 all state end -->
+        </div>
+
+        <!-- row 3 all state end -->
 
 
 
@@ -403,9 +406,11 @@
 
 
 
-            <!-- row 3 start -->
 
-            <br>
+        <!-- row 3 start -->
+        <br>
+
+        <div class="container">
             <div class="row my-row-3  ">
                 <!-- <marquee behavior="" direction="">UP का  डेटा अस्थायी रूप से उपलब्ध नहीं है जिस एपीआई से डेटा प्राप्त कर रहे थे वो मेंटिनेंस में हैं धन्यवाद </marquee> -->
                 <div class="col-sm-8 my-row-3-col-1">
@@ -538,28 +543,28 @@
                     </div>
 
                 </div>
-
-
             </div>
-            <!-- row 3 end -->
-
-            <hr>
-
-
-            <div class="row justify-content-center">
-
-                <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
-                        srcset=""></button>
-
-            </div>
-            <!-- #<sup>Don't give now, we are fixing errors </sup> -->
-            <br>
-            ये वेबसाइट <img
-                src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
-                title="User Stats" Alt="PHP Hits Count" border="0"> बार देखी गयी
-
 
         </div>
+        <!-- row 3 end -->
+
+        <hr>
+
+
+        <div class="row justify-content-center">
+
+            <button type="button" @click="twitter" class="btn btn-danger"><img src="images/twitter.png" alt=""
+                    srcset=""></button>
+
+        </div>
+        <!-- #<sup>Don't give now, we are fixing errors </sup> -->
+        <br>
+        ये वेबसाइट <img
+            src="https://hitwebcounter.com/counter/counter.php?page=7277230&style=0006&nbdigits=5&type=page&initCount=0"
+            title="User Stats" Alt="PHP Hits Count" border="0"> बार देखी गयी
+
+
+
 
         <!-- main big container end -->
 
@@ -568,28 +573,30 @@
         <!-- app download-start -->
         <center>
 
-        <div v-if="download_App_Loading">
-            <div class="spinner-border text-warning" role="status">
-                <span class="sr-only">Loading...</span>
+            <div v-if="download_App_Loading">
+                <div class="spinner-border text-warning" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <br>
+                <span class=" badge badge-success"> Please Wait</span>
             </div>
-            <br>
-            <span class=" badge badge-success"> Please Wait</span>
-        </div>
 
-        <div v-else style="cursor: pointer;" @click="downloadApp" id="android-app">
-            <b><img src="images/android.png" alt="" srcset=""> ऐप डाउनलोड <img src="images/download.png" alt=""
-                    srcset="">करें </b>
-        </div>
-        <hr>
-     </center>
+            <div v-else style="cursor: pointer;" @click="downloadApp" id="android-app">
+                <b><img src="images/android.png" alt="" srcset=""> ऐप डाउनलोड <img src="images/download.png" alt=""
+                        srcset="">करें </b>
+            </div>
+            <hr>
+        </center>
 
-            <!-- app download-end -->     
+        <!-- app download-end -->
 
-        <marquee style="background-color: antiquewhite;" behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा रहे है ऐसा संभव है की गलतियां हो जाएँ हमें
+        <marquee style="background-color: antiquewhite;" behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा
+            रहे है
+            ऐसा संभव है की गलतियां हो जाएँ हमें
             अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद </marquee>
 
 
-       
+
 
     </div>
 
