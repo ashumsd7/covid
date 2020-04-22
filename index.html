@@ -107,6 +107,9 @@
         <!-- first nav bar end -->
 
 
+
+
+
         <!-- second nav bar start -->
 
 
@@ -145,6 +148,35 @@
         </nav>
 
         <!-- second nav bar end -->
+
+        <!-- popup  -->
+        
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>पाएं रोज SMS अपडेट </strong> 
+            <div class="container">
+                <center>
+                    
+                    <div v-if="showSubscribeForm" class="subscribe-container">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true"
+                            width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+                    </div>
+
+                    <div class="sms-imgae">
+                        <img v-if="subscribe_contaoner_flag" src="/images/popupmobile.png" alt="">
+                    </div>      
+                </center>
+             <br>
+             <br>
+            </div>
+            <center>
+                <button v-if="subscribe_contaoner_flag" @click="showSubscribeFormMethod" class="btn btn-primary">अभी सब्सक्राइब करें </button>
+            </center>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
 
         <!-- small first  container start -->

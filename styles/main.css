@@ -203,3 +203,13 @@ li{
 marquee{
     background-color: rgb(223, 243, 134);
 }
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    background: rgb(186, 167, 216);
+    color: rgb(8, 1, 1);
+    border-radius: 10px;
+}
