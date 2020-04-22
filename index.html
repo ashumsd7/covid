@@ -331,9 +331,11 @@
 
 
 
-        <div class="container">
+        <div class="container state-container">
           <center> <h5 class=" stateDetailHeading"> <img src="./images/indiannew.png" alt="" srcset=""> सभी राज्य एवं केंद्रशाषित प्रदेश <img src="./images/indiannew.png" alt="" srcset=""></h5> </center> 
             <hr>
+            <marquee behavior="" direction=""><small>अगर डेटा का आर्डर गड़बड़ होता है तो अंग्रेजी नाम से ही
+                कुल और नए मामलों का मिलान करें </small></marquee>
             <div class="row row-cols-6">
                 <div class="col ">
                     <ul>
@@ -352,6 +354,17 @@
                         <li class="list-view-cases" v-for="confcases in stateConfirmed">
                             {{confcases}}
                         </li>
+                    </ul>
+                </div>
+
+                <div class="col ">
+                    <ul>
+                        <small> आज+ </small> 
+                        <hr>
+                        <li style="color: rgb(235, 17, 17);" class="stateNew" v-for="disttName in stateDeltaConfirmed">
+                            +{{ disttName }}
+                        </li>
+
                     </ul>
                 </div>
 
@@ -379,16 +392,7 @@
                     </ul>
                 </div>
 
-                <div class="col ">
-                    <ul>
-                        <small> आज+ </small> 
-                        <hr>
-                        <li style="color: rgb(235, 17, 17);" class="stateNew" v-for="disttName in stateDeltaConfirmed">
-                            +{{ disttName }}
-                        </li>
-
-                    </ul>
-                </div>
+               
 
                 <div class="col ">
                     <ul>
@@ -429,8 +433,7 @@
                     <center>
                         <h5 class="StateTitle">एक नज़र उत्तर प्रदेश <img src="images/indiaup.png" alt="" srcset=""> पर
                         </h5><sup>डेटा आखिर बार अपडेट किया गया {{last_updated}}</sup>
-                        <marquee behavior="" direction=""><small>अगर डेटा का आर्डर गड़बड़ होता है तो अंग्रेजी नाम से ही
-                                कुल और नए मामलों का मिलान करें </small></marquee>
+                       
                     </center>
 
 

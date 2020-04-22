@@ -185,7 +185,7 @@ li{
 }
 
 .stateDetailHeading{
-    background-color: rgb(178, 224, 178);
+    background-color: rgb(112, 240, 112);
     color: black;
     align-items: center;
     
@@ -195,4 +195,8 @@ li{
 }
 .stateNameEng{
     font-weight: lighter;
+}
+.state-container{
+    background-image: url(../images/indiablurbg.jpg);
+    background-size: cover;
 }
