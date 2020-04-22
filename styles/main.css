@@ -200,3 +200,6 @@ li{
     background-image: url(../images/indiablurbg.jpg);
     background-size: cover;
 }
+marquee{
+    background-color: rgb(223, 243, 134);
+}
