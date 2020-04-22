@@ -3,6 +3,7 @@ var corona = new Vue({
     mounted: function () {
         this.method1() //method1 will execute at pageload
         this.loadStateData();
+        this.collectAllStateData();
     },
     data() {
         return {
@@ -103,6 +104,53 @@ var corona = new Vue({
 
             wistleCount: '',
 
+            stateConfirmed:[],
+            stateRecovered:[],
+            stateActive:[],
+            stateDeaths:[],
+            stateDeltaConfirmed:[],
+            stateDeltaRecovered:[],
+            stateDeltaDeaths:[],
+            stateLastTimeUpdated:[],
+            stateNameFilteredEng:[],
+            stateNameHindi:['महाराष्ट्र',
+                'दिल्ली',
+                'गुजरात',
+                'राजस्थान',
+                'तमिलनाडु',
+                'मध्यप्रदेश',
+                'उत्तरप्रदेश',
+                'तेलंगाना',,
+                'आंध्रप्र.',
+                'कर्नाटक',
+                'केरल',
+                'जम्मूक.',
+                'पश्चिमबं.',
+                'हरियाणा',
+                'पंजाब',
+                'बिहार',
+                'ओडिशा',
+                'उत्तराखंड',
+                'झारखंड',
+                'हिमाचल',
+                'छत्तीसगढ़',
+                'असम',
+                'चंडीगढ़',
+                'लद्दाख',
+                'अंडमान',
+                'मेघालय',
+                'गोवा',
+                'पुडुचेरी',
+                'मणिपुर',
+                'त्रिपुरा',
+                'मिजोरम',
+                'अरुणाचल',
+                'नगालैंड',
+                'दादरा',
+                'दमनदीव',
+                'लक्षद्वीप',
+                'सिक्किम']
+
 
 
 
@@ -194,6 +242,111 @@ var corona = new Vue({
                     //console.log(this.disttConfirmCases); //list of cases success all distt
                     //console.log(this.disttConformNewCases); //list of new cases of all distt               
                 })
+        },
+
+
+        collectAllStateData(){
+            axios
+            .get('https://api.covid19india.org/data.json')
+            .then(response => {
+                this.result = JSON.stringify(response);
+
+                var fullData= JSON.parse(this.result).data.statewise;
+
+               
+                var stateName=[];
+               
+                for(let eachObj of fullData)
+                {
+                    // console.log(eachObj.confirmed);
+                    this.stateConfirmed.push(eachObj.confirmed);
+                    this.stateRecovered.push(eachObj.recovered);
+                    this.stateActive.push(eachObj.active);
+                    this.stateDeaths.push(eachObj.deaths);
+                    this.stateDeltaConfirmed.push(eachObj.deltaconfirmed);
+                    this.stateDeltaRecovered.push(eachObj.deltarecovered);
+                    this.stateDeltaDeaths.push(eachObj.deltadeaths);
+                    stateName.push(eachObj.state);
+                    this.stateLastTimeUpdated.push(eachObj.lastupdatedtime);
+                }
+//please if u looking at this code make it automatic I could also make it, and I will make , but if possible and u have time do it now. Thank u
+                for(let i in stateName)
+                {
+                    if(stateName[i]=="Madhya Pradesh")
+                    {
+                        stateName[i]="MP";
+                    }
+
+                    if(stateName[i]=="Uttar Pradesh")
+                    {
+                        stateName[i]="UP";
+                    }
+
+                    if(stateName[i]=="Jammu and Kashmir")
+                    {
+                        stateName[i]="J&K";
+                    }
+
+                    if(stateName[i]=="Himachal Pradesh")
+                    {
+                        stateName[i]="Himachal";
+                    }
+
+
+                    if(stateName[i]=="Dadra and Nagar Haveli")
+                    {
+                        stateName[i]="Dadra&NH";
+                    }
+
+                    if(stateName[i]=="Andhra Pradesh")
+                    {
+                        stateName[i]="Andhra";
+                    }
+
+                    if(stateName[i]=="Andaman and Nicobar Islands")
+                    {
+                        stateName[i]="AndamanNB";
+                    }
+
+                    if(stateName[i]=="Daman and Diu")
+                    {
+                        stateName[i]="Daman&D.";
+                    }
+                    if(stateName[i]=="Arunachal Pradesh")
+                    {
+                        stateName[i]="Arunachal";
+                    }
+                    if(stateName[i]=="Tamil Nadu")
+                    {
+                        stateName[i]="TN";
+                    }
+                    if(stateName[i]=="West Bengal")
+                    {
+                        stateName[i]="WB";
+                    }
+                }
+                this.stateNameFilteredEng= stateName;
+
+                this.stateConfirmed.shift();
+                this.stateRecovered.shift();
+                this.stateActive.shift();
+                this.stateDeaths.shift();
+                this.stateDeltaConfirmed.shift();
+                this.stateLastTimeUpdated.shift();
+                this.stateDeltaRecovered.shift();
+                this.stateDeltaDeaths.shift();
+                this.stateNameFilteredEng.shift();
+
+
+                console.log(stateName);
+
+            //   console.log(fullData);
+
+
+
+            })
+
+
         },
 
         playWistle() {

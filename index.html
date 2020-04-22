@@ -321,6 +321,87 @@
 
             <!-- row2   end-->
 
+            <hr>
+            <br>
+         <!-- row 3 all state start -->
+
+
+
+            <div class="container">
+                <h5 class="">भारत के सभी राज्य एवं केंद्र शाषित प्रदेश </h5>
+                <marquee behavior="" direction="">अगर अंग्रेज़ी नाम व हिंदी नाम के आर्डर में कोई गड़बड़ी हो तो कृपया अंग्रेजी नाम से ही कुल मामलों  का मिलान करें धन्यवाद </marquee>
+                <hr>
+                <div class="row row-cols-5">
+                    <div class="col col-sm-3">
+                        <ul>
+                            <h4 class="">राज्य</h4>
+                            <hr>
+                            <li class="" v-for="disttName in stateNameHindi">
+                                {{ disttName }}
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col col-sm-2">
+                        <ul>
+                            <h4 class="">कुल</h4>
+                            <hr>
+                            <li class="" v-for="confcases in stateConfirmed">
+                                {{confcases}}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col col-sm-2">
+                        <ul>
+                            <h4 class="">ठीक</h4>
+                            <hr>
+                            <li  class="" v-for="confcases in stateRecovered">
+                                <small> {{confcases}}</small>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col col-sm-2">
+                        <ul>
+                            <h4  class="">मृत्यु </h4>
+                            <hr>
+                            <li style="color: rgb(235, 17, 17);" class="" v-for="disttName in stateDeaths">
+                                {{ disttName }}
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col col-sm-3">
+                        <ul>
+                            <h4 class="">STATE</h4>
+                            <hr>
+                            <li class="NameList list-view-disttEng" v-for="disttName in stateNameFilteredEng">
+                                {{ disttName }}
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+            
+            <!-- row 3 all state end -->
+
+
+
+
+
+
+
+
+
+
 
             <!-- row 3 start -->
 
