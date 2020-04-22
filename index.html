@@ -334,31 +334,30 @@
         <div class="container">
             <h5 class="">भारत के सभी राज्य एवं केंद्र शाषित प्रदेश </h5>
             <hr>
-            <div class="row row-cols-5">
-                <div class="col col-sm-3">
+            <div class="row row-cols-6">
+                <div class="col ">
                     <ul>
-                        <h4 class="">राज्य</h4>
+                        <small class="">राज्य</small>
                         <hr>
                         <li class="" v-for="disttName in stateNameHindi">
                             {{ disttName }}
-
                         </li>
                     </ul>
                 </div>
 
-                <div class="col col-sm-2">
+                <div class="col ">
                     <ul>
-                        <h4 class="">कुल</h4>
+                        <small class="">कुल</small>
                         <hr>
-                        <li class="" v-for="confcases in stateConfirmed">
+                        <li class="list-view-cases" v-for="confcases in stateConfirmed">
                             {{confcases}}
                         </li>
                     </ul>
                 </div>
 
-                <div class="col col-sm-2">
+                <div class="col ">
                     <ul>
-                        <h4 class="">ठीक</h4>
+                        <small class="">ठीक</small>
                         <hr>
                         <li class="" v-for="confcases in stateRecovered">
                             <small> {{confcases}}</small>
@@ -367,9 +366,11 @@
 
                 </div>
 
-                <div class="col col-sm-2">
+          
+
+                <div class="col ">
                     <ul>
-                        <h4 class="">मृत्यु </h4>
+                        <small class="">मृत्यु </small>
                         <hr>
                         <li style="color: rgb(235, 17, 17);" class="" v-for="disttName in stateDeaths">
                             {{ disttName }}
@@ -378,9 +379,20 @@
                     </ul>
                 </div>
 
-                <div class="col col-sm-3">
+                <div class="col ">
                     <ul>
-                        <h4 class="">STATE</h4>
+                        <small> आज नए केस </small> 
+                        <hr>
+                        <li style="color: rgb(235, 17, 17);" class="" v-for="disttName in stateDeltaConfirmed">
+                            +{{ disttName }}
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col ">
+                    <ul>
+                        <small class="">STATE</small>
                         <hr>
                         <li class="NameList list-view-disttEng" v-for="disttName in stateNameFilteredEng">
                             {{ disttName }}
