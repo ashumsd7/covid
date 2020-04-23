@@ -207,7 +207,7 @@ marquee{
     background-color: #f8d7da;
     border-color: #f5c6cb;
     height: auto;
-    width: 80%;
+    width: auto;
     margin: auto;
     background: rgb(143, 36, 4);
     color: rgb(22, 221, 39);
