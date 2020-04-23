@@ -55,6 +55,8 @@ var corona = new Vue({
                 'औरैया',
                 'आजमगढ़',
                 'बागपत',
+                'बहराइच',
+                 'बलरामपुर',
                 'बांदा',
                 'बाराबंकी',
                 'बरेली',
@@ -98,6 +100,7 @@ var corona = new Vue({
                 'संतकबीरनगर',
                 'शाहजहांपुर',
                 'शामली',
+                'श्रावस्ती',
                 'सीतापुर',
                 'सुल्तानपुर',
                 'उन्नाव',
@@ -242,7 +245,7 @@ var corona = new Vue({
                         }
                     }
 
-                    // console.log(this.listOfDisttHindi);
+                     console.log(this.listOfDisttHindi);
 
 
                     //console.log(this.disttConfirmCases); //list of cases success all distt
