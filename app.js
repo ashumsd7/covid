@@ -27,7 +27,7 @@ var corona = new Vue({
             total_ind_tested: '485172',
             today_tested_icmr: 'NA ',
             today_positive_icmr: '21797',
-            date_icmr: '23 अप्रैल 2020  9PM',
+            date_icmr: '23 अप्रैल 2020  9AM',
 
 
             result: '',
