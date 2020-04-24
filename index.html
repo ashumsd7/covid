@@ -382,7 +382,7 @@
             <div class="row row-cols-6">
                 <div class="col ">
                     <ul>
-                        <small class="">राज्य</small>
+                        <small class="stateHindiTitile">राज्य</small>
                         <hr>
                         <li class="" v-for="disttName in stateNameHindi">
                             {{ disttName }}
@@ -392,7 +392,7 @@
 
                 <div class="col ">
                     <ul>
-                        <small class="">कुल</small>
+                        <small class="stateHindiTitile">कुल</small>
                         <hr>
                         <li class="list-view-cases" v-for="confcases in stateConfirmed">
                             {{confcases}}
@@ -402,7 +402,7 @@
 
                 <div class="col ">
                     <ul>
-                        <small> आज+ </small>
+                        <small class="stateHindiTitile"> आज+ </small>
                         <hr>
                         <li style="color: rgb(235, 17, 17);" class="stateNew" v-for="disttName in stateDeltaConfirmed">
                             +{{ disttName }}
@@ -413,7 +413,7 @@
 
                 <div class="col ">
                     <ul>
-                        <small class="">ठीक</small>
+                        <small class="stateHindiTitile">ठीक</small>
                         <hr>
                         <li class="" v-for="confcases in stateRecovered">
                             <small> {{confcases}}</small>
@@ -426,7 +426,7 @@
 
                 <div class="col ">
                     <ul>
-                        <small class="">मृत्यु </small>
+                        <small id="deathstateTitle" class="stateHindiTitile">मृत्यु </small>
                         <hr>
                         <li style="color: rgb(235, 17, 17);" class="" v-for="disttName in stateDeaths">
                             {{ disttName }}

@@ -278,6 +278,27 @@ var corona = new Vue({
                     stateName.push(eachObj.state);
                     this.stateLastTimeUpdated.push(eachObj.lastupdatedtime);
                 }
+
+                for (let i in this.stateDeaths) {
+                    if (this.stateDeaths[i] == 0) {
+                        this.stateDeaths[i] = "-";
+                    }
+                }
+
+                
+                for (let i in this.stateConfirmed) {
+                    if (this.stateConfirmed[i] == 0) {
+                        this.stateConfirmed[i] = "-";
+                    }
+                }
+
+                for (let i in this.stateRecovered) {
+                    if (this.stateRecovered[i] == 0) {
+                        this.stateRecovered[i] = "-";
+                    }
+                }
+
+               
 //please if u looking at this code make it automatic I could also make it, and I will make , but if possible and u have time do it now. Thank u
                 for(let i in stateName)
                 {
