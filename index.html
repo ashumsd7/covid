@@ -502,7 +502,7 @@
                                     <div class="statesHIN">
 
                                         <ul>
-                                            <h4 class="DisttTitle">जिलों के नाम </h4>
+                                            <h4 class="DisttTitle">जिला </h4>
                                             <hr>
                                             <li class="list-view-disttHin" v-for="disttName in listOfDisttHindi">
                                                 {{ disttName }} </li>
@@ -516,7 +516,7 @@
                                 <div class="two">
                                     <div class="cases">
                                         <ul>
-                                            <h4 class="DisttTitle">कुल मामले </h4>
+                                            <h4 class="DisttTitle">कुल  </h4>
                                             <hr>
                                             <li class="list-view-cases" v-for="confcases in disttConfirmCases">
                                                 {{confcases}}
@@ -529,10 +529,37 @@
                                 <div class="three">
                                     <div class="cases">
                                         <ul>
-                                            <h4 class="DisttTitle">नए मामले </h4>
+                                            <h4 style="color: rgb(241, 72, 123);"  class="DisttTitle">आज+ </h4>
                                             <hr>
-                                            <li style="color: red;" class="list-view-cases"
+                                            <li style="color: rgb(241, 72, 123);" class="list-view-cases"
                                                 v-for="confcases in disttConformNewCases"> <small> {{confcases}}</small>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="two">
+                                    <div class="cases">
+                                        <ul>
+                                            <h4 style="color: rgb(56, 238, 11);" class="DisttTitle">ठीक</h4>
+                                            <hr>
+                                            <li class="list-view-cases" v-for="confcases in disttRecovered">
+                                                {{confcases}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                             
+
+                                <div class="three">
+                                    <div class="cases">
+                                        <ul>
+                                            <h4 style="color: rgb(236, 13, 13);" class="DisttTitle">मौतें </h4>
+                                            <hr>
+                                            <li style="color: rgb(236, 13, 13);" class="list-view-cases"
+                                                v-for="confcases in disttdeceased"> <small> {{confcases}}</small>
                                             </li>
                                         </ul>
                                     </div>
@@ -542,11 +569,12 @@
 
 
 
+
                                 <div class="ZERO">
                                     <div class="statesENG">
 
                                         <ul>
-                                            <h4 class="DisttTitle">DISTRICT NAME</h4>
+                                            <h4 class="DisttTitle">DISTRICT</h4>
                                             <hr>
                                             <li class="NameList list-view-disttEng" v-for="disttName in listOfDistt">
                                                 {{ disttName }}

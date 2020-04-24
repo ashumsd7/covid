@@ -49,6 +49,8 @@ var corona = new Vue({
 
             disttConfirmCases: [],
             disttConformNewCases: [],
+            disttRecovered:[],
+            disttdeceased:[],
             listOfDistt: [],
             listOfDisttHindi: ['आगरा','अलीगढ',
                 'अमरोहा',
@@ -238,10 +240,24 @@ var corona = new Vue({
                     for (let i in arr) {
                         this.disttConfirmCases.push(arr[i].confirmed);
                         this.disttConformNewCases.push(arr[i].delta.confirmed)
+                        this.disttRecovered.push(arr[i].recovered);
+                        this.disttdeceased.push(arr[i].deceased)
                     }
                     for (let i in this.disttConformNewCases) {
                         if (this.disttConformNewCases[i] == 0) {
-                            this.disttConformNewCases[i] = "--";
+                            this.disttConformNewCases[i] = "-";
+                        }
+                    }
+
+                    for (let i in this.disttRecovered) {
+                        if (this.disttRecovered[i] == 0) {
+                            this.disttRecovered[i] = "-";
+                        }
+                    }
+
+                    for (let i in this.disttdeceased) {
+                        if (this.disttdeceased[i] == 0) {
+                            this.disttdeceased[i] = "-";
                         }
                     }
 

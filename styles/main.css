@@ -155,11 +155,11 @@ li{
 
 .DisttTitle{
     color: rgb(1, 1, 5);
-    background-color: chartreuse;
+    background-color: rgb(245, 247, 244);
     border-radius: 5px;
 }
 .StateTitle{
-    background-color: rgb(19, 231, 72);
+    background-color: rgb(56, 231, 100);
     color: black;
     border-radius: 5px;
     box-shadow: 2px 3px 4px gray;
@@ -216,4 +216,5 @@ marquee{
 
 .stateHindiTitile{
     font-size: large;
+    font-weight: bolder;
 }
