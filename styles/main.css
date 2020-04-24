@@ -218,3 +218,7 @@ marquee{
     font-size: large;
     font-weight: bolder;
 }
+.main-navbar{
+    background-image: url(../images/navbarback.JPG);
+    background-size: cover;
+}
