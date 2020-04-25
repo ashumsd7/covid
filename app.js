@@ -23,11 +23,11 @@ var corona = new Vue({
             last_updated: '',
 
 
-            total_tested: '541789',
+            total_tested: '5,79,957',
             total_ind_tested: '525667',
             today_tested_icmr: 'NA ',
             today_positive_icmr: '23502',
-            date_icmr: '24 अप्रैल 2020  9AM',
+            date_icmr: '25 अप्रैल 2020  9AM',
 
 
             result: '',

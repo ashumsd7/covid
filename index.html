@@ -182,7 +182,23 @@
         <!-- important info section start -->
         <div id="imporatant-info">
 
-            <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक : स्रोत: <a
+            <!-- row 0 start -->
+            <div class="container justify-content-center">
+                <div class="row row-testing">
+                    <div class="col-md-12">
+                        <div class="testing-tt">
+                            <center>
+                                <small>अब तक सैंपल टेस्ट <sup>{{date_icmr}} तक </sup> </small><br>
+                                <p> <img src="images/testingbg.png" alt="" srcset=""> {{total_tested}} <img
+                                        src="images/testingbg.png" alt="" srcset=""> </p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक : स्रोत: <a
                     href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_24April_9PM_IST.pdf">ICMR
                     वेबसाइट </a> </sup> <br>
 
@@ -190,18 +206,18 @@
                 <img src="images/speaker.png" alt="" srcset="">
                 <marquee scrollamount="5" behavior="" direction="">{{date_icmr}} बजे की रिपोर्ट के
                      अनुसार 
-                     अब तक
-                     <!-- <b>{{ today_tested_icmr}}</b>  -->
-                     <img src="./images/lab.png" alt=""> 
+                     अब तक -->
+            <!-- <b>{{ today_tested_icmr}}</b>  -->
+            <!-- <img src="./images/lab.png" alt=""> 
                  <b>{{today_positive_icmr}} सैंपल </b> पॉजिटिव पाए गए
                     |</marquee>
 
             </div>
             <small> अब तक सैंपल टेस्ट <img src="./images/lab.png" alt=""> किये गए</small>: <b
                 style="color: blue;">{{total_tested}}</b> <br>
-            <small>अब तक लोगों को टेस्ट किया गया: </small> <b style="color: blue;">{{total_ind_tested}}</b>
+            <small>अब तक लोगों को टेस्ट किया गया: </small> <b style="color: blue;">{{total_ind_tested}}</b> -->
         </div>
-        <!-- important info section end -->
+        <!-- important info section end  -->
 
 
 
@@ -301,22 +317,23 @@
                     <!-- <img src="./images/arogya.JPG" alt="" srcset=""> -->
                     <center>
 
-                    <div v-if="showSubscribeForm" class="subscribe-container">
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true"
-                            width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
+                        <div v-if="showSubscribeForm" class="subscribe-container">
+                            <iframe
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSeu5L4W1R0U31dPwsjIjBY6HX6RYDVyGeP8S2GUgp1LOn4BlA/viewform?embedded=true"
+                                width="350" height="400" frameborder="0" marginheight="0"
+                                marginwidth="0">Loading…</iframe>
+                        </div>
 
+                    </center>
+
+                </div>
+                <center>
+                    <button @click="showSubscribeFormMethod" class="btn btn-primary">अभी सब्सक्राइब करें </button>
                 </center>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span style="color: blanchedalmond;" aria-hidden="true">X</span>
+                </button>
 
-            </div>
-            <center>
-                <button @click="showSubscribeFormMethod" class="btn btn-primary">अभी सब्सक्राइब करें </button>
-            </center>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span style="color: blanchedalmond;" aria-hidden="true">X</span>
-            </button>
-               
             </div>
 
 
@@ -516,7 +533,7 @@
                                 <div class="two">
                                     <div class="cases">
                                         <ul>
-                                            <h4 class="DisttTitle">कुल  </h4>
+                                            <h4 class="DisttTitle">कुल </h4>
                                             <hr>
                                             <li class="list-view-cases" v-for="confcases in disttConfirmCases">
                                                 {{confcases}}
@@ -529,7 +546,7 @@
                                 <div class="three">
                                     <div class="cases">
                                         <ul>
-                                            <h4 style="color: rgb(241, 72, 123);"  class="DisttTitle">आज+ </h4>
+                                            <h4 style="color: rgb(241, 72, 123);" class="DisttTitle">आज+ </h4>
                                             <hr>
                                             <li style="color: rgb(241, 72, 123);" class="list-view-cases"
                                                 v-for="confcases in disttConformNewCases"> <small> {{confcases}}</small>
@@ -551,7 +568,7 @@
                                 </div>
 
 
-                             
+
 
                                 <div class="three">
                                     <div class="cases">

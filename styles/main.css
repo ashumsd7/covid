@@ -222,3 +222,10 @@ marquee{
     background-image: url(../images/navbarback.JPG);
     background-size: cover;
 }
+.row-testing{
+    /* background-image: url(../images/testingbg.png); */
+    /* background-size: cover; */
+    background-color: rgb(195, 238, 39);
+   border-radius: 10px;
+   color: rgb(18, 70, 150);
+}
