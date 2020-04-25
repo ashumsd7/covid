@@ -107,6 +107,7 @@ var corona = new Vue({
                 'सुल्तानपुर',
                 'उन्नाव',
                 'वाराणसी',
+                'अयोध्या',
                 'नहीं पता '],
 
             showFeedbackForm: false,
