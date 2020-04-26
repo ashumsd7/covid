@@ -58,7 +58,7 @@
     border: 1px solid rgb(34, 206, 19);
 } */
 
-
+/* 
 #confirmed-td{
  
     background-color: rgb(255, 115, 0);
@@ -78,7 +78,7 @@
     background-color: rgb(37, 231, 111);
     border-radius:15%;
     box-shadow: 1px 2px 3px 6px gray;
-}
+} */
 
 
 
@@ -229,3 +229,34 @@ marquee{
    border-radius: 10px;
    color: rgb(27, 4, 109);
 }
+
+.round{
+    margin: 3px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+}
+/* .my-col{
+    border: 1px solid gray;
+    margin: 2px;
+    border-radius: 50%;
+    width: 160px;
+    height: 180px;
+} */
+
+
+#confirmed-td{
+ box-shadow: 5px 5px 5px rgb(231, 8, 131);
+ background-color:rgb(233, 109, 177);
+   
+}
+#deaths-td{
+    box-shadow: 5px 5px 5px rgb(236, 4, 15);
+    background-color: rgb(250, 91, 91);
+}
+#recovered-td{
+    box-shadow: 5px 5px 5px rgb(69, 226, 7);
+    background-color:  rgb(134, 240, 93);;
+}
+ 
