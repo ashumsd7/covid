@@ -20,7 +20,7 @@ var firebaseConfig = {
   window.onload = function () {
 
     // alert("firebase in js");
-    var wTag= document.getElementById("wistle-show")
+    // var wTag= document.getElementById("wistle-show")
   
     db.on("value", function (snapshot) {
       var data = snapshot.val();
@@ -34,9 +34,10 @@ var firebaseConfig = {
       }
       lastCount= wistlearray[wistleCount-1];
     //   alert(Number(lastCount));
+    lastCount= Number(lastCount);
       console.log(wistlearray);
     });
-    wTag.innerText=lastCount;
+    // wTag.innerText=lastCount;
   
    
     //  newdb.set(3);
