@@ -48,6 +48,11 @@ var firebaseConfig = {
     var audio = new Audio('./scripts/smile.mp3');
     audio.play();
   }
+  function showTotalWistleCount(){
+      var showcc= document.getElementById('wistle-show');
+      showcc.innerText=wistleCount;
+    //   alert(wistleCount);
+  }
 
   function increaseCount(){
     //   alert(lastCount)
