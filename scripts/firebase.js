@@ -43,10 +43,23 @@ var firebaseConfig = {
     //  newdb.set(3);
   };  
 
+  function playsound(){
+      alert("??")
+    var audio = new Audio('./scripts/smile.mp3');
+    audio.play();
+  }
+
   function increaseCount(){
     //   alert(lastCount)
+        playsound();
+
+    var audio = new Audio('smile.mp3');
+        audio.play();
       var insertIt= ++lastCount;
       newdb.set(insertIt);
-      location.reload(true);
+      setTimeout(() => {
+        location.reload(true);
+      }, 2000);
+    
 
   }
