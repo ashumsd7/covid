@@ -44,7 +44,7 @@ var firebaseConfig = {
   };  
 
   function playsound(){
-      alert("??")
+    //   alert("??")
     var audio = new Audio('./scripts/smile.mp3');
     audio.play();
   }
@@ -53,8 +53,8 @@ var firebaseConfig = {
     //   alert(lastCount)
         playsound();
 
-    var audio = new Audio('smile.mp3');
-        audio.play();
+    // var audio = new Audio('smile.mp3');
+    //     audio.play();
       var insertIt= ++lastCount;
       newdb.set(insertIt);
       setTimeout(() => {
