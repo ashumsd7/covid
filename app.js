@@ -243,6 +243,9 @@ var corona = new Vue({
                         if (this.listOfDistt[i] == "Lakhimpur Kheri") {
                             this.listOfDistt[i] = "Lakhimpur";
                         }
+                        if (this.listOfDistt[i] == "Gautam Buddha Nagar") {
+                            this.listOfDistt[i] = "Noida";
+                        }
 
                         if (this.listOfDistt[i] == "Sant Kabir Nagar") {
                             this.listOfDistt[i] = "SantKabirNagar";
