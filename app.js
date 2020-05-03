@@ -23,7 +23,7 @@ var corona = new Vue({
             last_updated: '',
 
 
-            total_tested: '1,04,6450',
+            total_tested: '1,04,6,450',
             total_ind_tested: '525667',
             today_tested_icmr: '70,087',
             today_positive_icmr: '23502',
