@@ -178,9 +178,77 @@
         </div>
         <!-- small first  container end -->
 
-        <button style="background-color: chartreuse;" btn btn-warning onclick="increaseCount()"><img src="./images/wistle.png" alt="" srcset=""> </button>
-        <small style="background-color: cornflowerblue; cursor: pointer;" onclick="showTotalWistleCount()" id="wistle-show">...</small> <small id="showhere"></small>
+        <!-- <button style="background-color: chartreuse;" btn btn-warning onclick="increaseCount()"><img src="./images/wistle.png" alt="" srcset=""> </button>
+        <small style="background-color: cornflowerblue; cursor: pointer;" onclick="showTotalWistleCount()" id="wistle-show">...</small> <small id="showhere"></small> -->
         <!-- important info section start -->
+        <!-- Button trigger modal -->
+
+
+        <!-- ek click me jaane poora haal start -->
+        <center>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    एक क्लिक में जानें अभी तक का पूरा हाल 
+  </button>
+</center>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle"> {{last_updated}} बजे तक </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            
+           <span class="my-modal-title1">अब तक कुल सैंपल टेस्ट</span>  : <span class="my-modal-title1-data" >{{total_tested}}</span>
+            <br>
+          <span class="my-modal-title1">अब तक कुल पॉजिटिव केस </span>  : <span class="my-modal-title1-data"  >{{confirmed_tt}}</span> 
+            <br>
+           <span class="my-modal-title1">अब तक कुल ठीक केस </span> : <span class="my-modal-title1-data"> {{recovered_tt}}</span>
+            <br>
+            <span class="my-modal-title1"> अब तक कुल मृत्यु</span>    : <span class="my-modal-title1-data" >{{ deaths_tt}}</span> 
+            <br>
+            <hr>
+
+         <span class="my-modal-title2">आज पॉजिटिव केस</span>    : <span class="my-modal-title2-data"> {{confirmed_td}}</span>
+            <br>      
+        <span class="my-modal-title2">  आज ठीक हुए</span>   : <span class="my-modal-title2-data" >{{recovered_td}}</span> 
+            <br>
+          <span class="my-modal-title2">आज मृत्यु</span>   :  <span class="my-modal-title2-data">{{deaths_td}}</span>
+            <br>
+            <hr>
+            <div id="siteAddress">
+                <span ><center>ashumsd7.github.io/covid/</center></span>  
+            </div>
+           
+
+            <!-- <br>
+            सबसे ज्यादा केस राज्य में : शीर्ष 5
+            <hr>
+            महाराष्ट्र: 
+            <br>
+            गुजरात:
+            <br>
+            दिल्ली:
+            <br>
+            मध्यप्रदेश:
+            <br>
+            राजस्थान: -->
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- ek click me jaane poora haal end -->
+
         <div id="imporatant-info">
 
             <!-- row 0 start -->
@@ -202,24 +270,7 @@
             </div>
 
 
-            <!-- <sup>ICMR के रिपोर्ट के अनुसार {{date_icmr}} बजे तक : स्रोत: <a
-                    href="https://icmr.nic.in/sites/default/files/whats_new/ICMR_testing_update_24April_9PM_IST.pdf">ICMR
-                    वेबसाइट </a> </sup> <br>
-
-            <div class="movable-info">
-                <img src="images/speaker.png" alt="" srcset="">
-                <marquee scrollamount="5" behavior="" direction="">{{date_icmr}} बजे की रिपोर्ट के
-                     अनुसार 
-                     अब तक -->
-            <!-- <b>{{ today_tested_icmr}}</b>  -->
-            <!-- <img src="./images/lab.png" alt=""> 
-                 <b>{{today_positive_icmr}} सैंपल </b> पॉजिटिव पाए गए
-                    |</marquee>
-
-            </div>
-            <small> अब तक सैंपल टेस्ट <img src="./images/lab.png" alt=""> किये गए</small>: <b
-                style="color: blue;">{{total_tested}}</b> <br>
-            <small>अब तक लोगों को टेस्ट किया गया: </small> <b style="color: blue;">{{total_ind_tested}}</b> -->
+       
         </div>
         <!-- important info section end  -->
 
@@ -303,21 +354,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- row 0 end -->
             <!-- <center>
                 <h5>आज भारत में <sup style="color: rgb(88, 76, 76);"><small>[रात 12 बजे से अभी तक ]</small></sup> </h5>
@@ -325,54 +361,7 @@
             </center>
             <hr> -->
 
-            <!-- row 1 start -->
-            <!-- <div class="row my-row-1 ">
-                <div class="col-sm-4  my-row-1-col-1">
-
-                    <div id="confirmed-td">
-                        <small>आज के पॉजिटिव मामले </small>
-
-
-                        <p>+{{confirmed_td}} <img src="images/plus.png" alt="" srcset=""></p>
-
-
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="col-sm-4 my-row-1-col-3">
-
-
-
-                    <div id="recovered-td">
-                        <small>आज ठीक हुए </small>
-
-                        <p>+{{recovered_td}} <img src="images/sprinter.png" alt="" srcset=""></p>
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="col-sm-4 my-row-1-col-4">
-
-                    <div id="deaths-td">
-                        <small>आज के मृतकों की संख्या </small>
-
-                        <p>+{{deaths_td}} <img src="images/death.png" alt="" srcset=""> </p>
-
-
-                    </div>
-
-                </div>
-
-            </div> -->
-
-            <!-- row 1 end  -->
+      
 
 
             <!-- popup  -->

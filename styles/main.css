@@ -259,4 +259,24 @@ marquee{
     box-shadow: 5px 5px 5px rgb(69, 226, 7);
     background-color:  rgb(134, 240, 93);;
 }
- 
+ .my-modal-title1{
+     font-size: 18px;
+ }
+ .my-modal-title1-data{
+     font-size: 20px;
+ }
+ .my-modal-title2{
+     font-size: 20px;
+ }
+ .my-modal-title2-data{
+    font-size: 22px;
+ }
+ .modal-header{
+     background-color: rgb(151, 240, 8);
+     color: rgb(12, 12, 12);
+ }
+ #siteAddress{
+     background-color: rgb(56, 231, 100);
+     color: rgba(14, 13, 13, 0.5);
+     font-size: large;
+ }
