@@ -161,18 +161,21 @@ var corona = new Vue({
                 
                 
                 'ओडिशा',
-                'झारखंड',
+               
                 'चंडीगढ़',
+                'झारखंड',
+                'त्रिपुरा',
                 'उत्तराखंड',
                 'छत्तीसगढ़',
                 'असम',
-                'लद्दाख',
                 'हिमाचल',
+                'लद्दाख',
+               
                 
                 
                 
                 'अंडमान',
-                'त्रिपुरा',
+                
                
                
                 'मेघालय',
@@ -370,7 +373,7 @@ var corona = new Vue({
                     }
 
 
-                    if(stateName[i]=="Dadra and Nagar Haveli")
+                    if(stateName[i]=="Dadra and Nagar Haveli and Daman and Diu")
                     {
                         stateName[i]="Dadra&NH";
                     }
