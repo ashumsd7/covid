@@ -137,8 +137,9 @@ var corona = new Vue({
             stateNameFilteredEng:[],
             stateNameHindi:['महाराष्ट्र',
                 'गुजरात',
+                 'तमिलनाडु',
                 'दिल्ली',
-                'तमिलनाडु',
+               
                 'राजस्थान', 
                 'मध्यप्रदेश',   
                
