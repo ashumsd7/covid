@@ -607,7 +607,7 @@
                                             <h4 style="color: rgb(241, 72, 123);" class="DisttTitle">आज+ </h4>
                                             <hr>
                                             <li style="color: rgb(241, 72, 123);" class="list-view-cases"
-                                                v-for="confcases in disttConformNewCases"> <small> {{confcases}}</small>
+                                                v-for="confcases in disttConformNewCases"> <small> +{{confcases}}</small>
                                             </li>
                                         </ul>
                                     </div>
@@ -618,7 +618,7 @@
                                         <ul>
                                             <h4 style="color: rgb(56, 238, 11);" class="DisttTitle">ठीक</h4>
                                             <hr>
-                                            <li class="list-view-cases" v-for="confcases in disttRecovered">
+                                            <li style="color: rgb(28, 80, 16);" class="list-view-cases" v-for="confcases in disttRecovered">
                                                 {{confcases}}
                                             </li>
                                         </ul>
