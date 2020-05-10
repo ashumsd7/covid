@@ -21,22 +21,15 @@ var corona = new Vue({
             recovered_tt: '',
             recovered_td: '',
             last_updated: '',
-
+            
             total_tested:'16,09,037',
             today_tested_icmr:'85,824',
             last_updated:'',
             date_icmr: '10 मई 2020 9AM',
             betweenDates:'9 मई 9AM से 10 मई  9AM तक ',
-
-
             result: '',
             result1: '',
-
-
-
-
             download_App_Loading: false,
-
             DisttConfirmArray: '',
             DisttNewCaseArray: '',
 
@@ -96,8 +89,7 @@ var corona = new Vue({
                 'ललितपुर ',
                 'लखनऊ',
                 'महराजगंज',
-                'महोबा',
-                
+                'महोबा',              
                 'मैनपुरी',
                 'मथुरा',
                 'मऊ',
@@ -140,8 +132,9 @@ var corona = new Vue({
             stateNameFilteredEng:[],
             stateNameHindi:['महाराष्ट्र',
                 'गुजरात',
+                'तमिलनाडु',
                 'दिल्ली',
-                 'तमिलनाडु',
+                
                 
                
                 'राजस्थान', 
