@@ -43,6 +43,7 @@ var corona = new Vue({
             disttConformNewCases: [],
             disttRecovered:[],
             disttdeceased:[],
+            disttactive:[],
             listOfDistt: [],
             listOfDisttHindi: ['आगरा','अलीगढ', 'अम्बेडकरनगर ','अमेठी',
                 'अमरोहा',
@@ -274,10 +275,10 @@ var corona = new Vue({
                         if (this.listOfDistt[i] == "Sant Kabir Nagar") {
                             this.listOfDistt[i] = "SantKabirNagar";
                         }
-
-                        // if (this.listOfDistt[i] == "Unknown") {
-                        //     this.listOfDisttHindi.push("अज्ञात");
-                        // }..
+                        
+                        if (this.listOfDistt[i] == "Ambedkar Nagar") {
+                            this.listOfDistt[i] = "AmbedakarN";
+                        }
                     }
 
 
@@ -286,6 +287,7 @@ var corona = new Vue({
                         this.disttConformNewCases.push(arr[i].delta.confirmed)
                         this.disttRecovered.push(arr[i].recovered);
                         this.disttdeceased.push(arr[i].deceased)
+                        this.disttactive.push(arr[i].active)
                     }
                     for (let i in this.disttConformNewCases) {
                         if (this.disttConformNewCases[i] == 0) {
