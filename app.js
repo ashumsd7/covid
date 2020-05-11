@@ -287,11 +287,11 @@ var corona = new Vue({
                         this.disttRecovered.push(arr[i].recovered);
                         this.disttdeceased.push(arr[i].deceased)
                     }
-                    // for (let i in this.disttConformNewCases) {
-                    //     if (this.disttConformNewCases[i] == 0) {
-                    //         this.disttConformNewCases[i] = "-";
-                    //     }
-                    // }
+                    for (let i in this.disttConformNewCases) {
+                        if (this.disttConformNewCases[i] == 0) {
+                            this.disttConformNewCases[i] = "-";
+                        }
+                    }
 
                     for (let i in this.disttRecovered) {
                         if (this.disttRecovered[i] == 0) {
