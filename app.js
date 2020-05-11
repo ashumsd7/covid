@@ -222,7 +222,7 @@ var corona = new Vue({
                     this.deaths_td = JSON.parse(this.result).data.statewise[0].deltadeaths;
                     this.recovered_td = JSON.parse(this.result).data.statewise[0].deltarecovered;
                     // alert(this.recovered_td);
-                    this.recovered_td=0;
+                    // this.recovered_td=0;
                     this.last_updated = JSON.parse(this.result).data.statewise[0].lastupdatedtime;
 
 
