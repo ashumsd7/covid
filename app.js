@@ -1,4 +1,4 @@
-var corona = new Vue({
+﻿var corona = new Vue({
     el: "#app",
     mounted: function () {
         this.method1() //method1 will execute at pageload
@@ -62,6 +62,7 @@ var corona = new Vue({
                 'बिजनौर',
                 'बदायूं',
                 'बुलंदशहर',
+	'चन्दौली',
                 'चित्रकूट',
                 'देवरिया',
                 'एटा',
