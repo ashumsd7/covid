@@ -21,12 +21,12 @@
             recovered_tt: '',
             recovered_td: '',
             last_updated: '',
-            
-            total_tested:'23,02,792',
-            today_tested_icmr:'75,150',
-            last_updated:'',
+
+            total_tested: '23,02,792',
+            today_tested_icmr: '75,150',
+            last_updated: '',
             date_icmr: '18 मई 2020 9AM',
-            betweenDates:'17 मई 9AM से 18 मई  9AM तक ',
+            betweenDates: '17 मई 9AM से 18 मई  9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
@@ -37,15 +37,15 @@
             subscribe_contaoner_flag: true,
 
 
-           
+
 
             disttConfirmCases: [],
             disttConformNewCases: [],
-            disttRecovered:[],
-            disttdeceased:[],
-            disttactive:[],
+            disttRecovered: [],
+            disttdeceased: [],
+            disttactive: [],
             listOfDistt: [],
-            listOfDisttHindi: ['आगरा','अलीगढ', 'अम्बेडकरनगर ','अमेठी',
+            listOfDisttHindi: ['आगरा', 'अलीगढ', 'अम्बेडकरनगर ', 'अमेठी',
                 'अमरोहा',
                 'औरैया',
                 'अयोध्या',
@@ -53,7 +53,7 @@
                 'बागपत',
                 'बहराइच',
                 'बलिया ',
-                 'बलरामपुर',
+                'बलरामपुर',
                 'बांदा',
                 'बाराबंकी',
                 'बरेली',
@@ -62,7 +62,7 @@
                 'बिजनौर',
                 'बदायूं',
                 'बुलंदशहर',
-	'चन्दौली',
+                'चन्दौली',
                 'चित्रकूट',
                 'देवरिया',
                 'एटा',
@@ -92,7 +92,7 @@
                 'ललितपुर ',
                 'लखनऊ',
                 'महराजगंज',
-                'महोबा',              
+                'महोबा',
                 'मैनपुरी',
                 'मथुरा',
                 'मऊ',
@@ -115,12 +115,12 @@
                 'सीतापुर',
                 'सोनभद्र',
                 'सुल्तानपुर',
-              
+
 
 
                 'उन्नाव',
                 'वाराणसी',
-                
+
                 'नहीं पता '],
 
             showFeedbackForm: false,
@@ -128,80 +128,83 @@
 
             wistleCount: '',
 
-            stateConfirmed:[],
-            stateRecovered:[],
-            stateActive:[],
-            stateDeaths:[],
-            stateDeltaConfirmed:[],
-            stateDeltaRecovered:[],
-            stateDeltaDeaths:[],
-            stateLastTimeUpdated:[],
-            stateNameFilteredEng:[],
-            stateNameHindi:['महाराष्ट्र','तमिलनाडु',
+            stateConfirmed: [],
+            stateRecovered: [],
+            stateActive: [],
+            stateDeaths: [],
+            stateDeltaConfirmed: [],
+            stateDeltaRecovered: [],
+            stateDeltaDeaths: [],
+            stateLastTimeUpdated: [],
+            stateNameFilteredEng: [],
+            stateNameHindi: ['महाराष्ट्र',
                 'गुजरात',
-                
+                'तमिलनाडु',
+
+
                 'दिल्ली',
+
+
+                'राजस्थान',
+
+                'मध्यप्रदेश',
                 
-                
-               
-              
-                'मध्यप्रदेश',   
-                'राजस्थान', 
-                
+
                 'उत्तरप्रदेश',
                 'पश्चिमबं',
                 'आंध्रप्र.',
-                
+
                 'पंजाब',
-                
-                
-                
+
+
+
                 'तेलंगाना',
                 'बिहार',
-                'कर्नाटक',
                 'जम्मूक.',
-             
-                
-                'हरियाणा',
-                
-                'ओडिशा',
-                'केरल',             
-                
-         
-                
-                
-             
+                'कर्नाटक',
                
-                'चंडीगढ़',
+
+
+                'हरियाणा',
+
+                'ओडिशा',
+                'केरल',
+
+
+
+
                 'झारखंड',
+
+                'चंडीगढ़',
+                
                 'त्रिपुरा',
                 'असम',
                 'उत्तराखंड',
                 'हिमाचल',
-                
+
                 'छत्तीसगढ़',
-                
+
                 'लद्दाख',
-               
-                
-                
-                
+
+
+
+
                 'अंडमान',
                 'गोवा',
-                
-               
-               
-                'मेघालय',
+
                 'पुडुचेरी',
+
+                'मेघालय',
                
+
                 'मणिपुर',
-                
+
                 'मिजोरम',
                 'अरुणाचल',
-                
+
                 'दादरा',
                 'नगालैंड',
-               
+
                 'लक्षद्वीप',
                 'सिक्किम'],
             showPopPup: false
@@ -211,7 +214,7 @@
 
         }
     },
-     // 'दमनदीव',
+    // 'दमनदीव',
     methods: {
         method1: function () {
             axios
@@ -280,7 +283,7 @@
                         if (this.listOfDistt[i] == "Sant Kabir Nagar") {
                             this.listOfDistt[i] = "SantKabirNagar";
                         }
-                        
+
                         if (this.listOfDistt[i] == "Ambedkar Nagar") {
                             this.listOfDistt[i] = "AmbedakarN";
                         }
@@ -312,7 +315,7 @@
                         }
                     }
 
-                     console.log(this.listOfDisttHindi);
+                    console.log(this.listOfDisttHindi);
 
 
                     //console.log(this.disttConfirmCases); //list of cases success all distt
@@ -321,139 +324,126 @@
         },
 
 
-        collectAllStateData(){
+        collectAllStateData() {
             axios
-            .get('https://api.covid19india.org/data.json')
-            .then(response => {
-                this.result = JSON.stringify(response);
+                .get('https://api.covid19india.org/data.json')
+                .then(response => {
+                    this.result = JSON.stringify(response);
 
-                var fullData= JSON.parse(this.result).data.statewise;
+                    var fullData = JSON.parse(this.result).data.statewise;
 
-               
-                var stateName=[];
-               
-                for(let eachObj of fullData)
-                {
-                    // console.log(eachObj.confirmed);
-                    this.stateConfirmed.push(eachObj.confirmed);
-                    this.stateRecovered.push(eachObj.recovered);
-                    this.stateActive.push(eachObj.active);
-                    this.stateDeaths.push(eachObj.deaths);
-                    this.stateDeltaConfirmed.push(eachObj.deltaconfirmed);
-                    this.stateDeltaRecovered.push(eachObj.deltarecovered);
-                    this.stateDeltaDeaths.push(eachObj.deltadeaths);
-                    stateName.push(eachObj.state);
-                    this.stateLastTimeUpdated.push(eachObj.lastupdatedtime);
-                }
 
-                for (let i in this.stateDeaths) {
-                    if (this.stateDeaths[i] == 0) {
-                        this.stateDeaths[i] = "-";
-                    }
-                }
+                    var stateName = [];
 
-                
-                for (let i in this.stateConfirmed) {
-                    if (this.stateConfirmed[i] == 0) {
-                        this.stateConfirmed[i] = "-";
-                    }
-                }
-
-                for (let i in this.stateRecovered) {
-                    if (this.stateRecovered[i] == 0) {
-                        this.stateRecovered[i] = "-";
-                    }
-                }
-
-               
-//please if u looking at this code make it automatic I could also make it, and I will make , but if possible and u have time do it now. Thank u
-                for(let i in stateName)
-                {
-                    if(stateName[i]=="Madhya Pradesh")
-                    {
-                        stateName[i]="MP";
+                    for (let eachObj of fullData) {
+                        // console.log(eachObj.confirmed);
+                        this.stateConfirmed.push(eachObj.confirmed);
+                        this.stateRecovered.push(eachObj.recovered);
+                        this.stateActive.push(eachObj.active);
+                        this.stateDeaths.push(eachObj.deaths);
+                        this.stateDeltaConfirmed.push(eachObj.deltaconfirmed);
+                        this.stateDeltaRecovered.push(eachObj.deltarecovered);
+                        this.stateDeltaDeaths.push(eachObj.deltadeaths);
+                        stateName.push(eachObj.state);
+                        this.stateLastTimeUpdated.push(eachObj.lastupdatedtime);
                     }
 
-                    if(stateName[i]=="Uttar Pradesh")
-                    {
-                        stateName[i]="UP";
-                    }
-
-                    if(stateName[i]=="Jammu and Kashmir")
-                    {
-                        stateName[i]="J&K";
-                    }
-
-                    if(stateName[i]=="Himachal Pradesh")
-                    {
-                        stateName[i]="Himachal";
+                    for (let i in this.stateDeaths) {
+                        if (this.stateDeaths[i] == 0) {
+                            this.stateDeaths[i] = "-";
+                        }
                     }
 
 
-                    if(stateName[i]=="Dadra and Nagar Haveli and Daman and Diu")
-                    {
-                        stateName[i]="Dadra&NH";
+                    for (let i in this.stateConfirmed) {
+                        if (this.stateConfirmed[i] == 0) {
+                            this.stateConfirmed[i] = "-";
+                        }
                     }
 
-                    if(stateName[i]=="Andhra Pradesh")
-                    {
-                        stateName[i]="Andhra";
+                    for (let i in this.stateRecovered) {
+                        if (this.stateRecovered[i] == 0) {
+                            this.stateRecovered[i] = "-";
+                        }
                     }
 
-                    if(stateName[i]=="Andaman and Nicobar Islands")
-                    {
-                        stateName[i]="AndamanNB";
+
+                    //please if u looking at this code make it automatic I could also make it, and I will make , but if possible and u have time do it now. Thank u
+                    for (let i in stateName) {
+                        if (stateName[i] == "Madhya Pradesh") {
+                            stateName[i] = "MP";
+                        }
+
+                        if (stateName[i] == "Uttar Pradesh") {
+                            stateName[i] = "UP";
+                        }
+
+                        if (stateName[i] == "Jammu and Kashmir") {
+                            stateName[i] = "J&K";
+                        }
+
+                        if (stateName[i] == "Himachal Pradesh") {
+                            stateName[i] = "Himachal";
+                        }
+
+
+                        if (stateName[i] == "Dadra and Nagar Haveli and Daman and Diu") {
+                            stateName[i] = "Dadra&NH";
+                        }
+
+                        if (stateName[i] == "Andhra Pradesh") {
+                            stateName[i] = "Andhra";
+                        }
+
+                        if (stateName[i] == "Andaman and Nicobar Islands") {
+                            stateName[i] = "AndamanNB";
+                        }
+
+                        if (stateName[i] == "Daman and Diu") {
+                            stateName[i] = "Daman&D.";
+                        }
+                        if (stateName[i] == "Arunachal Pradesh") {
+                            stateName[i] = "Arunachal";
+                        }
+                        if (stateName[i] == "Tamil Nadu") {
+                            stateName[i] = "TN";
+                        }
+                        if (stateName[i] == "West Bengal") {
+                            stateName[i] = "WB";
+                        }
                     }
+                    this.stateNameFilteredEng = stateName;
 
-                    if(stateName[i]=="Daman and Diu")
-                    {
-                        stateName[i]="Daman&D.";
-                    }
-                    if(stateName[i]=="Arunachal Pradesh")
-                    {
-                        stateName[i]="Arunachal";
-                    }
-                    if(stateName[i]=="Tamil Nadu")
-                    {
-                        stateName[i]="TN";
-                    }
-                    if(stateName[i]=="West Bengal")
-                    {
-                        stateName[i]="WB";
-                    }
-                }
-                this.stateNameFilteredEng= stateName;
-
-                this.stateConfirmed.shift();
-                this.stateRecovered.shift();
-                this.stateActive.shift();
-                this.stateDeaths.shift();
-                this.stateDeltaConfirmed.shift();
-                this.stateLastTimeUpdated.shift();
-                this.stateDeltaRecovered.shift();
-                this.stateDeltaDeaths.shift();
-                this.stateNameFilteredEng.shift();
+                    this.stateConfirmed.shift();
+                    this.stateRecovered.shift();
+                    this.stateActive.shift();
+                    this.stateDeaths.shift();
+                    this.stateDeltaConfirmed.shift();
+                    this.stateLastTimeUpdated.shift();
+                    this.stateDeltaRecovered.shift();
+                    this.stateDeltaDeaths.shift();
+                    this.stateNameFilteredEng.shift();
 
 
-                // console.log(stateName);
+                    // console.log(stateName);
 
-            //   console.log(fullData);
+                    //   console.log(fullData);
 
 
 
-            })
+                })
 
 
         },
 
-        showAnyPopUp(){
-            this.showPopPup= true;
+        showAnyPopUp() {
+            this.showPopPup = true;
             window.scrollBy(0, 500);
         },
 
         playWistle() {
- 
-            firebaseConfig= {
+
+            firebaseConfig = {
                 apiKey: "AIzaSyCb17UFrF-iwOnF7jtzsD7u47gWRVLWdmQ",
                 authDomain: "covid-19-updates-459b6.firebaseapp.com",
                 databaseURL: "https://covid-19-updates-459b6.firebaseio.com",
@@ -463,30 +453,30 @@
                 appId: "1:194285663598:web:819e2146b5fa7c8020fd7f",
                 measurementId: "G-8PC5ZS12T1"
             },
-            firebase.initializeApp(firebaseConfig);
+                firebase.initializeApp(firebaseConfig);
             var db = firebase.database().ref("NEwDB");
-          
-           
+
+
             // setTimeout(() => {
             //     this.reloadPage();
             // }, 2000);
 
-            db.on("value",function(snapshot){ 
-                var data= snapshot.val();
+            db.on("value", function (snapshot) {
+                var data = snapshot.val();
                 console.log(data);
-             var objlen= Object.keys(data).length;
+                var objlen = Object.keys(data).length;
 
-             var wistleArray=[];
-             for(const[key,val] of Object.entries(data)){
-                wistleArray.push(val);
-             }
-             console.log(wistleArray[objlen-1]);
+                var wistleArray = [];
+                for (const [key, val] of Object.entries(data)) {
+                    wistleArray.push(val);
+                }
+                console.log(wistleArray[objlen - 1]);
 
 
-            var latestWistleCount= wistleArray[objlen-1];
+                var latestWistleCount = wistleArray[objlen - 1];
 
-            this.wistleCount= latestWistleCount+1;
-            console.log(this.wistleCount);
+                this.wistleCount = latestWistleCount + 1;
+                console.log(this.wistleCount);
 
             })
 
@@ -497,7 +487,7 @@
         },
 
 
-        reloadPage(){
+        reloadPage() {
             location.reload(true);
         },
 
@@ -536,29 +526,29 @@
             document.location.href = "https://twitter.com/WeWillStopCovid";
         },
 
-        showSubscribeFormMethod(){
-         ;
-          this.subscribe_contaoner_flag=false;
-          this.showSubscribeForm= true;
-        
+        showSubscribeFormMethod() {
+            ;
+            this.subscribe_contaoner_flag = false;
+            this.showSubscribeForm = true;
+
 
         },
 
-        showFeedbackFormMethod(){
-           
-            this.feedback_conatiner_flag=false;
-            this.showFeedbackForm= true;
-  
+        showFeedbackFormMethod() {
+
+            this.feedback_conatiner_flag = false;
+            this.showFeedbackForm = true;
+
         },
 
-        hideFeedBackForm(){
-           
-            this.feedback_conatiner_flag=true;
-            this.showFeedbackForm= false;
+        hideFeedBackForm() {
+
+            this.feedback_conatiner_flag = true;
+            this.showFeedbackForm = false;
         },
-        hideSubscribeForm(){
-            this.subscribe_contaoner_flag=true;
-          this.showSubscribeForm= false;
+        hideSubscribeForm() {
+            this.subscribe_contaoner_flag = true;
+            this.showSubscribeForm = false;
         }
 
 
