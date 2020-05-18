@@ -138,8 +138,9 @@
             stateLastTimeUpdated: [],
             stateNameFilteredEng: [],
             stateNameHindi: ['महाराष्ट्र',
+             'तमिलनाडु',
                 'गुजरात',
-                'तमिलनाडु',
+               
 
 
                 'दिल्ली',
