@@ -445,10 +445,10 @@
 
         },
 
-        showAnyPopUp() {
-            this.showPopPup = true;
-            window.scrollBy(0, 500);
-        },
+        // showAnyPopUp() {
+        //     this.showPopPup = true;
+        //     window.scrollBy(0, 500);
+        // },
 
         playWistle() {
 
