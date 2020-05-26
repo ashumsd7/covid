@@ -22,11 +22,11 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '30,33,591',
-            today_tested_icmr: '90,170',
+            total_tested: '31,26,119',
+            today_tested_icmr: '92,528',
             last_updated: '',
-            date_icmr: '25 मई 2020 9AM',
-            betweenDates: '24 मई 9AM से 25 मई  9AM तक ',
+            date_icmr: '26 मई 2020 9AM',
+            betweenDates: '25 मई 9AM से 26 मई  9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
@@ -156,9 +156,9 @@
                 'आंध्रप्र.',
 
                
-
-'नहींपता ',
  'बिहार',
+'नहींपता ',
+
  'कर्नाटक',
  'पंजाब',
   
