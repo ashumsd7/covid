@@ -121,7 +121,7 @@
                 'उन्नाव',
                 'वाराणसी',
 
-                'नहीं पता '],
+                ],
 
             showFeedbackForm: false,
             showSubscribeForm: false,
