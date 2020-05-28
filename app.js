@@ -22,11 +22,11 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '32,42,160',
-            today_tested_icmr: '1,16,041',
+            total_tested: '33,62,136',
+            today_tested_icmr: '1,19,976',
             last_updated: '',
-            date_icmr: '27 मई 2020 9AM',
-            betweenDates: '26 मई 9AM से 27 मई  9AM तक ',
+            date_icmr: '28 मई 2020 9AM',
+            betweenDates: '27 मई 9AM से 28 मई  9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
@@ -153,9 +153,10 @@
 
                 'उत्तरप्रदेश',
                 'पश्चिमबं',
-                'आंध्रप्र.',
+         
 
-   'नहींपता ',            
+   'नहींपता ',          
+       'आंध्रप्र.',  
  'बिहार',
 
 
