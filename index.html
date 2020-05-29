@@ -487,14 +487,25 @@
                             +{{ disttName }}
                         </li>
 
-                    </ul>
+                    </ul> 
                 </div>
+
+                <!-- <div class="col ">
+                    <ul>
+                        <small class="stateHindiTitile"> Active </small>
+                        <hr>
+                        <li style="color: rgb(235, 17, 17);" class="stateNew" v-for="disttName in stateActive">
+                            +{{ disttName }}
+                        </li>
+
+                    </ul> 
+                </div> -->
 
                 <div class="col ">
                     <ul>
                         <small class="stateHindiTitile">ठीक</small>
                         <hr>
-                        <li class="" v-for="confcases in stateRecovered">
+                        <li style="color: green;" class="" v-for="confcases in stateRecovered">
                             <small> {{confcases}}</small>
                         </li>
                     </ul>
