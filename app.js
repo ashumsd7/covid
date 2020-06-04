@@ -22,11 +22,11 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '41,03,233',
-            today_tested_icmr: '1,37,158',
+            total_tested: '42,42,718',
+            today_tested_icmr: '1,39,485',
             last_updated: '',
-            date_icmr: '03 जून 2020 9AM',
-            betweenDates: '02 जून 9AM से 03 जून 9AM तक ',
+            date_icmr: '04 जून 2020 9AM',
+            betweenDates: '03 जून 9AM से 04 जून 9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
@@ -158,10 +158,11 @@
      
  'बिहार',
     
-       'आंध्रप्र.',  
+     
 
 
  'कर्नाटक',
+  'आंध्रप्र.',  
     'तेलंगाना',
        'जम्मूक.',
      
@@ -218,9 +219,10 @@
                 'मेघालय',
                 
    'अरुणाचल',
+     'मिजोरम',
            'दादरा',
 
-                'मिजोरम',
+           
              
         'सिक्किम',
            
