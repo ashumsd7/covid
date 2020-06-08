@@ -22,11 +22,11 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '46,66,386',
-            today_tested_icmr: '1,42,069',
+            total_tested: '47,74,434',
+            today_tested_icmr: '1,08,048',
             last_updated: '',
-            date_icmr: '07 जून 2020 9AM',
-            betweenDates: '06 जून 9AM से 07 जून 9AM तक ',
+            date_icmr: '08 जून 2020 9AM',
+            betweenDates: '07 जून 9AM से 08 जून 9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
@@ -209,10 +209,11 @@
               
             'लद्दाख',                
    'अरुणाचल',
+ 'मिजोरम',
   'अंडमान',     
 'मेघालय',
              
-     'मिजोरम',
+    
            'दादरा',
 
            
