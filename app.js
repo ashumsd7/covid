@@ -26,7 +26,7 @@
             today_tested_icmr: '1,45,216',
             last_updated: '',
             date_icmr: '10 जून 2020 9AM',
-            betweenDates: '09 जून AM से 10 जून 9AM तक ',
+            betweenDates: '09 जून 9 AM से 10 जून 9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
