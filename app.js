@@ -233,7 +233,8 @@
                 'लक्षद्वीप',
         
                 ],
-            showPopPup: false
+            showPopPup: false,
+            showReasonText: false
 
 
 
@@ -268,6 +269,17 @@
                
 
 
+        },
+        showReason(){
+            if(this.showReasonText== true)
+            {
+                this.showReasonText= false;
+            }
+            if(this.showReasonText== false)
+            {
+                this.showReasonText= true;
+            }
+            
         },
 
         loadStateData() {

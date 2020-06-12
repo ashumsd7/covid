@@ -27,6 +27,7 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- firebae cdn -->
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase.js"></script>
@@ -330,10 +331,18 @@
         </h5>
 
     </center>
+  
+        <small style="font-size: smaller;" v-if="showReasonText" >अगर आपको आज की संख्या ऋण में दिखाई दे रही है तो इसका कारण है , MoHFW ने Unassigned श्रेणी में से कुछ संख्या को कम कर दिया है। यह कमी आज के कुल में परिलक्षित होगी।</small>
+        <hr>
+ 
     <div class="row align-self-center">
 
         <div class="col-sm-3 my-col mr-auto">
-            <small>आज के पॉजिटिव मामले </small>
+            <small class="">आज के पॉजिटिव मामले  <i @click="showReason" class="fa fa-bullhorn" aria-hidden="true"></i> </small> 
+               
+            
+            
+           
             <center>
                 <div id="confirmed-td" class="round ">
                     <small> +</small>
@@ -343,6 +352,8 @@
                             srcset=""></p>
                 </div>
             </center>
+           
+           
         </div>
         
         <div class="col-sm-3 my-col  mr-auto">

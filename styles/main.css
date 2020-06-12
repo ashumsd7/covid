@@ -281,3 +281,7 @@ marquee{
      color: rgba(14, 13, 13, 0.5);
      font-size: large;
  }
+
+.fa-bullhorn{
+    cursor: pointer;
+}
