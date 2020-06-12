@@ -333,7 +333,9 @@
     </center>
   
         <small style="font-size: smaller; color: red;" v-if="showReasonText" >अगर आपको आज की संख्या ऋण में दिखाई दे रही है तो इसका कारण है , MoHFW ने Unassigned श्रेणी में से कुछ संख्या को कम कर दिया है। ( नीचे के राज्यों के सूची में "Unassigned/नहीं पता"  वाली पंक्ति देखें ) यह कमी आज के पॉजिटिव मामलों में परिलक्षित होगी।</small>
+      <br>  <small @click="hideReason" v-if="showReasonText" style="background: black; color: aliceblue; margin: 2px; padding: 3px; cursor: pointer; border: 1px solid red; border-radius: 5px;">   ठीक है</small>     
         <hr>
+      
  
     <div class="row align-self-center">
 

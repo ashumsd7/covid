@@ -281,6 +281,9 @@
             }
             
         },
+        hideReason(){
+            this.showReasonText= false;
+        },
 
         loadStateData() {
             axios
