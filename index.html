@@ -7,7 +7,8 @@
     <title>भारत में कोरोना मामले : हिंदी में </title>
 
     <!-- ajax cdn -->
-    <script data-ad-client="ca-pub-6990943232540646" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-6990943232540646" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script src="https://npmcdn.com/vue/dist/vue.js"></script>
@@ -90,11 +91,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="dropdown-item"
-                    href="whoweare.html">
-                    About This Site ?</a>
+                        <a class="dropdown-item" href="whoweare.html">
+                            About This Site ?</a>
                     </li>
-                  
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -108,7 +108,7 @@
                             <a class="dropdown-item" href="https://www.icmr.gov.in/">ICMR वेबसाइट पर
                                 जाएँ </a>
 
-                            
+
                             <!-- <a class="dropdown-item" href="#">Something else here</a> -->
                         </div>
                     </li>
@@ -128,7 +128,8 @@
         <nav class="navbar navbar-dark  bg-dark">
             <a class="navbar-brand"><img src="images/stayhome.png" alt="" srcset=""></a>
 
-            <strong style="color: aliceblue;">अब तक कुल सैंपल टेस्ट : <strong style="color: rgb(141, 247, 43); font-size: large;"> {{total_tested}} </strong>  </strong>
+            <strong style="color: aliceblue;">अब तक कुल सैंपल टेस्ट : <strong
+                    style="color: rgb(141, 247, 43); font-size: large;"> {{total_tested}} </strong> </strong>
 
             <!-- <div v-if="subscribe_flag" class="mobile-form">
                 <form class="form-inline">
@@ -202,49 +203,60 @@
         <br>
         <center>
 
-            <button onclick="document.location.href='https://chinadown.netlify.app/'" class="btn btn-danger">चीन के खिलाफ एक कदम </button>
+            <button onclick="document.location.href='https://chinadown.netlify.app/'" class="btn btn-danger">चीन के
+                खिलाफ एक कदम </button>
             <br>
             <br>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    एक क्लिक में जानें अभी तक का पूरा हाल 
-  </button>
-</center>
-  <br>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle"> {{last_updated}} बजे तक </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            
-           <span class="my-modal-title1">अब तक कुल सैंपल टेस्ट</span>  : <span class="my-modal-title1-data" >{{total_tested}}</span>
-            <br>
-          <span class="my-modal-title1">अब तक कुल पॉजिटिव केस </span>  : <span class="my-modal-title1-data"  >{{confirmed_tt}}</span> 
-            <br>
-           <span class="my-modal-title1">अब तक कुल ठीक केस </span> : <span class="my-modal-title1-data"> {{recovered_tt}}</span>
-            <br>
-            <span class="my-modal-title1"> अब तक कुल मृत्यु</span>    : <span class="my-modal-title1-data" >{{ deaths_tt}}</span> 
-            <br>
-            <hr>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                एक क्लिक में जानें अभी तक का पूरा हाल
+            </button>
+        </center>
+        <br>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle"> {{last_updated}} बजे तक </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
 
-         <span class="my-modal-title2">आज पॉजिटिव केस</span>    : <span class="my-modal-title2-data"> {{confirmed_td}}</span>
-            <br>      
-        <span class="my-modal-title2">  आज ठीक हुए</span>   : <span class="my-modal-title2-data" >{{recovered_td}}</span> 
-            <br>
-          <span class="my-modal-title2">आज मृत्यु</span>   :  <span class="my-modal-title2-data">{{deaths_td}}</span>
-            <br>
-            <hr>
-            <div id="siteAddress">
-                <span ><center>https://nocovid.netlify.app/</center></span>  
-            </div>
-           
+                        <span class="my-modal-title1">अब तक कुल सैंपल टेस्ट</span> : <span
+                            class="my-modal-title1-data">{{total_tested}}</span>
+                        <br>
+                        <span class="my-modal-title1">अब तक कुल पॉजिटिव केस </span> : <span
+                            class="my-modal-title1-data">{{confirmed_tt}}</span>
+                        <br>
+                        <span class="my-modal-title1">अब तक कुल ठीक केस </span> : <span class="my-modal-title1-data">
+                            {{recovered_tt}}</span>
+                        <br>
+                        <span class="my-modal-title1"> अब तक कुल मृत्यु</span> : <span
+                            class="my-modal-title1-data">{{ deaths_tt}}</span>
+                        <br>
+                        <hr>
 
-            <!-- <br>
+                        <span class="my-modal-title2">आज पॉजिटिव केस</span> : <span class="my-modal-title2-data">
+                            {{confirmed_td}}</span>
+                        <br>
+                        <span class="my-modal-title2"> आज ठीक हुए</span> : <span
+                            class="my-modal-title2-data">{{recovered_td}}</span>
+                        <br>
+                        <span class="my-modal-title2">आज मृत्यु</span> : <span
+                            class="my-modal-title2-data">{{deaths_td}}</span>
+                        <br>
+                        <hr>
+                        <div id="siteAddress">
+                            <span>
+                                <center>https://nocovid.netlify.app/</center>
+                            </span>
+                        </div>
+
+
+                        <!-- <br>
             सबसे ज्यादा केस राज्य में : शीर्ष 5
             <hr>
             महाराष्ट्र: 
@@ -256,17 +268,17 @@
             मध्यप्रदेश:
             <br>
             राजस्थान: -->
-        </div>
-        <div class="modal-footer">
-          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button> -->
-        
-        </div>
-      </div>
-    </div>
-  </div>
 
-    <!-- ek click me jaane poora haal end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ek click me jaane poora haal end -->
 
         <div id="imporatant-info">
 
@@ -277,21 +289,21 @@
                         <div class="testing-tt">
                             <center>
                                 <!-- अब तक सैंपल टेस्ट <sup>{{date_icmr}} तक  -->
-                                <small>{{betweenDates}}   सैंपल टेस्ट किये गए | स्रोत: <a style="color: black;"
-                                    href="https://icmr.nic.in">ICMR
-                                    वेबसाइट </a> </sup>  </small><br>
+                                <small>{{betweenDates}} सैंपल टेस्ट किये गए | स्रोत: <a style="color: black;"
+                                        href="https://icmr.nic.in">ICMR
+                                        वेबसाइट </a> </sup> </small><br>
                                 <p> <img src="images/testingbg.png" alt="" srcset=""> {{today_tested_icmr}} </p>
-                                        <!-- <small>{{betweenDates}}<small style="font-size: 20px; color: rgb(241, 8, 136);">{{today_tested_icmr}}</small>   सैंपल टेस्ट किये गए | </small> -->
+                                <!-- <small>{{betweenDates}}<small style="font-size: 20px; color: rgb(241, 8, 136);">{{today_tested_icmr}}</small>   सैंपल टेस्ट किये गए | </small> -->
                             </center>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
 
 
-       
+
+
         </div>
         <!-- important info section end  -->
 
@@ -308,9 +320,9 @@
 
 
             <!-- noraml information end         -->
-          
 
-<hr>
+
+            <hr>
 
             <!-- row 0 start -->
             <div class="row row-0">
@@ -329,64 +341,71 @@
 
             <div style="height: 3px; border-bottom: 2px solid rgb(9, 109, 240);" class="hr-line"> </div>
             <br>
-<!-- Testing -->
-<div class="conatiner">
-    <center>
-        <h5 style="background-color: rgb(119, 231, 194); color: rgb(8, 8, 8); border-radius: 10px;">आज भारत में <sup style="color: rgb(88, 76, 76);"><small>[रोज़ सुबह लगभग 9 बजे के बाद से]</small></sup>
-        </h5>
+            <!-- Testing -->
+            <div class="conatiner">
+                <center>
+                    <h5 style="background-color: rgb(119, 231, 194); color: rgb(8, 8, 8); border-radius: 10px;">आज भारत
+                        में <sup style="color: rgb(88, 76, 76);"><small>[रोज़ सुबह लगभग 9 बजे के बाद से]</small></sup>
+                    </h5>
 
-    </center>
-  
-        <small style="font-size: smaller; color: red;" v-if="showReasonText" >अगर आपको आज की संख्या ऋण में दिखाई दे रही है तो इसका कारण है , MoHFW ने Unassigned श्रेणी में से कुछ संख्या को कम कर दिया है। ( नीचे के राज्यों के सूची में "Unassigned/नहीं पता"  वाली पंक्ति देखें ) यह कमी आज के पॉजिटिव मामलों में परिलक्षित होगी।</small>
-      <br>  <small @click="hideReason" v-if="showReasonText" style="background: black; color: aliceblue; margin: 2px; padding: 3px; cursor: pointer; border: 1px solid red; border-radius: 5px;">   ठीक है</small>     
-        <hr>
-      
- 
-    <div class="row align-self-center">
+                </center>
 
-        <div class="col-sm-3 my-col mr-auto">
-            <small class="">आज के पॉजिटिव मामले  <i @click="showReason" class="fa fa-bullhorn" aria-hidden="true"></i> </small> 
-               
-            
-            
-           
-            <center>
-                <div id="confirmed-td" class="round ">
-                    <small> +</small>
-                
-                   
-                    <p class="text-center">  {{confirmed_td}}  <br><img src="images/plus.png" alt=""
-                            srcset=""></p>
-                </div>
-            </center>
-           
-           
-        </div>
-        
-        <div class="col-sm-3 my-col  mr-auto">
-            <small><b>आज ठीक हुए</b>  </small>
-            <center>
+                <small style="font-size: smaller; color: red;" v-if="showReasonText">अगर आपको आज की संख्या ऋण में दिखाई
+                    दे रही है तो इसका कारण है , MoHFW ने Unassigned श्रेणी में से कुछ संख्या को कम कर दिया है। ( नीचे के
+                    राज्यों के सूची में "Unassigned/नहीं पता" वाली पंक्ति देखें ) यह कमी आज के पॉजिटिव मामलों में
+                    परिलक्षित होगी।</small>
+                <br> <small @click="hideReason" v-if="showReasonText"
+                    style="background: black; color: aliceblue; margin: 2px; padding: 3px; cursor: pointer; border: 1px solid red; border-radius: 5px;">
+                    ठीक है</small>
+                <hr>
 
-                <div id="recovered-td" class="round ">
-                    <small> +</small>
-                    <p class="text-center"> {{recovered_td}} <br><img src="images/sprinter.png" alt=""
-                            srcset=""></p>
+
+                <div class="row align-self-center">
+
+                    <div class="col-sm-3 my-col mr-auto">
+                        <small class="">आज के पॉजिटिव मामले <i @click="showReason" class="fa fa-bullhorn"
+                                aria-hidden="true"></i> </small>
+
+
+
+
+                        <center>
+                            <div id="confirmed-td" class="round ">
+                                <small> +</small>
+
+
+                                <p class="text-center"> {{confirmed_td}} <br><img src="images/plus.png" alt=""
+                                        srcset=""></p>
+                            </div>
+                        </center>
+
+
+                    </div>
+
+                    <div class="col-sm-3 my-col  mr-auto">
+                        <small><b>आज ठीक हुए</b> </small>
+                        <center>
+
+                            <div id="recovered-td" class="round ">
+                                <small> +</small>
+                                <p class="text-center"> {{recovered_td}} <br><img src="images/sprinter.png" alt=""
+                                        srcset=""></p>
+                            </div>
+                        </center>
+                    </div>
+
+                    <div class="col-sm-3  my-col  mr-auto">
+                        <small>आज के मृतकों की संख्या </small>
+                        <center>
+                            <div id="deaths-td" class="round">
+                                <small> +</small>
+                                <p class="text-center"> {{deaths_td}} <br><img src="images/death.png" alt="" srcset="">
+                                </p>
+                            </div>
+                        </center>
+                    </div>
                 </div>
-            </center>
-        </div>
-       
-        <div class="col-sm-3  my-col  mr-auto">
-            <small>आज के मृतकों की संख्या </small>
-            <center>
-                <div id="deaths-td" class="round">
-                    <small> +</small>
-                    <p class="text-center"> {{deaths_td}} <br><img src="images/death.png" alt="" srcset="">
-                    </p>
-                </div>
-            </center>
-        </div>
-    </div>
-</div>
+            </div>
 
 
 
@@ -397,7 +416,7 @@
             </center>
             <hr> -->
 
-      
+
 
 
             <!-- popup  -->
@@ -435,7 +454,7 @@
 
             <!-- row2   start-->
 
-           
+
             <center>
                 <h5>अब तक भारत <img src="images/india.png" alt=""> में </h5>
             </center>
@@ -474,19 +493,19 @@
             </div>
         </div>
         <br>
-       
+
         <!-- row2   end-->
 
 
         <!-- row 3 all state start -->
-<br>
+        <br>
         <div style="height: 3px; border-bottom: 2px solid rgb(39, 219, 15);" class="hr-line"> </div>
         <br>
 
         <div class="container state-container">
             <center>
                 <h5 class=" stateDetailHeading"> <img src="./images/indiannew.png" alt="" srcset="">
-                    भारत के सभी राज्य  <img src="./images/indiannew.png" alt="" srcset=""></h5>
+                    भारत के सभी राज्य <img src="./images/indiannew.png" alt="" srcset=""></h5>
             </center>
             <hr>
             <marquee behavior="" direction=""><small>अगर डेटा का आर्डर गड़बड़ होता है तो अंग्रेजी नाम से ही
@@ -521,7 +540,7 @@
                             +{{ disttName }}
                         </li>
 
-                    </ul> 
+                    </ul>
                 </div>
 
                 <!-- <div class="col ">
@@ -539,10 +558,10 @@
                     <ul>
                         <small class="stateHindiTitile">ठीक</small>
                         <hr>
-                        
+
                         <li style="color: green;" class="" v-for="confcases in stateRecovered">
-                            <small> {{confcases}} 
-                                
+                            <small> {{confcases}}
+
                             </small>
                         </li>
                     </ul>
@@ -663,14 +682,15 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </div> 
+                                </div>
 
                                 <div class="two">
                                     <div class="cases">
                                         <ul>
                                             <h4 style="color: rgb(11, 4, 107);" class="DisttTitle">सक्रिय </h4>
                                             <hr>
-                                            <li style="color: rgb(8, 102, 179);" class="list-view-cases" v-for="confcases in disttactive">
+                                            <li style="color: rgb(8, 102, 179);" class="list-view-cases"
+                                                v-for="confcases in disttactive">
                                                 {{confcases}}
                                             </li>
                                         </ul>
@@ -683,7 +703,8 @@
                                         <ul>
                                             <h4 style="color: rgb(56, 238, 11);" class="DisttTitle">ठीक</h4>
                                             <hr>
-                                            <li style="color: rgb(28, 80, 16);" class="list-view-cases" v-for="confcases in disttRecovered">
+                                            <li style="color: rgb(28, 80, 16);" class="list-view-cases"
+                                                v-for="confcases in disttRecovered">
                                                 {{confcases}}
                                             </li>
                                         </ul>
@@ -716,7 +737,8 @@
                                         <ul>
                                             <h4 class="DisttTitle text-muted">DISTRICT</h4>
                                             <hr>
-                                            <li class="NameList list-view-disttEng text-muted" v-for="disttName in listOfDistt">
+                                            <li class="NameList list-view-disttEng text-muted"
+                                                v-for="disttName in listOfDistt">
                                                 {{ disttName }}
                                             </li>
 
@@ -820,8 +842,9 @@
         <marquee style="background-color: antiquewhite;" behavior="" direction="">कुल मामले जहाँ से अपडेट किये जा
             रहे है
             ऐसा संभव है की गलतियां हो जाएँ हमें
-            अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद  :===>> <a style="color: black;"
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLScrwo1ZQ3lls0G1bk1Oxz16f6ZZaPAIkOgISRmhrVFMoiKN6g/viewform?embedded=true">CLICK HERE </a></marquee>
+            अवगत कराईये हम गलतियों को सुधारने का पूरा प्रयास करेंगे धन्यवाद :===>> <a style="color: black;"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScrwo1ZQ3lls0G1bk1Oxz16f6ZZaPAIkOgISRmhrVFMoiKN6g/viewform?embedded=true">CLICK
+                HERE </a></marquee>
 
 
 
