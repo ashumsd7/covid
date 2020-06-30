@@ -22,12 +22,12 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '83,98,362',
-            today_tested_icmr: '1,70,560',
+            total_tested: '86,08,654',
+            today_tested_icmr: '2,10,292',
 
             last_updated: '',
-            date_icmr: '29 जून 2020 9AM',
-            betweenDates: '28 जून 9 AM से 29 जून 9AM तक ',
+            date_icmr: '30 जून 2020 9AM',
+            betweenDates: '29 जून 9 AM से 30 जून 9AM तक ',
             result: '',
             result1: '',
             download_App_Loading: false,
