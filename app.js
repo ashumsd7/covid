@@ -22,13 +22,13 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '1,20,92,503',
+            total_tested: '1,24,12,664',
 
-            today_tested_icmr: '2,86,247',
+            today_tested_icmr: '3,20,161',
 
             last_updated: '',
             date_icmr: '04 जुलाई 2020 9AM',
-            betweenDates: '13 जुलाई  को',
+            betweenDates: '14 जुलाई  को',
             result: '',
             result1: '',
             download_App_Loading: false,
@@ -117,9 +117,6 @@
                 'सीतापुर',
                 'सोनभद्र',
                 'सुल्तानपुर',
-
-
-
                 'उन्नाव',
                 'वाराणसी',
 
