@@ -28,7 +28,7 @@
 
             last_updated: '',
             date_icmr: '04 जुलाई 2020 9AM',
-            betweenDates: '25 जुलाई  को',
+            betweenDates: '23 जुलाई  को',
             result: '',
             result1: '',
             download_App_Loading: false,
