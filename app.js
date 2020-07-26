@@ -24,11 +24,11 @@
 
             total_tested: '1,58,49,068',
 
-            today_tested_icmr: '4,20,898',
+            today_tested_icmr: '4,42,263',
 
             last_updated: '',
             date_icmr: '04 जुलाई 2020 9AM',
-            betweenDates: '24 जुलाई  को',
+            betweenDates: '25 जुलाई  को',
             result: '',
             result1: '',
             download_App_Loading: false,
