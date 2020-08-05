@@ -24,7 +24,7 @@
 
             total_tested: '2,08,64,750',
 
-            today_tested_icmr: '6,61,892,
+            today_tested_icmr: '6,61,892',
 
             last_updated: '',
             date_icmr: '04 जुलाई 2020 9AM',
