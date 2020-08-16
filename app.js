@@ -22,9 +22,9 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '2,85,63,095',
+            total_tested: '2,93,09,703',
 
-            today_tested_icmr: '8,68,679',
+            today_tested_icmr: '7,46,608',
 
             last_updated: '',
             date_icmr: '04 जुलाई 2020 9AM',
