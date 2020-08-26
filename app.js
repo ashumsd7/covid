@@ -22,13 +22,13 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '3,68,27,520',
+            total_tested: '3,76,51,512',
 
-            today_tested_icmr: '9,25,383',
+            today_tested_icmr: '8,23,992',
 
             last_updated: '',
             date_icmr: '04 जुलाई 2020 9AM',
-            betweenDates: '24 अगस्त को',
+            betweenDates: '25 अगस्त को',
             result: '',
             result1: '',
             download_App_Loading: false,
