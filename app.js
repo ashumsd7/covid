@@ -22,7 +22,7 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '4,23,07,914
+            total_tested: '4,23,07,914',
 ',
 
             today_tested_icmr: '8,46,278',
