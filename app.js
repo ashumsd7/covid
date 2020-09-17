@@ -22,14 +22,14 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '5,72,39,428',
+            total_tested: '6,05,65,728',
 
 
-            today_tested_icmr: '9,78,500',
+            today_tested_icmr: '11,36,613',
 
             last_updated: '',
             date_icmr: '0 जुलाई 2020 9AM',
-            betweenDates: ' 13 September को ',
+            betweenDates: ' 16 September को ',
             result: '',
             result1: '',
             download_App_Loading: false,
