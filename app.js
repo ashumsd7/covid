@@ -28,7 +28,7 @@
             today_tested_icmr: '14,69,984',
 
             last_updated: '',
-            date_icmr: '0 जुलाई 2020 9AM',
+            date_icmr: '00 जुलाई 2020 9AM',
             betweenDates: ' 21 OCTOBER को ',
             result: '', 
             result1: '',
