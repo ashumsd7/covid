@@ -29,7 +29,7 @@
 
             last_updated: '',
             date_icmr: '00 जुलाई 2020 9AM',
-            betweenDates: ' 27 OCTOBER को ',
+            betweenDates: ' 27 0CTOBER को ',
             result: '', 
             result1: '',
             download_App_Loading: false,
