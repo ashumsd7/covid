@@ -22,14 +22,14 @@
             recovered_td: '',
             last_updated: '',
 
-            total_tested: '12,48,36,819',
+            total_tested: '13,06,57,808',
 
 
-            today_tested_icmr: '8,05,589',
+            today_tested_icmr: '10,66,022',
 
             last_updated: '',
             date_icmr: '00 जुलाई 2020 9AM',
-            betweenDates: ' 14 NOVEMBER को ',
+            betweenDates: ' 20 NOVEMBER को ',
             result: '', 
             result1: '',
             download_App_Loading: false,
@@ -137,30 +137,32 @@
             stateDeltaDeaths: [],
             stateLastTimeUpdated: [],
             stateNameFilteredEng: [],
-            stateNameHindi: ['महाराष्ट्र','आंध्रप्र.',   'कर्नाटक',  
+            stateNameHindi: ['महाराष्ट्र',   'कर्नाटक',  'आंध्रप्र.' ,
              'तमिलनाडु',
              
            
   'उत्तरप्रदेश',
+  'केरल',
                 'दिल्ली',
 
  
-   'केरल',
+ 
     
  
    'पश्चिमबं',
  'ओडिशा',
    'तेलंगाना', 
    'बिहार',    
-     'असम',
  'राजस्थान',
-     'गुजरात',
-   'मध्यप्रदेश',
+     'असम',
+
+
+
 
         'छत्तीसगढ़',    
  'हरियाणा',     
-                   
-
+          'गुजरात',              
+   'मध्यप्रदेश',
 
   'पंजाब',  
    
@@ -177,11 +179,11 @@
   'हिमाचल',  
   
    'मणिपुर',
-   
+    'अरुणाचल',  
  'चंडीगढ़',  
 
 
- 'अरुणाचल',  
+
  'मेघालय',
  'नगालैंड',  
 
